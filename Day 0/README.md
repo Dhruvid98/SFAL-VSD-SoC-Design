@@ -6,7 +6,7 @@
   - Compiling and executing the application to generate output **O0**.
 * Modeling specification
   - Creating/ modeling specs in any processor compiler architecture (RISCV-ISA, ARM-ISA, or x86-ISA).
-  - Running the application on the modeled  hardware architecture to verify the specifications and generate the output **O1**.
+  - Running the application on the modeled  hardware architecture to verify the specifications and generating the output **O1**.
 * The goal here is to ensure O0 = O1, which can be considered a checkpoint for freezing the specifications.
 ### Step 2: RTL Architect
 ### Step 3: SoC Integration
