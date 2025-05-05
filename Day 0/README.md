@@ -2,8 +2,12 @@
 ## Summary of Chip development flow 
 ### Step 1: Chip Modelling 
 * Application creation
-  - Creating a software application in C programming language.
-  - Compiling and exectuing the application to generate output **O0**
+  - Creating a software application in the C programming language.
+  - Compiling and executing the application to generate output **O0**.
+* Modeling specification
+  - Creating/ modeling specs in any processor compiler architecture (RISCV-ISA, ARM-ISA, or x86-ISA).
+  - Running the application on the modeled  hardware architecture to verify the specifications and generate the output **O1**.
+* The goal here is to ensure O0 = O1, which can be considered a checkpoint for freezing the specifications.
 ### Step 2: RTL Architect
 ### Step 3: SoC Integration
 ### Step 4: RTL2GDS
