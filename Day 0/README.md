@@ -1,1 +1,2 @@
-
+# Day 0
+## Summary of Chip development flow 
