@@ -1,6 +1,9 @@
 # Day 0
 ## Summary of Chip development flow 
 ### Step 1: Chip Modelling 
+* Application creation
+  - Creating a software application in C programming language.
+  - Compiling and exectuing the application to generate output **O0**
 ### Step 2: RTL Architect
 ### Step 3: SoC Integration
 ### Step 4: RTL2GDS
