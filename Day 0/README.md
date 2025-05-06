@@ -21,6 +21,8 @@
 * This step involves floor and power planning, place and route, CTS, and power and signal integrity checks.
 * The output of this step is the creation of a GDSII file (Graphic Data System Information Interchange).
 ### Step 5: Physical verification and Fabrication 
+* Physical verification of the GDSII file is done using DRC and LVS checks.
+* Later chip is sent for manufacturing to the foundries, also known as TAPOUT.  
 ### Step 6: Post-Silicon Validation
 * Hardware validation on evaluation boards
 ### Step 7: System Ingetration 
