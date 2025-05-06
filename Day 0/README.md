@@ -19,7 +19,7 @@
 * The output is then compared with O1 and O2 to ensure that the functionality is maintained. 
 ### Step 4: RTL2GDS
 * This step involves floor and power planning, place and route, CTS, and power and signal integrity checks.
-* The output of this step is a GDSII file (Graphic Data System II).
+* The output of this step is the creation of a GDSII file (Graphic Data System Information Interchange).
 ### Step 5: Physical verification and Fabrication 
 ### Step 6: Post-Silicon Validation
 * Hardware validation on evaluation boards
