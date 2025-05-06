@@ -15,7 +15,7 @@
 * The goal is to verify **O1 =O2**, to make sure that we are maintaining the same functionality. 
 ### Step 3: SoC Design and Integration
 * Using RTL code, we design synthesizable processors and macros, while analog IPs (PLLs and ADCs) are defined at the transistor level.
-* SoC Designer integrates the IPs using GPIOs and the UUT is tested on the integrated SoC to generate output **O3**.
+* SoC Designer integrates the IPs using GPIOs, and the UUT is tested on the integrated SoC to generate output **O3**.
 * The output is then compared with O1 and O2 to ensure that the functionality is maintained. 
 ### Step 4: RTL2GDS
 * This step involves floor and power planning, place and route, CTS, and power and signal integrity checks.
@@ -27,6 +27,7 @@
 ### Step 7: Post-Silicon Validation
 * The chip on the evaluation board is then tested further by driving signals from the onboard peripherals and measuring the output, O4, at the output pin.
 * The goal here is to ensure that O1 = O2 = O3 = O4, maintaining consistent functionality throughout. 
-### Step 8: System Ingetration 
-* Consumer electronics
+### Step 8: System Integration 
 * Chip integration to PCB/system, smart watch, smartphone.
+
+## Tool Installation Snippet. 
