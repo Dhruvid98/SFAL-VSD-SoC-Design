@@ -15,9 +15,11 @@
 * The goal is to verify **O1 =O2**, to make sure that we are maintaining the same functionality. 
 ### Step 3: SoC Design and Integration
 * Using RTL code, we design synthesizable processors and macros, while analog IPs (PLLs and ADCs) are defined at the transistor level.
-* SoC Designer integrates the IPs using GPIOs and the UUT is tested on the integrated SoC to generate output O3.
+* SoC Designer integrates the IPs using GPIOs and the UUT is tested on the integrated SoC to generate output **O3**.
 * The output is then compared with O1 and O2 to ensure that the functionality is maintained. 
 ### Step 4: RTL2GDS
+* This step involves floor and power planning, place and route, CTS, and power and signal integrity checks.
+* The output of this step is a GDSII file (Graphic Data System II).
 ### Step 5: Physical verification and Fabrication 
 ### Step 6: Post-Silicon Validation
 * Hardware validation on evaluation boards
