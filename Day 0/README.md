@@ -23,10 +23,10 @@
 ### Step 5: Physical verification and Fabrication 
 * Physical verification of the GDSII file is done using DRC and LVS checks.
 * Later chip is sent for manufacturing to the foundries, also known as TAPOUT.
-#### TAP IN
-### Step 6: Post-Silicon Validation
+### Step 6: TAP IN
+### Step 7: Post-Silicon Validation
 * The chip on the evaluation board is then tested further by driving signals from the onboard peripherals and measuring the output, O4, at the output pin.
 * The goal here is to ensure that O1 = O2 = O3 = O4, maintaining consistent functionality throughout. 
-### Step 7: System Ingetration 
+### Step 8: System Ingetration 
 * Consumer electronics
 * Chip integration to PCB/system, smart watch, smartphone.
