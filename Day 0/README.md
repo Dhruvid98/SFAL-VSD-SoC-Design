@@ -11,9 +11,12 @@
 ### Step 2: RTL Architect
 <!-- RTL is the abstraction level used to describe digital designs in terms of data flow between registers and the logic that operates on them. It defines the functional behavior of a design. -->
 * Describing hardware in HDL using Verilog, Bluespec, or Chisel language.
-* Running the same application on UUT and measuring the output **O2**
+* Running the same application on UUT and measuring the output **O2**.
 * The goal is to verify **O1 =O2**, to make sure that we are maintaining the same functionality. 
-### Step 3: SoC Integration
+### Step 3: SoC Design and Integration
+* Using RTL code, we design synthesizable processors and macros, while analog IPs (PLLs and ADCs) are defined at the transistor level.
+* SoC Designer integrates the IPs using GPIOs and the UUT is tested on the integrated SoC to generate output O3.
+* The output is then compared with O1 and O2 to ensure that the functionality is maintained. 
 ### Step 4: RTL2GDS
 ### Step 5: Physical verification and Fabrication 
 ### Step 6: Post-Silicon Validation
