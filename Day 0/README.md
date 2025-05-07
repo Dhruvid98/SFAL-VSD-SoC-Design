@@ -30,4 +30,4 @@
 ### Step 8: System Integration 
 * Chip integration to PCB/system, smart watch, smartphone.
 
-## Tool Installation Snippet. 
+## Tool Installation. 
