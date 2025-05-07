@@ -32,4 +32,4 @@
 
 ## Tool Installation. 
 ### 1. Ubuntu 24.04 LTS
-![Linux image](Images/Screenshot 2025-05-06 203035.png)
+![Linux image](/Images/Screenshot 2025-05-06 203035.png)
