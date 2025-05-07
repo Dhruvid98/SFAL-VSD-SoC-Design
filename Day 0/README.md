@@ -31,3 +31,4 @@
 * Chip integration to PCB/system, smart watch, smartphone.
 
 ## Tool Installation. 
+### 1. Ubuntu 24.04 LTS
