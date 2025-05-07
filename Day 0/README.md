@@ -32,4 +32,4 @@
 
 ## Tool Installation. 
 ### 1. Ubuntu 24.04 LTS
-![Linux image](/Images/Screenshot 2025-05-06 203035.png)
+![Linux image](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%200/Images/Screenshot%202025-05-06%20203035.png)
