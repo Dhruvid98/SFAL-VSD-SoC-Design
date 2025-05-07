@@ -33,3 +33,17 @@
 ## Tool Installation. 
 ### 1. Ubuntu 24.04 LTS
 ![Linux image](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%200/Images/Screenshot%202025-05-06%20203035.png)
+### 2. Yosys
+![Yosys tool](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%200/Images/Screenshot%202025-05-06%20222113.png)
+### 3. Iverilog
+![Iverilog](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%200/Images/Screenshot%202025-05-06%20222333.png)
+### 4. GTKWave
+![gtkwave](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%200/Images/Screenshot%202025-05-06%20222831.png)
+### 5. OpenSTA
+![openSTA](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%200/Images/Screenshot%202025-05-06%20223210.png)
+### 6. ngspice
+![ngspice](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%200/Images/Screenshot%202025-05-06%20230225.png)
+### 7. magic
+![magic](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%200/Images/Screenshot%202025-05-06%20232524.png)
+### 8. OpenLane
+![openLane](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%200/Images/Screenshot%202025-05-07%20130008.png)
