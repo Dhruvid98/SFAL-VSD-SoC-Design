@@ -12,13 +12,13 @@ Git folder structre sky130 RTL Design & Synthesis
 * verilog_files - contains verilog source and testbench files for the lab.
 
 Example : Design of good_mux.v (source code)
-module good_mux (input i0 , input i1 , input sel , output reg y);
-always @ (*)
-begin
-	if(sel)
-		y <= i1;
-	else 
-		y <= i0;
-end
-endmodule
+	module good_mux (input i0 , input i1 , input sel , output reg y);
+	always @ (*)
+	begin
+		if(sel)
+			y <= i1;
+		else 
+			y <= i0;
+	end
+	endmodule
 
