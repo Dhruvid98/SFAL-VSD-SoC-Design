@@ -8,5 +8,7 @@
 
 ## Process
 **Step 1** : Passing RTL desing and corresponding testbench to Iverilog simulatator
+
 **Step 2** : Generating vcd(value change dump) file
 **Step 3** : Visualizing the variables dumping into a VCD file with GTKwave
+**Step 4** : Simulation waveform
