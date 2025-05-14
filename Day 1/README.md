@@ -26,8 +26,8 @@
 
 **Step 5** : Reading standard cell library
 **Step 6** : Reading RTL Design
-**Step 7** : Synthesizing Design
-**Step 8** Linking synthesized design to standard cell library 
+**Step 7** : Synthesizing Design (Top module that is getting synthesized)
+**Step 8** : Linking synthesized design to standard cell library 
 **Step 9** : View Synthesized 2x1 MUX using show command
 **Step 10**: Writing gate-level netlist to a file using the write_verilog command
 **Step 11** : Gat level Netlist file for 2x1 MUX
