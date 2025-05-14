@@ -8,7 +8,7 @@
 
 ## Process
 
-**Step 1** : Passing RTL desing and corresponding testbench to Iverilog simulatator
+**Step 1** : Passing RTL design and corresponding testbench to Iverilog simulator
 
 ![RTL iverilog](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%201/Mux%202%3A1%20Images/Functional%20Veri/Screenshot%202025-05-11%20205940.png)
 
@@ -25,9 +25,35 @@
 ![simulation waveform](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%201/Mux%202%3A1%20Images/Functional%20Veri/Screenshot%202025-05-11%20205825.png)
 
 **Step 5** : Reading standard cell library
+
+![reading std](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%201/Mux%202%3A1%20Images/Design%20Synthesis/Screenshot%202025-05-13%20230733.png)
+
 **Step 6** : Reading RTL Design
+
+![rtl read](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%201/Mux%202%3A1%20Images/Design%20Synthesis/Screenshot%202025-05-13%20230753.png)
+
 **Step 7** : Synthesizing Design (Top module that is getting synthesized)
+
+![top module](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%201/Mux%202%3A1%20Images/Design%20Synthesis/Screenshot%202025-05-13%20230920.png)
+
+![synthesizied design](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%201/Mux%202%3A1%20Images/Design%20Synthesis/Screenshot%202025-05-13%20231132.png)
+
 **Step 8** : Linking synthesized design to standard cell library 
+
+![link to std](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%201/Mux%202%3A1%20Images/Design%20Synthesis/Screenshot%202025-05-13%20231605.png)
+
+![report](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%201/Mux%202%3A1%20Images/Design%20Synthesis/Screenshot%202025-05-13%20231619.png)
+
 **Step 9** : View Synthesized 2x1 MUX using show command
+
+![show command](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%201/Mux%202%3A1%20Images/Design%20Synthesis/Screenshot%202025-05-13%20231655.png)
+![logic made](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%201/Mux%202%3A1%20Images/Design%20Synthesis/Screenshot%202025-05-13%20231713.png)
+
 **Step 10**: Writing gate-level netlist to a file using the write_verilog command
+
+![write gate level netlist](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%201/Mux%202%3A1%20Images/Design%20Synthesis/Screenshot%202025-05-13%20231759.png)
+
 **Step 11** : Gat level Netlist file for 2x1 MUX
+
+![netlist file](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%201/Mux%202%3A1%20Images/Design%20Synthesis/Screenshot%202025-05-13%20231759.png)
+
