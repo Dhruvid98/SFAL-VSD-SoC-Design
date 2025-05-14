@@ -3,6 +3,7 @@
 ## Introduction to simulator Iverilog and GTKWave. 
 * **Iverilog** is an open-source simulator tool used to verify whether an RTL design adheres to the specified requirements by simulating the design's functionality.
 * **GTKWave** is used to view the waveform.
+* **Yosys** is a synthesizing tool used to convert RTL into a netlist. 
 * Iverilog based simulation flow
 ![image](https://github.com/user-attachments/assets/91202d92-99b0-4e1f-8d3f-ea9025417d07)
 
@@ -48,12 +49,11 @@
 
 ![show command](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%201/Mux%202%3A1%20Images/Design%20Synthesis/Screenshot%202025-05-13%20231655.png)
 ![logic made](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%201/Mux%202%3A1%20Images/Design%20Synthesis/Screenshot%202025-05-13%20231713.png)
-
 **Step 10**: Writing gate-level netlist to a file using the write_verilog command
 
 ![write gate level netlist](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%201/Mux%202%3A1%20Images/Design%20Synthesis/Screenshot%202025-05-13%20231759.png)
 
-**Step 11** : Gat level Netlist file for 2x1 MUX
+**Step 11** : Gate level Netlist file for 2x1 MUX
 
 ![netlist file](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%201/Mux%202%3A1%20Images/Design%20Synthesis/Screenshot%202025-05-13%20231759.png)
 
