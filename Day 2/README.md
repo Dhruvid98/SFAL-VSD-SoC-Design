@@ -20,8 +20,10 @@ Example of PVT by using the below file name.
    * Leakage power based on all combination inputs
    * Area
    * Power ports
- * Input capacitance
- * Power associated with the pin
- * Transition and Delay
+   * Input capacitance
+   * Power associated with the pin
+   * Transition and Delay
+
+ ## Hierarchical vs Flat Synthesis
 
 
