@@ -9,8 +9,8 @@
 - Temperature: Variation due to temperature
 
 Example of PVT by using the below file name.
-*tt* stands for typical in the .lib name
-*025C* stands for temperature of 25 C in the .lib name
+*tt* stands for typical in the .lib name  
+*025C* stands for temperature of 25 C in the .lib name  
 *1v80* stands for voltage of 1.8V in the .lib name
 
 
