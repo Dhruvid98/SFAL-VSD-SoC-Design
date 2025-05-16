@@ -17,9 +17,9 @@ Example of PVT by using the below file name.
 
 - Cell keyword is used to define the cell.
 - Information regarding the features of each cell that is present
- * Leakage power based on all combination inputs
- * Area
- * Power ports
+   * Leakage power based on all combination inputs
+   * Area
+   * Power ports
  * Input capacitance
  * Power associated with the pin
  * Transition and Delay
