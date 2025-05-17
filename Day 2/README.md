@@ -60,4 +60,6 @@ The images below show the synthesis report of submodule 2 (OR gate) and the logi
 ![show](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%202/Images/sub_modules/Screenshot%202025-05-17%20002035.png)  
 ![net](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%202/Images/sub_modules/Screenshot%202025-05-17%20001938.png)  
 
+## Various Flop Coding Styles and optimization
+
  
