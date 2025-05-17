@@ -23,17 +23,26 @@ Example of PVT by using the below file name.
    * Power associated with the pin
    * Transition and Delay
 
- ## Hierarchical vs Flat Synthesis
+## Hierarchical vs Flat Synthesis
 ### Hierarchical Synthesis
 The synthesis of multiple_modules.v is performed hierarchically, where sub-module 1 (AND gate) and sub-module 2 (OR gate) are initialized. The synthesis stats show the number of cells present in each submodule.   
 
 ![sythensis stats](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%202/Images/Hierarchical%20Synthesis/Screenshot%202025-05-16%20225748.png)
 
-Here, the hierarchy is preserved in submodule 1 and submodule 2. Instead of an AND and OR gate, we have submodules when the **show multiple_modules** command is executed.   
+Here, the hierarchy is preserved in submodule 1 and submodule 2. Instead of an AND and OR gate, we have submodules (u1 and u2) when the **show multiple_modules** command is executed.   
 
 ![show](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%202/Images/Hierarchical%20Synthesis/Screenshot%202025-05-16%20231701.png)  
 
 After generating the synthesis netlist for multiple_modules_hier.v, sub-module 2 does not use an OR gate as input. Instead, it is implemented with 2 INV gates and 1 NAND gate. This change is made because the OR gate has stacked PMOS transistors, which is undesirable in CMOS design due to the increased resistance, reduced mobility, and stronger body effect.  
+
+### Flat Synthesis
+
+The design can be flattened using the command **flatten**.  
+The images below show the flattened logical diagram and the synthesized netlist. In the flattened design, AND and OR gates can be observed.
+![logical](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%202/Images/Flatten/Screenshot%202025-05-16%20234138.png)  
+![netlist](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%202/Images/Flatten/Screenshot%202025-05-16%20234346.png)  
+
+### Submodule synthesis 
 
 ![netlist](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%202/Images/Hierarchical%20Synthesis/Screenshot%202025-05-16%20231932.png)  
 
