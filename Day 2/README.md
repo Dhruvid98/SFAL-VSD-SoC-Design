@@ -24,5 +24,15 @@ Example of PVT by using the below file name.
    * Transition and Delay
 
  ## Hierarchical vs Flat Synthesis
+### Hierarchical Synthesis
+The synthesis of multiple_modules.v is performed hierarchically, where sub-module 1 (AND gate) and sub-module 2 (OR gate) are initialized. The synthesis stats show the number of cells present in each submodule. 
+![sythensis stats]
+
+Here, the hierarchy is preserved in submodule 1 and submodule 2. Instead of an AND and OR gate, we have submodules when the **show multiple_modules** command is executed. 
+![show]
+After generating the synthesis netlist for multiple_modules_hier.v, sub-module 2 does not use an OR gate as input. Instead, it is implemented with 2 INV gates and 1 NAND gate. This change is made because the OR gate has stacked PMOS transistors, which is undesirable in CMOS design due to the increased resistance, reduced mobility, and stronger body effect.
+![netlist]
+
+
 
 
