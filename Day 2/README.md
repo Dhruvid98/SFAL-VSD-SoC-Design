@@ -44,7 +44,20 @@ The images below show the flattened logical diagram and the synthesized netlist.
 
 ### Submodule synthesis 
 
+Submodule synthesis refers to the process of synthesizing smaller, individual functional blocks or submodules of a larger design separately before integrating them into the final top-level design.   
+Why is it needed?
+- Reuseability: Synthesizing submodules allows for the reuse of pre-synthesized modules in different parts of the design.
+- Optimized Performance: By synthesizing smaller submodules, the synthesis tool can apply specific optimizations to each submodule, potentially improving overall performance and turnaround time
+- Resource Management: When working with complex designs, the synthesis tool might struggle to handle the entire design in one go. By breaking the design into submodules, each can be synthesized independently, making the process more manageable
 
+Synthesize the sub-module only
+read_libertiy -lib ../my_libs/libs/sky130_fd_sc_hd__tt_025C_1v80.lib  
+read_verilog multiple_modules.v  
+synth -top sub_module2  
+show  
 
+The images below show the synthesis report of submodule 2 (OR gate) and the logical diagram. 
+![show](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%202/Images/sub_modules/Screenshot%202025-05-16%20234346.png)  
+![net](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%202/Images/sub_modules/Screenshot%202025-05-16%20234138.png)  
 
-
+ 
