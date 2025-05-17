@@ -25,7 +25,7 @@ Example of PVT by using the below file name.
 
 ## Hierarchical vs Flat Synthesis
 ### Hierarchical Synthesis
-The synthesis of multiple_modules.v is performed hierarchically, where sub-module 1 (AND gate) and sub-module 2 (OR gate) are initialized. The synthesis stats show the number of cells present in each submodule.
+The synthesis of multiple_modules.v is performed hierarchically, where sub-module 1 (AND gate) and sub-module 2 (OR gate) are initialized. The synthesis stats show the number of cells present in each submodule.  
 ![stat](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%202/Images/Hierarchical%20Synthesis/Screenshot%202025-05-16%20225748.png)  
 
 Here, the hierarchy is preserved in submodule 1 and submodule 2. Instead of an AND and OR gate, we have submodules (u1 and u2) when the **show multiple_modules** command is executed.   
