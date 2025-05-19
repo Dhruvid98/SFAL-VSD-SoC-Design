@@ -11,7 +11,7 @@
 Example of PVT by using the below file name.  
 *tt* stands for typical in the .lib name  
 *025C* stands for temperature of 25 C in the .lib name  
-*1v80* stands for voltage of 1.8V in the .lib name  
+*1v80* stands for voltage of 1.8V in the .lib name    
 ![lib](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%202/Images/Lab1/Screenshot%202025-05-15%20215430.png)
 
 - Cell keyword is used to define the cell.
@@ -28,10 +28,8 @@ Example of PVT by using the below file name.
 The synthesis of multiple_modules.v is performed hierarchically, where sub-module 1 (AND gate) and sub-module 2 (OR gate) are initialized. The synthesis stats show the number of cells present in each submodule.  
 ![stat](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%202/Images/Hierarchical%20Synthesis/Screenshot%202025-05-16%20225748.png)  
 
-Here, the hierarchy is preserved in submodule 1 and submodule 2. Instead of an AND and OR gate, we have submodules (u1 and u2) when the **show multiple_modules** command is executed.   
-
+Here, the hierarchy is preserved in submodule 1 and submodule 2. Instead of an AND and OR gate, we have submodules (u1 and u2) when the **show multiple_modules** command is executed.  
 ![show](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%202/Images/Hierarchical%20Synthesis/Screenshot%202025-05-16%20231701.png)  
-
 After generating the synthesis netlist for multiple_modules_hier.v, sub-module 2 does not use an OR gate as input. Instead, it is implemented with 2 INV gates and 1 NAND gate. This change is made because the OR gate has stacked PMOS transistors, which is undesirable in CMOS design due to the increased resistance, reduced mobility, and stronger body effect.  
 ![submodule](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%202/Images/Hierarchical%20Synthesis/Screenshot%202025-05-16%20231932.png)  
 
@@ -63,6 +61,6 @@ The images below show the synthesis report of submodule 2 (OR gate) and the logi
 ## Various Flop Coding Styles and Optimization.
 ### Why is a flip-flop needed?  
 A sudden shift in the output, referred to as a glitch in digital design, can be caused by noise, signal delay, or timing problems in a combinational circuit. Flip-flops, which are storage components, are utilized in between stages of combinational logic to stop such unstable outputs from influencing downstream logic.  
-![flops basic](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%202/Images/Flop%20basic/1.pngg)  
+![flops basic](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%202/Images/Flop%20basic/1.png)  
 As it is seen in the above screenshot, flip-flop captures and holds the stable input value from the preceding combinational logic at a specific clock edge (rising or falling). It then passes this stable value to the next combinational stage. Because flip-flops only update their output on clock edges, they effectively filter out any glitches or transients that occur outside the clock transition window. This clocked behavior ensures that only stable and valid data is propagated through the design, resulting in a more reliable and predictable output.  
  
