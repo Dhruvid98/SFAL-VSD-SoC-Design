@@ -39,7 +39,7 @@ synth -top multiple_modules
 abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
 write_verilog -noattr multiple_modules_hier.v
 ```
-The synthesis stats show the number of cells present in each submodule, where sub-module 1 (AND gate) and sub-module 2 (OR gate) are initialized. 
+The synthesis stats show the number of cells present in each submodule, where sub-module 1 (AND gate) and sub-module 2 (OR gate) are initialized.   
 ![stat](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%202/Images/Hierarchical%20Synthesis/Screenshot%202025-05-16%20225748.png)  
 
 Here, the hierarchy is preserved in submodule 1 and submodule 2. Instead of an AND and OR gate, we have submodules (u1 and u2) when the **show multiple_modules** command is executed.  
