@@ -83,16 +83,17 @@ The below screenshot shows DFF with asynchronous reset simulation in Iverilog an
 ### Synthesizing flops
 Commands:-
 ```
-read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_liberty -lib ..my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 read_verilog dff_asyncres.v
 synth -top dff_asyncres
-dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib # used to map only dff. Sometimes flip-flop lib can be different or the same.
-abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+dfflibmap -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib <!-- used to map only dff. Sometimes flip-flop lib can be different or the same. -->
+abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 show
 ```
-Below is the image of synthesizing DFF with asynchronous reset  
-![async_reset_syn]()  
-synthesizing DFF with asynchronous set  
-![async_set_syn]()  
-synthesizing DFF with synchronous reset   
-!(sync_resey_syn)  
+Below is the image of synthesizing DFF with an asynchronous reset  
+![async_reset_syn](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%202/Images/DFF%20Synthesis/async_reset.png)  
+Below is the image of synthesizing DFF with asynchronous set  
+![async_set_syn](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%202/Images/DFF%20Synthesis/async_set.png)  
+Image of synthesizing DFF with synchronous reset   
+![sync_resey_syn](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%202/Images/DFF%20Synthesis/sync.png)  
+
