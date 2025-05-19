@@ -63,4 +63,14 @@ The images below show the synthesis report of submodule 2 (OR gate) and the logi
 A sudden shift in the output, referred to as a glitch in digital design, can be caused by noise, signal delay, or timing problems in a combinational circuit. Flip-flops, which are storage components, are utilized in between stages of combinational logic to stop such unstable outputs from influencing downstream logic.  
 ![flops basic](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%202/Images/Flop%20basic/1.png)  
 As it is seen in the above screenshot, flip-flop captures and holds the stable input value from the preceding combinational logic at a specific clock edge (rising or falling). It then passes this stable value to the next combinational stage. Because flip-flops only update their output on clock edges, they effectively filter out any glitches or transients that occur outside the clock transition window. This clocked behavior ensures that only stable and valid data is propagated through the design, resulting in a more reliable and predictable output.  
+### Different types of flops.   
+To initialize flops, we need to set and reset, which can be synchronous or asynchronous.  
+- Asynchronous: Change is immediately activated
+   * Reset: It forces output to 0.  
+      - R= 0 -> denpends on d , R= 1 -> q = 0  
+   * Set: It forces output at 1.
+      - S= 0 -> depends on d, S= 1, -> q = 1
+ - Synchronous: Change is observed from the upcoming rising edge of the clock
+![diff](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%202/Images/Flop%20basic/2.png)
 
+The screenshot below shows DFF with asynchronous reset HDL simulation in Iverilog and waveform display in GTKwave. Irrespective of the clock and d, as soon as async_reset=1, q=0.
