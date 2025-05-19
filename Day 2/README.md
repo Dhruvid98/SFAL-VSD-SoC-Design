@@ -78,5 +78,21 @@ The below screenshot shows DFF with asynchronous reset simulation in Iverilog an
 The below screenshot shows DFF with asynchronous reset simulation in Iverilog and waveform display in GTKwave. Irrespective of the clock and d, as soon as async_set=1, q=1.  
 ![async_set](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%202/Images/DFF_simulation/async_set.png)  
 The below screenshot shows DFF with asynchronous reset simulation in Iverilog and waveform display in GTKwave. With the rising edge of the clock and d, sync_reset=1, q=0.  
-![sync_reset](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%202/Images/DFF_simulation/sync_reset.png)
+![sync_reset](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%202/Images/DFF_simulation/sync_reset.png)  
 
+### Synthesizing flops
+Commands:-
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog dff_asyncres.v
+synth -top dff_asyncres
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib # used to map only dff. Sometimes flip-flop lib can be different or the same.
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+Below is the image of synthesizing DFF with asynchronous reset  
+![async_reset_syn]()  
+synthesizing DFF with asynchronous set  
+![async_set_syn]()  
+synthesizing DFF with synchronous reset   
+!(sync_resey_syn)  
