@@ -8,6 +8,11 @@
 - Voltage: Variation is due to a voltage
 - Temperature: Variation due to temperature
 
+* Why do we need faster and slower cells?
+    - Faster cells provide high performance (i.e. faster charging/ discharging of capacitors) and lower delay. Also, they ensure there are no SETUP time issues.
+    - Slower cells ensure that there are no HOLD issues.
+    - While the disadvantage of faster cells is that they occupy plenty of area and power. Wider transistors are needed for faster cells.
+    - The disadvantage of the slower cell is that even though transistors are narrow, it has more delay, less area and power.
 Example of PVT by using the below file name.  
 *tt* stands for typical in the .lib name  
 *025C* stands for temperature of 25 C in the .lib name  
