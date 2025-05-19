@@ -73,4 +73,10 @@ To initialize flops, we need to set and reset, which can be synchronous or async
  - Synchronous: Change is observed from the upcoming rising edge of the clock
 ![diff](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%202/Images/Flop%20basic/2.png)
 
-The screenshot below shows DFF with asynchronous reset HDL simulation in Iverilog and waveform display in GTKwave. Irrespective of the clock and d, as soon as async_reset=1, q=0.
+The below screenshot shows DFF with asynchronous reset simulation in Iverilog and waveform display in GTKwave. Irrespective of the clock and d, as soon as async_reset=1, q=0.
+![async_reset]()  
+The below screenshot shows DFF with asynchronous reset simulation in Iverilog and waveform display in GTKwave. Irrespective of the clock and d, as soon as async_set=1, q=1.  
+![async_set]()  
+The below screenshot shows DFF with asynchronous reset simulation in Iverilog and waveform display in GTKwave. With the rising edge of the clock and d, sync_reset=1, q=0.  
+![sync_reset]()
+
