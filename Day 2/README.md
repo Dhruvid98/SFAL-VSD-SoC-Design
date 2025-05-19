@@ -96,7 +96,7 @@ Commands:-
 read_liberty -lib ..my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 read_verilog dff_asyncres.v
 synth -top dff_asyncres
-dfflibmap -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib <!-- used to map only dff. Sometimes flip-flop lib can be different or the same. -->
+dfflibmap -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib # used to map only dff. Sometimes flip-flop lib can be different or the same.
 abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 show
 ```
