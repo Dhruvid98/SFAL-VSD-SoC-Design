@@ -60,9 +60,13 @@ The images below show the synthesis report of submodule 2 (OR gate) and the logi
 
 ## Various Flop Coding Styles and Optimization.
 ### Why is a flip-flop needed?  
-A sudden shift in the output, referred to as a glitch in digital design, can be caused by noise, signal delay, or timing problems in a combinational circuit. Flip-flops, which are storage components, are utilized in between stages of combinational logic to stop such unstable outputs from influencing downstream logic.  
-![flops basic](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%202/Images/Flop%20basic/1.png)  
-As it is seen in the above screenshot, flip-flop captures and holds the stable input value from the preceding combinational logic at a specific clock edge (rising or falling). It then passes this stable value to the next combinational stage. Because flip-flops only update their output on clock edges, they effectively filter out any glitches or transients that occur outside the clock transition window. This clocked behavior ensures that only stable and valid data is propagated through the design, resulting in a more reliable and predictable output.  
+In digital design, combinational circuits are prone to glitches, i.e. unintended transitions in output values. These occur when multiple input signals arrive at slightly different times due to unequal propagation delays, causing the logic to temporarily settle to incorrect states. Flip-flops, which are storage components, are utilized in between stages of combinational logic to stop such unstable outputs from influencing downstream logic.  
+* Issues
+    - If these glitches are usually harmless in isolation. However, if another part of the circuit captures these unstable outputs, it can lead to functional failures or incorrect data being latched.
+![flops basic](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%202/Images/Flop%20basic/1.png)
+* Solution
+    - Flip-flop captures and holds the stable input value from the preceding combinational logic at a specific clock edge (rising or falling). It then passes this stable value to the next combinational stage. Because flip-flops only update their output on clock edges, they effectively filter out any glitches or transients that occur outside the clock transition window. This clocked behavior ensures that only stable and valid data is propagated through the design, resulting in a more reliable and predictable output.
+ 
 ### Different types of flops.   
 To initialize flops, we need to set and reset, which can be synchronous or asynchronous.  
 - Asynchronous: Change is immediately activated
