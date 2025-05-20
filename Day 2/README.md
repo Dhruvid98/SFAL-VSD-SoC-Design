@@ -119,3 +119,15 @@ Below is the image of synthesizing DFF with asynchronous set
 Image of synthesizing DFF with synchronous reset   
 ![sync_resey_syn](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%202/Images/DFF%20Synthesis/sync.png)  
 
+### Synthesizing mult2
+To implement mult2, we’re taking a 3-bit input a[2:0] and generating a 4-bit output y[3:0], where y = a * 2. Now, instead of using actual multiplication hardware, in binary, multiplying by 2 is the same as shifting the bits to the left by one position. That is just like adding a 0 to the right (least significant bit). No hardware or logic gate is required for this, it can be realized by just wiring. 
+This concept applies to all powers of 2:
+Multiply by 2 → append one 0 (y = {a, 1'b0})
+Multiply by 4 → append two 0s (y = {a, 2'b00} )
+Multiply by 8 → append three 0s (y = {a, 3'b000} ), and so on.  
+![mul2](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%202/Images/Optimization%20flop/mult2.png)  
+
+As no logic cells are used, the abc command for mapping isn’t necessary here.  
+![no ABC](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%202/Images/Optimization%20flop/mult2_1.png)  
+![final](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%202/Images/Optimization%20flop/mult2_2.png)
+
