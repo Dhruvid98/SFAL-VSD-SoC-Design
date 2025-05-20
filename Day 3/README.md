@@ -7,10 +7,11 @@
   - Optimized designs are efficient in terms of *Area and Power* saving.
 
 
-* Techniques for optimization
+* Techniques for optimization:-
     - Constant Propagation
-        * Direct optimization
+        * Directly simplifying logic paths when input constants are known
+![const](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%203/Images/Introduction/Constant.png)
     - Boolean logic optimization
-        * K- Map
-        * Quine McKluskey Algo.  
-
+        * K- Map ((Karnaugh Map))
+        * Quine McKluskey Algo.
+![bool](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%203/Images/Introduction/boolean.png)
