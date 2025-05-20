@@ -119,7 +119,7 @@ Below is the image of synthesizing DFF with asynchronous set
 Image of synthesizing DFF with synchronous reset   
 ![sync_resey_syn](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%202/Images/DFF%20Synthesis/sync.png)  
 
-### Synthesizing mult2
+### Synthesizing mult2 (multiplying 2)
 To implement mult2, we’re taking a 3-bit input a[2:0] and generating a 4-bit output y[3:0], where y = a * 2. Now, instead of using actual multiplication hardware, in binary, multiplying by 2 is the same as shifting the bits to the left by one position. That is just like adding a 0 to the right (least significant bit). No hardware or logic gate is required for this, it can be realized by just wiring.  
 This concept applies to all powers of 2:  
 Multiply by 2 → append one 0 (y = {a, 1'b0})  
@@ -131,3 +131,11 @@ As no logic cells are used, the abc command for mapping isn’t necessary here.
 ![no ABC](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%202/Images/Optimization%20flop/mult2_1.png)  
 ![final](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%202/Images/Optimization%20flop/mult2_2.png)
 
+### Sythesizing mult8 (multiplying by 9 / 8 + 1)
+The multiplication y = 9 * a can be expressed as y = 8 * a + a. To implement this for a 3-bit input a[2:0] and a 6-bit output y[5:0], we can achieve the operation by appending three zeros to the input (a[2:0]) and then adding the original input back. *y[5:0] = {a[2:0],000} + a[2:0]*. This implementation can be fully realized through simple wiring and addition, without requiring dedicated multiplication hardware.  
+
+![wire map](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%202/Images/Optimization%20flop/mul8.png)
+
+As a result, no standard logic cells are involved. Since there are no logic cells to map, the use of the 'abc' command for technology mapping is unnecessary in this case.
+![code](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%202/Images/Optimization%20flop/mul8_1.png)  
+![netlist](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%202/Images/Optimization%20flop/mult8_3.png)
