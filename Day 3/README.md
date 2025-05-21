@@ -104,4 +104,4 @@ assign y = c | (b & n1);
 endmodule
 ```
 The logic implementation after synthesis for multiple_module_opt.v. (Need to flatten the design before opt_clean -purge step)
-![showmul]()
+![showmul](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%203/Images/Optimization/mult_1.png)
