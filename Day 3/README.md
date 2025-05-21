@@ -56,7 +56,18 @@ module opt_check2 (input a , input b , output y);
         assign y = a?1:b;
 endmodule
 ```
-For opt_check.v, the assigned y = a?1:b. i.e. if a=1, y = 1 else y =b. The above logic is reduced to y = a+b. 
+For opt_check2.v, the assigned y = a?1:b. i.e. if a=1, y = 1 else y =b. The above logic is reduced to y = a+b. 
 ![check2_logic](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%203/Images/Optimization/check2_1.png)  
 After synthesis, we can find only OR gate.
 ![check2_show](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%203/Images/Optimization/check2_2.png)  
+
+### Optimization for opt_check3.v
+```
+module opt_check3 (input a , input b, input c , output y);
+	assign y = a?(c?b:0):0;
+endmodule
+```
+For opt_check3.v, the assigned y = a?(c?b:0):0. i.e. if a=1, y = c?b:0 else y =0. The above logic is reduced to y = ABC.  
+![logic3](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%203/Images/Optimization/check3_1.png)
+After synthesis, we can find one AND gate with 3 inputs a,b, and c.
+![synth3](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%203/Images/Optimization/check3_2.png)  
