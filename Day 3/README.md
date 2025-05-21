@@ -71,3 +71,37 @@ For opt_check3.v, the assigned y = a?(c?b:0):0. i.e. if a=1, y = c?b:0 else y =0
 ![logic3](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%203/Images/Optimization/check3_1.png)
 After synthesis, we can find one AND gate with 3 inputs a,b, and c.
 ![synth3](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%203/Images/Optimization/check3_2.png)  
+
+### Optimization for opt_check4.v
+```
+module opt_check4 (input a , input b, input c , output y);
+	assign y = a?(b?(a & c): c):(!c);
+endmodule
+```
+For opt_check4.v, the assigned y = a?(b?(a & c): c):(!c). The above logic is reduced to y = a ⊙ c.
+![logic4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%203/Images/Optimization/check4_1.jfif)
+After synthesis, we can find one XNOR gate with a and c inputs.
+![show4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%203/Images/Optimization/check4_2.png)  
+
+### Optimization for multiple_module_opt.v
+```
+module sub_module1(input a , input b , output y);
+ assign y = a & b;
+endmodule
+
+module sub_module2(input a , input b , output y);
+ assign y = a^b;
+endmodule
+
+module multiple_module_opt(input a , input b , input c , input d , output y);
+wire n1,n2,n3;
+
+sub_module1 U1 (.a(a) , .b(1'b1) , .y(n1));
+sub_module2 U2 (.a(n1), .b(1'b0) , .y(n2));
+sub_module2 U3 (.a(b), .b(d) , .y(n3));
+
+assign y = c | (b & n1); 
+endmodule
+```
+The logic implementation after synthesis for multiple_module_opt.v. (Need to flatten the design before opt_clean -purge step)
+![showmul]()
