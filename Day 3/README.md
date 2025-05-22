@@ -196,7 +196,7 @@ end
 
 endmodule
 ```
-In this scenario, we have two D flip-flops, Q1 and Q. When `reset = 1`, Q1 is set to 1. When `reset = 0`, Q1 will wait for the next rising clock edge to transition to 1, with some propagation delay. The output of Q1 is then fed as the input to Q. When `reset = 1`, Q will be set to 1, acting as a set operation rather than a reset. When `reset = 0`, Q will remain low for one clock cycle due to the propagation delay. At the next clock edge, Q will sample the value of Q1, which will be 1. **Due to this optimization can't be applied.**  
+In this scenario, we have two D flip-flops, Q1 and Q. When `reset = 1`, Q1 is set to 0. When `reset = 0`, Q1 will wait for the next rising clock edge to transition to 1, with some propagation delay. The output of Q1 is then fed as the input to Q. When `reset = 1`, Q will be set to 1, acting as a set operation rather than a reset. When `reset = 0`, Q will remain low for one clock cycle due to the propagation delay. At the next clock edge, Q will sample the value of Q1, which will be 1. **Due to this optimization can't be applied.**  
 ![logic](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%203/Images/Sequence%20Opt/L3_logic.png)  
 
 **Simluation** 
@@ -218,7 +218,7 @@ show
 ### Optimization for dff_const4.v  
 dff_const4.v
 ```
-module dff_const3(input clk, input reset, output reg q);
+module dff_const4(input clk, input reset, output reg q);
 reg q1;
 
 always @(posedge clk, posedge reset)
@@ -252,4 +252,44 @@ dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 show
 ```
-![show](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%203/Images/Sequence%20Opt/L4_show.png)
+![show](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%203/Images/Sequence%20Opt/L4_show.png)  
+
+### Optimization for dff_const5.v  
+dff_const5.v
+```
+module dff_const5(input clk, input reset, output reg q);
+reg q1;
+
+always @(posedge clk, posedge reset)
+begin
+	if(reset)
+	begin
+		q <= 1'b0;
+		q1 <= 1'b0;
+	end
+	else
+	begin
+		q1 <= 1'b1;
+		q <= q1;
+	end
+end
+
+endmodule
+```
+In this scenario, we have two D flip-flops, Q1 and Q. When `reset = 1`, Q1 is set to 0. When `reset = 0`, Q1 will wait for the next rising clock edge to transition to 1, with some propagation delay. The output of Q1 is then fed as the input to Q. When `reset = 1`, Q will be set to 0. When `reset = 0`, Q will remain low for one clock cycle due to the propagation delay. At the next clock edge, Q will sample the value of Q1, which will be 1. **Due to this optimization can't be applied.**   
+
+**Simluation** 
+
+![simulation](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%203/Images/Sequence%20Opt/L5_gtkwave.png)
+
+**Synthesis**
+
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog dff_const5.v
+synth -top dff_const5
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+![show](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%203/Images/Sequence%20Opt/L5_show.png)
