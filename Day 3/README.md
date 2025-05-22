@@ -105,3 +105,34 @@ endmodule
 ```
 The logic implementation after synthesis for multiple_module_opt.v. (Need to flatten the design before opt_clean -purge step)
 ![showmul](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%203/Images/Optimization/mult_1.png)
+
+## Sequential logic optimization
+
+### Optimization for dff_const1.v
+```
+module dff_const1(input clk, input reset, output reg q);
+always @(posedge clk, posedge reset)
+begin
+	if(reset)
+		q <= 1'b0;
+	else
+		q <= 1'b1;
+end
+
+endmodule
+```
+![logic_here](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%203/Images/Sequence%20Opt/L1_logic.png)
+
+For ddf_const1, as long as the reset is held high (reset = 1), the output q will remain low (q = 0). When the reset = 0, the value of q will not immediately transition to 1. Instead, it will wait for the next rising clock edge to update its value. So that's the reason **optimization can't be applied here**.
+![waveform](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%203/Images/Sequence%20Opt/L1_gtkwave.png)
+
+*Synthesis* 
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog dff_const1.v
+synth -top dff_const1
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+![show](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%203/Images/Sequence%20Opt/L1_show.png)
