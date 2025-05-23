@@ -295,7 +295,7 @@ show
 ![show](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%203/Images/Sequence%20Opt/L5_show.png)
 
 ## Sequential Optimisations for Unused Outputs
-### Optimization for 3 3-bit up counter with q[0] used (counter_opt.v)
+### Optimization for 3-bit up counter with q[0] used (counter_opt.v)
 ```
 module counter_opt (input clk , input reset , output q);
 reg [2:0] count;
@@ -312,7 +312,8 @@ end
 endmodule
 ```
 The logic of the counter uses only q[0]. So the **optimization can be applied here**, which is explained in the image below. 
-![logic1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%203/Images/Unused%20output/L1_logic.png)
+![logic1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%203/Images/Unused%20output/L1_logic.png)  
+
 **Synthesis**
 ```
 read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
@@ -324,3 +325,33 @@ show
 ```
 Only one flop is seen after the synthesis process. 
 ![sythn](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%203/Images/Unused%20output/L1_show.png)
+
+### Optimization for 3-bit up counter (counter_opt2.v)
+Example of a counter where all the bits are used. 
+```
+module counter_opt (input clk , input reset , output q);
+reg [2:0] count;
+assign q = (count[2:0] == 3'b100);
+
+always @(posedge clk ,posedge reset)
+begin
+	if(reset)
+		count <= 3'b000;
+	else
+		count <= count + 1;
+end
+
+endmodule
+```
+**Synthesis**
+```
+read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog counter_opt2.v
+synth -top counter_opt
+dfflibmap -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+![stats](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%203/Images/Unused%20output/L2_stat.png)
+![show](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%203/Images/Unused%20output/L2_show.png)
+![proof](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%203/Images/Unused%20output/L2_proff.png)
