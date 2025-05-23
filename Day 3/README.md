@@ -31,11 +31,11 @@ Example of sequential constant propagation shown below in a D flip flop with asy
 
 ```
 yosys
-read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 read_verilog opt_check.v 
 synth -top opt_check
 opt_clean -purge # to optimize / to remove redundant logic 
-abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 show
 ```
 ### Optimization for opt_check.v
@@ -133,11 +133,11 @@ For ddf_const1, as long as the reset is held high (reset = 1), the output q will
 **Synthesis**
 
 ```
-read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 read_verilog dff_const1.v
 synth -top dff_const1
-dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+dfflibmap -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 show
 ```
 ![show](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%203/Images/Sequence%20Opt/L1_show_stat.png)  
@@ -165,11 +165,11 @@ endmodule
 **Synthesis**
 
 ```
-read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 read_verilog dff_const2.v
 synth -top dff_const2
-dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+dfflibmap -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 show
 ```
 ![show](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%203/Images/Sequence%20Opt/L2_show.png)  
@@ -206,11 +206,11 @@ In this scenario, we have two D flip-flops, Q1 and Q. When `reset = 1`, Q1 is se
 **Synthesis**
 
 ```
-read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 read_verilog dff_const3.v
 synth -top dff_const3
-dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+dfflibmap -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 show
 ```
 ![show](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%203/Images/Sequence%20Opt/L3_show.png)
@@ -245,11 +245,11 @@ endmodule
 **Synthesis**
 
 ```
-read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 read_verilog dff_const4.v
 synth -top dff_const4
-dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+dfflibmap -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 show
 ```
 ![show](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%203/Images/Sequence%20Opt/L4_show.png)  
@@ -285,11 +285,42 @@ In this scenario, we have two D flip-flops, Q1 and Q. When `reset = 1`, Q1 is se
 **Synthesis**
 
 ```
-read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 read_verilog dff_const5.v
 synth -top dff_const5
-dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+dfflibmap -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 show
 ```
 ![show](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%203/Images/Sequence%20Opt/L5_show.png)
+
+## Sequential Optimisations for Unused Outputs
+### Optimization for 3 3-bit up counter with q[0] used (counter_opt.v)
+```
+module counter_opt (input clk , input reset , output q);
+reg [2:0] count;
+assign q = count[0];
+
+always @(posedge clk ,posedge reset)
+begin
+	if(reset)
+		count <= 3'b000;
+	else
+		count <= count + 1;
+end
+
+endmodule
+```
+The logic of the counter uses only q[0]. So the **optimization can be applied here**, which is explained in the image below. 
+![logic1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%203/Images/Unused%20output/L1_logic.png)
+**Synthesis**
+```
+read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog counter_opt.v
+synth -top counter_opt
+dfflibmap -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+Only one flop is seen after the synthesis process. 
+![sythn](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%203/Images/Unused%20output/L1_show.png)
