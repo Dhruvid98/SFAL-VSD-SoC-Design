@@ -13,4 +13,11 @@
 *GLS flow using iVerilog*
 ![flow](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%204/Images/GLS%20flow/GLS_flow.png)  
 
+## Synthesis Simulation Mismatches
+
+It happens because of the following reasons:-
+* Missing sensitivity list
+* Blocking vs non-blocking assignments
+* Non-standard verilog coding
+
 
