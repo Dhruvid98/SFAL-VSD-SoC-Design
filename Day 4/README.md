@@ -20,13 +20,13 @@ It happens because of the following reasons:-
 * Blocking vs non-blocking assignments
 * Non-standard Verilog coding
 
-### Missing Sensitivity list. 
+### 1. Missing Sensitivity list. 
 
 Screenshot below of RTL code for a 2:1 multiplexer (MUX2:1) uses the sensitivity list always @(Sel), the output Y will only respond to changes in the `sel`. This means any changes to the data inputs i0 and i1 will be ignored unless. As a result, the design behaves potentially like a latch or a double-edge triggered flip-flop. However, when we use always @(*) the code on the right side, the sensitivity list automatically includes all signal changes. This ensures that any change in any of the inputs will trigger the block.  
 
 ![logic](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%204/Images/Missing%20sensitivity%20list/logic.png)  
 
-### Blocking and Non-blocking statements in Verilog 
+### 2. Blocking and Non-blocking statements in Verilog 
 
 Blocking and Non-blocking statements will come into picture when we are using **always** block. 
 
@@ -38,4 +38,7 @@ Blocking and Non-blocking statements will come into picture when we are using **
  * Non blocking statements
    - Represented by **<=**
    - Executes all the RHS when always block is entered and assigns to LHS
-   - Parallel execution (order doesn't matter) 
+   - Parallel execution (order doesn't matter)
+
+  ![blocking issue](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%204/Images/Blocking/Logic.png)  
+  The left side of the screenshot below gives us the correct execution. While the right side can lead to serious issues as d is assigned to q directly. So, choosing non-blocking statements is better.
