@@ -61,7 +61,7 @@ iverilog ternary_operator_mux.v tb_ternary_operator_mux.v
 gtkwave tb_ternary_operator_mux.vcd
 ```
 The waveform illustrates the simulation results of the RTL code for ternary_operator_mux.v. 
-![rtl_simulation]()  
+![rtl_simulation](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%204/Images/GLS%20flow/ternary_mux_rtl.png)  
 
 Command to run synthesis 
 ```
@@ -70,20 +70,20 @@ read_verilog ternary_operator_mux.v
 synth -top ternary_operator_mux
 abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 show
-write_verilog ternary_operator_mux_net.v
+write_verilog ternary_operator_mux_netlist.v
 ```
 
 Synthesis for ternary_operator_mux.v.
 
-![synth_waveform]()
+![synth_waveform](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%204/Images/GLS%20flow/ternary_synth.png)
 
 Commands to run GLS for ternary_operator_mux.v 
 ```
-iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v ternary_operator_mux_net.v tb_ternary_operator_mux.v
+iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v ternary_operator_mux_netlist.v tb_ternary_operator_mux.v
 ./a.out
 gtkwave tb_ternary_operator_mux.vcd
 ```
 
 The GLS output is shown in the screenshot below. 
 
-![gls_waveform]()
+![gls_waveform](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%204/Images/GLS%20flow/GLS_lab.png)
