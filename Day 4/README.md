@@ -112,7 +112,7 @@ gtkwave tb_bad_mux.vcd
 ```
 
 The waveform illustrates the simulation results of the RTL code for bad_mux.v.  
-![rtl_code_simu]() 
+![rtl_code_simu](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%204/Images/Missing%20sensitivity%20list/rtl_wave.png) 
 
 Synthesis for bad_mux.v.
 
@@ -127,7 +127,7 @@ write_verilog bad_mux_net.v
 
 The synthesis report of the mux cell, but not the flop.  
 
-![synth]()  
+![synth](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%204/Images/Missing%20sensitivity%20list/synth.png)  
 
 Commands to run GLS for bad_mux.v
 ```
@@ -137,4 +137,5 @@ gtkwave tb_bad_mux.vcd
 ```
 
 The following GLS output confirms correct functionality, contrasting with the HDL simulation and showing a mismatch between synthesis and simulation.
-![gls_output]()
+![gls_output](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%204/Images/Missing%20sensitivity%20list/GLS_wave.png)  
+![diff_mismatch](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%204/Images/Missing%20sensitivity%20list/diff.png)  
