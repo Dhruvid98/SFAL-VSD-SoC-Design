@@ -164,7 +164,7 @@ iverilog blocking_caveat.v tb_blocking_caveat.v
 gtkwave tb_blocking_caveat.vcd
 ```
 
-The screenshot below displays the HDL simulation waveform for blocking_caveat.v. Where `d` incorrectly reflects the old value of `x`, causing functional errors  
+The screenshot below displays the HDL simulation waveform for blocking_caveat.v. Where `d` incorrectly reflects the old value of `x`, causing functional errors    
 ![rtl_wave](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%204/Images/Blocking/rtl_gtkwave.png)  
 
 Synthesis for blocking_caveat.v  
@@ -189,5 +189,6 @@ gtkwave tb_blocking_caveat.vcd
 ```
 
 The following GLS output confirms that d reflects the correct value of x, ensuring accurate functionality. However, this differs from the HDL simulation, revealing a **synthesis simulation inconsistency**.
-![gls_out](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%204/Images/Blocking/gtk_wave.png)  
+![gls_out](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%204/Images/Blocking/gtk_wave.png) 
+
 ![diff_img](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%204/Images/Blocking/diff_rtl_gls.png)
