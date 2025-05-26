@@ -53,13 +53,14 @@ module ternary_operator_mux (input i0 , input i1 , input sel , output y);
 	endmodule
 ```
 
-Commands to run HDL simulation 
+Commands to run the HDL simulation 
 
 ```
 iverilog ternary_operator_mux.v tb_ternary_operator_mux.v
 ./a.out
 gtkwave tb_ternary_operator_mux.vcd
 ```
+
 The waveform illustrates the simulation results of the RTL code for ternary_operator_mux.v. 
 ![rtl_simulation](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%204/Images/GLS%20flow/ternary_mux_rtl.png)  
 
@@ -90,3 +91,50 @@ The GLS output is shown in the screenshot below.
 
 ### Bad mux :- Bad_mux.v 
 Here, the always block is executed on the `sel` signal only. Because of that, the change in input signal of i0 and i1 is ignored, making it work as a flop rather than a mux. 
+```
+module bad_mux (input i0 , input i1 , input sel , output reg y);
+always @ (sel)
+begin
+	if(sel)
+		y <= i1;
+	else 
+		y <= i0;
+end
+endmodule
+```
+
+Commands to run the HDL simulation  
+
+```
+iverilog bad_mux.v tb_bad_mux.v
+./a.out
+gtkwave tb_bad_mux.vcd
+```
+
+The waveform illustrates the simulation results of the RTL code for bad_mux.v.  
+![rtl_code_simu]() 
+
+Synthesis for bad_mux.v.
+
+```
+read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog bad_mux.v
+synth -top bad_mux
+abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+write_verilog bad_mux_net.v
+```
+
+The synthesis report of the mux cell, but not the flop.  
+
+![synth]()  
+
+Commands to run GLS for bad_mux.v
+```
+iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v bad_mux_net.v tb_bad_mux.v
+./a.out
+gtkwave tb_bad_mux.vcd
+```
+
+The following GLS output confirms correct functionality, contrasting with the HDL simulation and showing a mismatch between synthesis and simulation.
+![gls_output]()
