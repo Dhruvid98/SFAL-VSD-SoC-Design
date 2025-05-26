@@ -43,7 +43,7 @@ Blocking and Non-blocking statements will come into picture when we are using **
 ![blocking issue](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%204/Images/Blocking/Logic.png)  
 The left side of the screenshot below gives us the correct execution. While the right side can lead to serious issues as d is assigned to q directly. So, choosing non-blocking statements is better.
 
-## Labs on GLS and Synthesis-Simulation Mismatch
+## Lab on GLS and Synthesis-Simulation Mismatch
 
 ### Ternary operator mux :- ternary_operator_mux.v
 
@@ -86,4 +86,7 @@ gtkwave tb_ternary_operator_mux.vcd
 
 The GLS output is shown in the screenshot below. 
 
-![gls_waveform](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%204/Images/GLS%20flow/GLS_lab.png)
+![gls_waveform](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%204/Images/GLS%20flow/GLS_lab.png)  
+
+### Bad mux :- Bad_mux.v 
+Here, the always block is executed on the `sel` signal only. Because of that, the change in input signal of i0 and i1 is ignored, making it work as a flop rather than a mux. 
