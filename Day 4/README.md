@@ -89,7 +89,7 @@ The GLS output is shown in the screenshot below.
 
 ![gls_waveform](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%204/Images/GLS%20flow/GLS_lab.png)  
 
-### Bad mux :- Bad_mux.v 
+### Missing sensitivity mismatch (bad_mux.v) 
 Here, the always block is executed on the `sel` signal only. Because of that, the change in input signal of i0 and i1 is ignored, making it work as a flop rather than a mux. 
 ```
 module bad_mux (input i0 , input i1 , input sel , output reg y);
@@ -136,6 +136,58 @@ iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_
 gtkwave tb_bad_mux.vcd
 ```
 
-The following GLS output confirms correct functionality, contrasting with the HDL simulation and showing a mismatch between synthesis and simulation.
+The following GLS output confirms correct functionality, contrasting with the HDL simulation and showing a **mismatch between synthesis and simulation**.
 ![gls_output](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%204/Images/Missing%20sensitivity%20list/GLS_wave.png)  
 ![diff_mismatch](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%204/Images/Missing%20sensitivity%20list/diff.png)  
+
+### Mismatch for Blocking Statements (blocking_caveat.v) 
+
+```
+module blocking_caveat (input a , input b , input  c, output reg d); 
+reg x;
+always @ (*)
+begin
+	d = x & c;
+	x = a | b;
+end
+endmodule
+```
+
+The logic to simulate the blocking_caveat.v 
+![logical](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%204/Images/Blocking/logic_to_code.png)
+
+Commands to run the HDL simulation  
+
+```
+iverilog blocking_caveat.v tb_blocking_caveat.v
+./a.out
+gtkwave tb_blocking_caveat.vcd
+```
+
+The screenshot below displays the HDL simulation waveform for blocking_caveat.v. Where `d` incorrectly reflects the old value of `x`, causing functional errors  
+![rtl_wave](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%204/Images/Blocking/rtl_gtkwave.png)  
+
+Synthesis for blocking_caveat.v  
+
+```
+read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog blocking_caveat.v
+synth -top blocking_caveat
+abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+write_verilog blocking_caveat_netlist.v
+```
+
+The synthesis report and logic synthesis of blocking_caveat.   
+![synth_dia](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%204/Images/Blocking/synth.png)  
+
+Commands to run GLS for blocking_caveat.v  
+```
+iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v blocking_caveat_netlist.v tb_blocking_caveat.v
+./a.out
+gtkwave tb_blocking_caveat.vcd
+```
+
+The following GLS output confirms that d reflects the correct value of x, ensuring accurate functionality. However, this differs from the HDL simulation, revealing a **synthesis simulation inconsistency**.
+![gls_out](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%204/Images/Blocking/gtk_wave.png)  
+![diff_img](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%204/Images/Blocking/diff_rtl_gls.png)
