@@ -1,3 +1,7 @@
 # Introduction to Logic Synthesis 
 
-* How to know the right combination for cell selection for synthesis?
+*Tools used for lab session 
+-Iverilog - for Verilog compilation and simulation
+-GTKwave - for viewing the simulation output
+-Synopsys Design Compiler - for logic synthesis
+-Skywater 130nm Library - for standard cell library
