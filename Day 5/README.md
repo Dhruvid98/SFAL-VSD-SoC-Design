@@ -1,6 +1,6 @@
 # Introduction to Logic Synthesis 
 
-*Tools used for lab session 
+*Tools used for the lab session  
 -Iverilog - for Verilog compilation and simulation
 -GTKwave - for viewing the simulation output
 -Synopsys Design Compiler - for logic synthesis
