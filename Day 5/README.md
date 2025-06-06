@@ -28,16 +28,18 @@
 Example of synthesis 
 ![example of syn](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/Intro/synth_exple.png)  
 
-What will be the correct implementation based on different implementation 
+What will be the correct implementation based on the different implementations 
 ![implement option](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/Intro/different_implement.png)  
 
 Standard cell details for each cell.
 ![std_cell_details](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/Intro/std_Cell_detail.png)  
 
-Implementation 3 is the best scenario based on below screen shot.
-![implement]()  
+Implementation 3 is the best scenario based on below.
+![implement](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/Intro/final_impl.png)  
 
-* But will implementation 3 will always the best case?
-   - No. It depends on if the logic is present in the hold-sensitive path or if additonal buffers are added then it will add to both power and area.  
+* Will implementation 3 always be the best case?
+   - No. It depends on whether the logic is present in the hold-sensitive path. If additional buffers are added, then it will impact both power and area.
 
-All three implementations are valid, and the choice will be made depending on the requirements. The *constraints* define these needs. The synthesizer is guided by constraints to choose the library cells that are most suited for the design.
+* In digital circuit design, our goal is to ensure that the circuit is logically correct, electrically correct, and meets all timing requirements. 
+* All three implementations are valid, and the choice will be made depending on the requirements. The *constraints* define these needs. The synthesizer is guided by constraints to choose the library cells that are most suited for the design.
+
