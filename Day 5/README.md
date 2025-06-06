@@ -10,28 +10,29 @@
 * Digital logic is a **switching function** used in automation and decision-making processes
 * The behavioral model of design is expressed in the HDL programming language known as Register Transfer Logic, which includes Verilog and VHDL.
 * **Synthesis** is the process of converting RTL to gate-level translation.
-![into_pic1]()  
+![into_pic1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/Intro/Screenshot%202025-06-05%20222726.png)  
 
 **.LIB file**
 *.lib file is a collection of standard cells.
-![.lib why]()
+![.lib why](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/Intro/Screenshot%202025-06-05%20223208.png)
 
 ### Why do we need different flavors of cells?
-![why different]()  
-![diff between fast and slow]()
+![why different](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/Intro/Screenshot%202025-06-05%20223453.png)  
+![slow](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/Intro/Screenshot%202025-06-05%20223654.png)  
+![diff_slow_fast](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/Intro/Screenshot%202025-06-05%20223832.png)
 
 ### How to select cells 
 * The guidance offered to the synthesizer in the form of  **CONSTRAINTS**
-![synthesizer]()
+![synthesizer](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/Intro/Screenshot%202025-06-05%20224145.png)
 
 Example of synthesis 
-![example of syn]()  
+![example of syn](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/Intro/synth_exple.png)  
 
-What will be correct implementation based on different implementation 
-![implement option]()  
+What will be the correct implementation based on different implementation 
+![implement option](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/Intro/different_implement.png)  
 
 Standard cell details for each cell.
-![std_cell_details]()  
+![std_cell_details](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/Intro/std_Cell_detail.png)  
 
 Implementation 3 is the best scenario based on below screen shot.
 ![implement]()  
