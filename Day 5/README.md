@@ -29,9 +29,11 @@ Example of synthesis
 ![example of syn](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/Intro/synth_exple.png)  
 
 What will be the correct implementation based on the different implementations 
+
 ![implement option](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/Intro/different_implement.png)  
 
 Standard cell details for each cell.
+
 ![std_cell_details](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/Intro/std_Cell_detail.png)  
 
 Implementation 3 is the best scenario based on below.
@@ -45,22 +47,24 @@ Implementation 3 is the best scenario based on below.
 
 ## Introduction to Design Compiler (DC)
 
-### What is Design Compiler 
+#### What is Design Compiler 
 ![dc what](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/DC/DC.png)  
 
-### Terminologies associated with Design Compiler
+#### Terminologies associated with Design Compiler
 ![termi with dc](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/DC/terminologies.png)  
 
-### Synopsys Design Contraints 
+#### Synopsys Design Contraints 
 ![SDC](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/DC/SDC.png)  
 
-### Setting up Design Compiler (DC)
+#### Setting up Design Compiler (DC)
 ![DC setup](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/DC/Dc%20setup.png)
 
-### Implementation flow of ASIC 
+#### Implementation flow of ASIC 
 * Steps in converting RTL to physical database (GDS)
+
 ![asic flow](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/DC/ASIC%20flow.png)
 
-### DC Synthesis flow 
+#### DC Synthesis flow 
 * Linking the design means to know that all the information that is present in the design can be implemented in the form of standard cell libraries.
+
 ![dc syhntesis flow](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/DC/DC_synthesis_flow.png)
