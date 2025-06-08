@@ -43,3 +43,24 @@ Implementation 3 is the best scenario based on below.
 * In digital circuit design, our goal is to ensure that the circuit is logically correct, electrically correct, and meets all timing requirements. 
 * All three implementations are valid, and the choice will be made depending on the requirements. The *constraints* define these needs. The synthesizer is guided by constraints to choose the library cells that are most suited for the design.
 
+## Introduction to Design Compiler (DC)
+
+### What is Design Compiler 
+![dc what](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/DC/DC.png)  
+
+### Terminologies associated with Design Compiler
+![termi with dc](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/DC/terminologies.png)  
+
+### Synopsys Design Contraints 
+![SDC](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/DC/SDC.png)  
+
+### Setting up Design Compiler (DC)
+![DC setup](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/DC/Dc%20setup.png)
+
+### Implementation flow of ASIC 
+* Steps in converting RTL to physical database (GDS)
+![asic flow](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/DC/ASIC%20flow.png)
+
+### DC Synthesis flow 
+* Linking the design means to know that all the information that is present in the design can be implemented in the form of standard cell libraries.
+![dc syhntesis flow](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/DC/DC_synthesis_flow.png)
