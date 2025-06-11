@@ -100,12 +100,12 @@ The screenshot above appears after executing the `read_verilog` command in Desig
 
 A notable warning in the output is:
 **Warning: Can't read link_library file 'your_library.db'. (UID-3)**  
-This means that the DC compiler is unable to locate or read the file your_library.db, that was created for dummy purpose. To resolve this, you need to update the link_library variable to point to the correct technology library. The message compiling source file`/home/dhruvi/sky130RTLDesignAndSynthesisWorkshop/DC_WORKSHOP/verilog_files/lab1_flop_with_en.v` indicates that DC is compiling the verilog source file, and it infers the registers or memory device which is 1-bit flip-flop with asynchronous reset.   
+This means that the DC compiler is unable to locate or read the file your_library.db, that was created for dummy purpose. To resolve this, you need to update the link_library variable to point to the correct technology library. The message compiling source file`/home/dhruvi/sky130RTLDesignAndSynthesisWorkshop/DC_WORKSHOP/verilog_files/lab1_flop_with_en.v` indicates that DC is compiling the verilog source file, and it infers the registers or memory device which is 1-bit flip-flop with asynchronous reset. We need to link the design properly and point to the proper technology library.   
 
-We need to link the design properly and point to the proper technology library.  
+![write](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/Lab1/write_verilog.png) 
 
-When the below commands is executed to generate the netlist, the error **Can't read the link library 'your_library.db'** is found. This error occurs because no standard cell library was provided to the Design Compiler. As a result, the tool is using gtech cells, and the netlist is written using dummy cells.
-![write](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/Lab1/write_verilog.png)  
+When the above commands is executed to generate the netlist, the error **Can't read the link library 'your_library.db'** is found. This error occurs because no standard cell library was provided to the Design Compiler. As a result, the tool is using gtech cells, and the netlist is written using dummy cells.  
+ 
 Below is the lab1_net.v is opened using the command sh gvim lab1_net.v looks like as shown below. The netlist is not in form of sky130 library cells.
 ```
 module lab1_flop_with_en ( res, clk, d, en, q );
