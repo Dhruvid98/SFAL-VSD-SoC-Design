@@ -73,10 +73,32 @@ Implementation 3 is the best scenario based on below.
 DC is invoked in folder `/home/dhruvi/sky130RTLDesignAndSynthesisWorkshop`. Commands to invoke the Design compiler (DC compiler)
 ```
 csh
-dc_shell \\ invoke dc
+dc_shell // invoke dc
 echo $target_library // your_library.db
 echo $link_library // * your_library.db 
 read_verilog DC_WORKSHOP/verilog_files/lab1_flop_with_en.v
 write -f verilog -out lab1_net_sky130.v
 sh gvim lab1_net_sky130.v
 ```
+Here **your_library.db** is imaginary non-existent library, its a dummy library invoked in the DC.  
+
+Verilog code for `lab1_flop_with_en.v`(DFF with Asynchronous Reset)
+```
+module lab1_flop_with_en ( input res , input clk , input d , input en , output reg q);
+always @ (posedge clk , posedge res)
+begin
+	if(res)
+		q <= 1'b0;
+	else if(en)
+		q <= d;	
+end
+endmodule
+```
+![read_verilog]()  
+
+The screenshot above appears after executing the `read_verilog` command in Design Compiler (DC). This output includes several important messages related to the compilation and design understanding process. One of the key components mentioned is `gtech.db`, which is a virtual library used internally by DC to represent generic technology components. It plays a crucial role in helping the tool understand the design before mapping it to a specific technology library. The tool also invokes the HDL Compiler (or Presto HDL Compiler) to analyze and compile the provided Verilog source files.
+
+A notable warning in the output is:
+**Warning: Can't read link_library file 'your_library.db'. (UID-3)**  
+This means that the DC compiler is unable to locate or read the file your_library.db, that was created for dummy purpose. To resolve this, you need to update the link_library variable to point to the correct technology library. The message compiling source file`/home/dhruvi/sky130RTLDesignAndSynthesisWorkshop/DC_WORKSHOP/verilog_files/lab1_flop_with_en.v` indicates that DC is compiling the verilog source file, and it infers the registers or memory device which is 1-bit flip-flop with asynchronous reset. 
+We need to link the design properly and point to the proper technology library.
