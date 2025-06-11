@@ -134,7 +134,7 @@ write -f verilog -out lab1_net_sky130.v
 sh gvim lab1_net_sky130.v
 ```
 
-There may be multiple libraries in DC memory. * represents all the libraries already loaded in DC memory. So we are appending an additional library without overwriting the already loaded library. Below is the correct verilog netlist generated with skywater130 library. 
+There may be multiple libraries in DC memory. * represents all the libraries already loaded in DC memory. So we are appending an additional library without overwriting the already loaded library. Below is the correct Verilog netlist generated with the skywater130 library. 
 
 ```
 module lab1_flop_with_en ( res, clk, d, en, q );
@@ -147,3 +147,25 @@ module lab1_flop_with_en ( res, clk, d, en, q );
   sky130_fd_sc_hd__clkinv_1 U6 ( .A(res), .Y(n2) );
 endmodule
 ```
+
+## Lab2 - Intro to DDC GUI with Design Vision
+Command to write the DDC file after compilation
+```
+write -f ddc -out lab1.ddc
+```
+
+Commands to launch Design Vision 
+
+```
+csh
+design_vision
+```
+
+Once the GUI is opened, the command to open DDC file
+```
+read_ddc lab1.ddc
+```
+When using the GUI, the `read_verilog` command reads only the Verilog source file into the tool. Whereas the read_ddc command loads both the design and the associated library information. A DDC file captures and stores all relevant design data, including technology libraries, within the tool's memory for use in that session.  
+
+![design](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/Lab2/design_v.png)  
+![explain](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/Lab2/pic2.png)
