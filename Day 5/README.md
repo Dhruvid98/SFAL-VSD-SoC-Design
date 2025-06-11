@@ -68,3 +68,15 @@ Implementation 3 is the best scenario based on below.
 * Linking the design means to know that all the information that is present in the design can be implemented in the form of standard cell libraries.
 
 ![dc syhntesis flow](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/DC/DC_synthesis_flow.png)
+
+## Lab 1 Invoking DC basic setup
+DC is invoked in folder `/home/dhruvi/sky130RTLDesignAndSynthesisWorkshop`. Commands to invoke the Design compiler (DC compiler)
+```
+csh
+dc_shell \\ invoke dc
+echo $target_library // your_library.db
+echo $link_library // * your_library.db 
+read_verilog DC_WORKSHOP/verilog_files/lab1_flop_with_en.v
+write -f verilog -out lab1_net_sky130.v
+sh gvim lab1_net_sky130.v
+```
