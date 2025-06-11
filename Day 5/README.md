@@ -94,7 +94,7 @@ begin
 end
 endmodule
 ```
-![read_verilog]()  
+![read_verilog](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/Lab1/read_verilog.png)  
 
 The screenshot above appears after executing the `read_verilog` command in Design Compiler (DC). This output includes several important messages related to the compilation and design understanding process. One of the key components mentioned is `gtech.db`, which is a virtual library used internally by DC to represent generic technology components. It plays a crucial role in helping the tool understand the design before mapping it to a specific technology library. The tool also invokes the HDL Compiler (or Presto HDL Compiler) to analyze and compile the provided Verilog source files.
 
@@ -105,7 +105,7 @@ This means that the DC compiler is unable to locate or read the file your_librar
 We need to link the design properly and point to the proper technology library.  
 
 When the below commands is executed to generate the netlist, the error **Can't read the link library 'your_library.db'** is found. This error occurs because no standard cell library was provided to the Design Compiler. As a result, the tool is using gtech cells, and the netlist is written using dummy cells.
-![write]()  
+![write](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/Lab1/write_verilog.png)  
 Below is the lab1_net.v is opened using the command sh gvim lab1_net.v looks like as shown below. The netlist is not in form of sky130 library cells.
 ```
 module lab1_flop_with_en ( res, clk, d, en, q );
@@ -118,7 +118,9 @@ module lab1_flop_with_en ( res, clk, d, en, q );
         1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), .synch_enable(en) );
 endmodule
 ```
- By setting correct target_library and link_library pointing to the std cell .db file can write the netlist in sky130 library cells. Below are the correct commands to create netlist in sky130 lib using DC compiler. 
+
+ By setting correct target_library and link_library pointing to the std cell .db file, we can write the netlist in sky130 library cells. Below are the correct commands to create netlist in sky130 lib using DC compiler. 
+ 
  ```
 csh
 dc_shell
@@ -130,4 +132,18 @@ link
 compile
 write -f verilog -out lab1_net_sky130.v
 sh gvim lab1_net_sky130.v
+```
+
+There may be multiple libraries in DC memory. * represents all the libraries already loaded in DC memory. So we are appending an additional library without overwriting the already loaded library. Below is the correct verilog netlist generated with skywater130 library. 
+
+```
+module lab1_flop_with_en ( res, clk, d, en, q );
+  input res, clk, d, en;
+  output q;
+  wire   n2, n3;
+
+  sky130_fd_sc_hd__dfrtp_1 q_reg ( .D(n3), .CLK(clk), .RESET_B(n2), .Q(q) );
+  sky130_fd_sc_hd__mux2_1 U5 ( .A0(q), .A1(d), .S(en), .X(n3) );
+  sky130_fd_sc_hd__clkinv_1 U6 ( .A(res), .Y(n2) );
+endmodule
 ```
