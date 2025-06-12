@@ -168,4 +168,14 @@ read_ddc lab1.ddc
 When using the GUI, the `read_verilog` command reads only the Verilog source file into the tool. Whereas the read_ddc command loads both the design and the associated library information. A DDC file captures and stores all relevant design data, including technology libraries, within the tool's memory for use in that session.  
 
 ![design](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/Lab2/design_v.png)  
-![explain](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/Lab2/pic2.png)
+![explain](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/Lab2/pic2.png)  
+
+## Lab 3 - Synopsys Design Compiler setup
+`.synopsys_dc.setup` file is used to print all repetitive tasks that are used for setting up the tool. The user's DC tool invocation directory overwrites the default .synopsys_dc.setup that is installed under DC.  
+![dc_setup]()  
+
+The setup file by gvim .synopsys_dc.setup and copy paste the target library and link library commands as below. 
+```
+set target_library /home/dhruvi/sky130RTLDesignAndSynthesisWorkshop/DC_WORKSHOP/lib/sky130_fd_sc_hd__tt_025C_1v80.db
+set link_library {* $target_library}
+```
