@@ -172,7 +172,7 @@ When using the GUI, the `read_verilog` command reads only the Verilog source fil
 
 ## Lab 3 - Synopsys Design Compiler setup
 `.synopsys_dc.setup` file is used to print all repetitive tasks that are used for setting up the tool. The user's DC tool invocation directory overwrites the default .synopsys_dc.setup that is installed under DC.  
-![dc_setup]()  
+![dc_setup](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/Lab3/dc_setup.png)  
 
 The setup file by gvim .synopsys_dc.setup and copy paste the target library and link library commands as below. 
 ```
