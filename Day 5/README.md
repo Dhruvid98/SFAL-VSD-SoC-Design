@@ -174,8 +174,16 @@ When using the GUI, the `read_verilog` command reads only the Verilog source fil
 `.synopsys_dc.setup` file is used to print all repetitive tasks that are used for setting up the tool. The user's DC tool invocation directory overwrites the default .synopsys_dc.setup that is installed under DC.  
 ![dc_setup](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/Lab3/dc_setup.png)  
 
-The setup file by gvim .synopsys_dc.setup and copy paste the target library and link library commands as below. 
+The setup file by gvim .synopsys_dc.setup and copy and paste the target library and link library commands as below. 
 ```
 set target_library /home/dhruvi/sky130RTLDesignAndSynthesisWorkshop/DC_WORKSHOP/lib/sky130_fd_sc_hd__tt_025C_1v80.db
 set link_library {* $target_library}
 ```
+
+## Tool Command Language (TCL) Refresher
+In TCL, the placement of `{ }` is very important. TCL has very strict syntax rules for brace usage.  
+
+![set command](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/TCL_intro/set_command.png)  
+![while command](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/TCL_intro/while_condition.png)  
+![for command](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/TCL_intro/for_loop.png)  
+![foreach command](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/TCL_intro/foreach.png)
