@@ -1,4 +1,4 @@
-# Day 0
+# Day 0 : Chip development flow and Tool Installation 
 ## Summary of Chip development flow 
 ### Step 1: Chip Modelling 
 * Application creation
