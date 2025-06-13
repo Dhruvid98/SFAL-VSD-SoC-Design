@@ -223,7 +223,8 @@ while {$j < 21} {
 }
 ```
 
-The output for the `multiplication` table
+The output for the `multiplication` table  
+
 ![image5](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/TCl_lab/image5.png)
 
 Syntax to read from a `list`. 
@@ -236,5 +237,6 @@ foreach myvar $my_list {
 echo $mylist;
 ```
 
-The output from reading a `list`.
+The output from reading a `list`.  
+
 ![image6](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/TCl_lab/image6.png)
