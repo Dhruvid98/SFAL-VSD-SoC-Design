@@ -1,4 +1,4 @@
-# Introduction to Logic Synthesis 
+# Day 5: Introduction to Logic Synthesis 
 
 - Tools used for the lab session  
   * Iverilog - Verilog compilation and simulation
