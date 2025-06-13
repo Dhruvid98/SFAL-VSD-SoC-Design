@@ -187,3 +187,54 @@ In TCL, the placement of `{ }` is very important. TCL has very strict syntax rul
 ![while command](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/TCL_intro/while_condition.png)  
 ![for command](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/TCL_intro/for_loop.png)  
 ![foreach command](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/TCL_intro/foreach.png)
+
+## Lab 4: TCL scripting
+Command to launch gvim within DC compiler
+```
+sh gvim &
+```
+![image1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/TCl_lab/image1.png)
+![image2](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/TCl_lab/image2.png)  
+
+Command to see `or` gates in `.lib` file.  
+![image3](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/TCl_lab/image%203.png)  
+
+Print each `or` gate in .lib file  
+
+```
+foreach_in_collection my_var [get_lib_cells */*or*] {
+	set my_var_name [get_object_name $my_var];
+	echo $my_var_name;
+}
+```
+
+The output for `foreach_in_collection`
+![image4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/TCl_lab/image4.png)
+
+Print the `multiplication` table
+```
+echo "Printing Multiplication Table"
+
+set i 10;
+set j 1;
+while {$j < 21} {
+	echo [expr $i*$j];
+	incr j;
+}
+```
+
+The output for the `multiplication` table
+![image5](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/TCl_lab/image5.png)
+
+Syntax to read from a `list`. 
+```
+set my_list [list a b c d e f];
+
+foreach myvar $my_list {
+	echo $myvar;
+}
+echo $mylist;
+```
+
+The output from reading a `list`.
+![image6](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%205/Image/TCl_lab/image6.png)
