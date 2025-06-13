@@ -1,4 +1,4 @@
-# Combinational and Sequential Optimization 
+# Day 3: Combinational and Sequential Optimization 
 
 ## Introduction to Optimization 
 ### Combinational Optimization
