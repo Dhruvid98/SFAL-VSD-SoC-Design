@@ -1,4 +1,4 @@
-# GLS, Blocking vs Non-blocking and Synthesis-Simulation Mismatch
+# Day 4 : GLS, Blocking vs Non-blocking and Synthesis-Simulation Mismatch
 
 ## Gate Level Simulation
 
