@@ -234,7 +234,7 @@ set my_list [list a b c d e f];
 foreach myvar $my_list {
 	echo $myvar;
 }
-echo $mylist;
+echo $my_list;
 ```
 
 The output from reading a `list`.  
