@@ -7,8 +7,9 @@
 
 ### Water Bucket Analogy for Delay
 1. The inflow of water translates to the inflow of current. Fast current sourcing (fast rise time of input) => less delay.
-2. Delay is directly proportional to load capacitance  
-So, delay is a function of input transition (inflow) and load capacitance (the size of the bucket).
+2. Delay is directly proportional to load capacitance
+
+So, delay is a function of **input transition (inflow)** and **load capacitance (the size of the bucket)**.
 
 ![water_a_1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/water_a_1.png)  
 ![water_a_2](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/water_a_2.png)  
