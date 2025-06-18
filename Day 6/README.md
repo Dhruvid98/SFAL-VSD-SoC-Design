@@ -21,3 +21,12 @@ So, delay is a function of **input transition (inflow)** and **load capacitance 
 ![combi_delay](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/timing_Arc_combi.png)  
 ![seq_delay](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/timing_arc_seq.png)  
 ![diff](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/timiing_arc_latch_ffp.png)
+
+## What are constraints? 
+The `critical path` determines the maximum achievable clock frequency in a design. The critical path is used to determine the clock frequency. If the critical path delay is reduced, a better frequency can be achieved. We need to tell the tools to pick library cells with specific delays. This is defined through constraints.  
+
+![timing_Arc](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/Constraints/timings_arc.png)  
+![img2](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/Constraints/img2.png)  
+![img3](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/Constraints/img3.png)  
+
+* How much delay is acceptable? How to control that? 
