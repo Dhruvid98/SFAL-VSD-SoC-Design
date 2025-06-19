@@ -34,4 +34,7 @@ The `critical path` determines the maximum achievable clock frequency in a desig
 Assuming a clock frequency of 500 MHz (corresponding to a 2 ns clock period), and considering that each flip-flop introduces a delay of 0.5 ns, the total sequential element delay would be 1 ns. This leaves only 1 ns available for the combinational logic within the clock cycle. As illustrated in the screenshot below, it is ultimately the clock period that constrains the allowable delay for the combinational logic in the timing path.  
 ![img4]()  
 
-** Constraints that can be specified **
+**Constraints that can be specified**  
+i. The constraint given to the synthesis tool is the `acceptable clock period as constraint`. So the tool will pick appropriate cells for the combinational logic.  
+
+ii. Input constraint 
