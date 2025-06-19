@@ -32,9 +32,27 @@ The `critical path` determines the maximum achievable clock frequency in a desig
 * How much delay is acceptable? How to control that?
 
 Assuming a clock frequency of 500 MHz (corresponding to a 2 ns clock period), and considering that each flip-flop introduces a delay of 0.5 ns, the total sequential element delay would be 1 ns. This leaves only 1 ns available for the combinational logic within the clock cycle. As illustrated in the screenshot below, it is ultimately the clock period that constrains the allowable delay for the combinational logic in the timing path.  
-![img4]()  
+![img4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/Constraints/img4.png)  
 
 **Constraints that can be specified**  
-i. The constraint given to the synthesis tool is the `acceptable clock period as constraint`. So the tool will pick appropriate cells for the combinational logic.  
 
-ii. Input constraint 
+*1. The constraint given to the synthesis tool is the `acceptable clock period as constraint`. So the tool will pick appropriate cells for the combinational logic.*  
+*2. Input constraint* 
+![img5](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/Constraints/img5.png) 
+
+*3. REG3 drives its output to an external flip-flop, REG_EXT_3, through the Output Logic, with both flip-flops clocked by the same clock signal, CLK. This forms a synchronous timing path. To ensure proper timing, the delay introduced by the Output Logic must be kept within allowable limits. Therefore, it is essential to apply appropriate constraints on the output path to control its timing behavior.* 
+![img6](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/Constraints/img6.png)  
+
+![img7](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/Constraints/img7.png)  
+
+*4. We can constrain the I/O logic by specifying input external delay and output external delays relative to the associated `clock (CLK)`. This helps ensure timing requirements are met at the interface boundaries.*
+
+Sources of I/O Delay Modeling:
+
+* Standard Interface Specifications:
+    - Delays defined by communication standards such as I2C, SPI, etc.
+
+* I/O Budgeting:
+    - Delay allocation based on interaction and timing alignment with other functional modules in the system.
+![img8](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/Constraints/img8.png)
+
