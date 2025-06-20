@@ -60,3 +60,20 @@ Sources of I/O Delay Modeling:
     - Delay allocation based on interaction and timing alignment with other functional modules in the system.
 ![img8](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/Constraints/img8.png)
 
+## Input Transition and Output Load
+
+#### Is IO Delay Modeling Sufficient?
+
+The screenshot below represents the clock period at the rising edge of `EXT_1`, accounting for external delay but assuming ideal signals.  
+![img9](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/Constraints/img9.png)  
+
+The setup violation, observed with practical signals, is shown in the screenshot below.  
+![img10](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/Constraints/img10.png)  
+![img11](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/Constraints/img%2011.png)
+![img12](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/Constraints/img12.png)  
+
+As a thumb rule, 70% of the clock period is allocated for external delays and 30% for internal delays.  
+
+![img13](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/Constraints/img13.png)  
+
+## Lab: Timing .Libs
