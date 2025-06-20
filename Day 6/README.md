@@ -76,4 +76,4 @@ As a thumb rule, 70% of the clock period is allocated for external delays and 30
 
 ![img13](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/Constraints/img13.png)  
 
-## Lab: Timing .Libs
+## Lab5 : Timing .Libs
