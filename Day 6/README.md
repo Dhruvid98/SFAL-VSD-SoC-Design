@@ -1,4 +1,5 @@
 # Day 6: Basics of Static Time Analysis (STA)
+
 ## Introduction to STA.
 ### Minimum and Maximum delay constraints
 ![min_max_delay](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/min_max_delay_constraint.png)  
@@ -77,6 +78,7 @@ As a thumb rule, 70% of the clock period is allocated for external delays and 30
 ![img13](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/Constraints/img13.png)  
 
 ## Lab5 : Timing .Libs
+
 ### Contents present in .lib file
 
 * Technology: CMOS
@@ -112,3 +114,5 @@ timing_sense : "positive_unate";
     - By using unateness information, DC tool will generate a transition.
 
   ![img4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/.lib_file/img4.png)
+
+## Lab6: Exploring .lib (Part 1)
