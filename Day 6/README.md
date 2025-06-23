@@ -77,3 +77,9 @@ As a thumb rule, 70% of the clock period is allocated for external delays and 30
 ![img13](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/Constraints/img13.png)  
 
 ## Lab5 : Timing .Libs
+### Contents present in .lib file
+* Technology: CMOS
+* PVT condition
+      - Process, Voltage and Temperature information
+  
+#### Max Transition 
