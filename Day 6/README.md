@@ -78,8 +78,37 @@ As a thumb rule, 70% of the clock period is allocated for external delays and 30
 
 ## Lab5 : Timing .Libs
 ### Contents present in .lib file
+
 * Technology: CMOS
 * PVT condition
-      - Process, Voltage and Temperature information
+    - Process, Voltage and Temperature information
   
 #### Max Transition 
+```
+Example 
+default_max_transition : 1.5000000000;
+```
+
+The **Output** has an `output pin capacitance`, `net capacitance`, and there is `input capacitance` at the next gate or `sum of all input capacitance` for fan out. If the library has a max capacitance limit of 1.5pF, the DC will use this value to limit the maximum capacitance. And if the limit is violated, DC will divide the net and add a buffer in the path as shown in the green diagram.  
+
+![img1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/.lib_file/img_1.png)  
+
+#### Delay Model Look up Model 
+```
+delay_model : "table_lookup";
+```
+![img2](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/.lib_file/img2.png)
+
+* Pin attributes
+    - Attributes associated with the pin such as whether it is clock or not, pin capacitance, direction, max_transition, rise_power/ fall power lookup tables and more
+  ![img3](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/.lib_file/img3.png)
+
+#### Unateness
+```
+timing_sense : "positive_unate";
+```
+* Why is unateness important?
+    - Unateness is important because that's how the tool will understand how to propagate transitions.
+    - By using unateness information, DC tool will generate a transition.
+
+  ![img4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/.lib_file/img4.png)
