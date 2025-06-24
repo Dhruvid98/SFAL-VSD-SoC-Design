@@ -108,11 +108,25 @@ delay_model : "table_lookup";
 #### Unateness
 ```
 timing_sense : "positive_unate";
+timing_type : "combinational" (cmobinational timing arc)
 ```
 * Why is unateness important?
     - Unateness is important because that's how the tool will understand how to propagate transitions.
     - By using unateness information, DC tool will generate a transition.
+    - `timing_sense : "non_unate"` - non_unate means concerning clock Q may be rising or falling (called no unateness).
 
   ![img4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/.lib_file/img4.png)
 
 ## Lab6: Exploring .lib (Part 1)
+* `CLK_N` is the active-low clock. The attribute clock is `true`
+* Sequential timing arc
+  - `timing_type : "falling_edge"` - (Negative edge clock)
+  - `timing_type : "rising_edge"` - (Positive edge clock)  
+
+![img1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/Lab2/img1.png)  
+![img2](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/Lab2/img2.png)  
+
+* Unlike flip-flops, latches sample data at different points within the clock cycle, as shown in the screenshot below.
+
+![img3](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/Lab2/img3.png)
+![img4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/Lab2/img4.png)
