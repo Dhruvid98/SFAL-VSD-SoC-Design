@@ -129,4 +129,6 @@ timing_type : "combinational" (cmobinational timing arc)
 * Unlike flip-flops, latches sample data at different points within the clock cycle, as shown in the screenshot below.
 
 ![img3](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/Lab2/img3.png)
-![img4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/Lab2/img4.png)
+![img4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/Lab2/img4.png)  
+
+## Lab6: Exploring .lib (Part 2)
