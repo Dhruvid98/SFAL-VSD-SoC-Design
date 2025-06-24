@@ -135,3 +135,51 @@ timing_type: "combinational" (combinational timing arc)
 ## Lab6: Exploring .lib (Part 2)
 
 ### Querying the properties of .lib from DC shell. 
+
+Command to retrieve a specific cell in the library. 
+```
+get_lib_cells */*and*
+```
+![img1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/Lab3/img1.png)  
+
+Command to get the list of that particular cell as a list
+```
+foreach_in_collection my_lib_cell [get_lib_cells */*and*] {
+set my_lib_cell_name [get_object_name $my_lib_cell]; echo $my_lib_cell_name;
+}
+```
+![img2](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/Lab3/img2.png)  
+
+Command to get the pins in a cell  
+```
+get_lib_attribute sky130_fd_sc_hd__tt_025C_1v80/sky130_fd_sc_hd__and2_0/X function
+```
+![img3](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/Lab3/img3.png)  
+
+Command to get the pins and their function 
+```
+get_lib_pins sky130_fd_sc_hd__tt_025C_1v80/sky130_fd_sc_hd__and2_0/*
+get_lib_attribute sky130_fd_sc_hd__tt_025C_1v80/sky130_fd_sc_hd__and2_0/X function
+```
+* Functionality is shown on the `output pin`.
+
+![img4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/Lab3/img4.png)
+
+Command to query the direction of the output pin
+```
+get_lib_attribute sky130_fd_sc_hd__tt_025C_1v80/sky130_fd_sc_hd__and2_0/X direction
+```
+
+Other attributes of the cell.
+```
+get_lib_attribute sky130_fd_sc_hd__tt_025C_1v80/sky130_fd_sc_hd__and2_0 area // area of cell
+get_lib_attribute sky130_fd_sc_hd__tt_025C_1v80/sky130_fd_sc_hd__and2_0/A capacitance // capacitance of the pin
+get_lib_attribute sky130_fd_sc_hd__tt_025C_1v80/sky130_fd_sc_hd__and2_0/A clock // if a pin is clock
+get_lib_cells */* -filter "is_sequential == true" // query all sequential cell
+```
+![img5](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/Lab3/img5.png)  
+
+*Command to list all attributes*
+```
+list_attributes -app
+```
