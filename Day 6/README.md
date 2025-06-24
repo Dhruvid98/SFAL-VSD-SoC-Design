@@ -4,7 +4,7 @@
 ### Minimum and Maximum delay constraints
 ![min_max_delay](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/min_max_delay_constraint.png)  
 * Setup time: Propagation delay helps make sure data arrives in time for setup.
-* Hold time: Contamination delay helps make sure data doesn’t arrive too early, violating hold time.
+* Hold time: Contamination delay helps make sure data doesn’t arrive too early, violating the hold time.
 
 ### Water Bucket Analogy for Delay
 1. The inflow of water translates to the inflow of current. Fast current sourcing (fast rise time of input) => less delay.
@@ -108,12 +108,12 @@ delay_model : "table_lookup";
 #### Unateness
 ```
 timing_sense : "positive_unate";
-timing_type : "combinational" (cmobinational timing arc)
+timing_type: "combinational" (combinational timing arc)
 ```
 * Why is unateness important?
     - Unateness is important because that's how the tool will understand how to propagate transitions.
     - By using unateness information, DC tool will generate a transition.
-    - `timing_sense : "non_unate"` - non_unate means concerning clock Q may be rising or falling (called no unateness).
+    - `timing_sense: "non_unate"` - non_unate means concerning clock Q may be rising or falling (called no unateness).
 
   ![img4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/.lib_file/img4.png)
 
