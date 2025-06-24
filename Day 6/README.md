@@ -102,7 +102,7 @@ delay_model : "table_lookup";
 ![img2](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/.lib_file/img2.png)
 
 * Pin attributes
-    - Attributes associated with the pin such as whether it is clock or not, pin capacitance, direction, max_transition, rise_power/ fall power lookup tables and more
+    - Attributes associated with the pin such as whether it is clock or not, pin capacitance, direction, max_transition, rise_power/ fall power lookup tables and more  
   ![img3](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/.lib_file/img3.png)
 
 #### Unateness
