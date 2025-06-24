@@ -133,3 +133,5 @@ timing_type : "combinational" (cmobinational timing arc)
 
 
 ## Lab6: Exploring .lib (Part 2)
+
+### Querying the properties of .lib from DC shell. 
