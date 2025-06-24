@@ -136,6 +136,11 @@ timing_type: "combinational" (combinational timing arc)
 
 ### Querying the properties of .lib from DC shell. 
 
+Command to **check the library loaded** in the design
+```
+dc_shell> list_lib // loaded library
+```
+
 Command to retrieve a specific cell in the library. 
 ```
 get_lib_cells */*and*
