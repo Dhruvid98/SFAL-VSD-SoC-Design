@@ -132,7 +132,7 @@ timing_type: "combinational" (combinational timing arc)
 ![img4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%206/Images/Lab2/img4.png)  
 
 
-## Lab6: Exploring .lib (Part 2)
+## Lab7: Exploring .lib (Part 2)
 
 ### Querying the properties of .lib from DC shell. 
 
