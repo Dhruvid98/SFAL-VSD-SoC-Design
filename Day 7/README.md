@@ -1,6 +1,7 @@
 # Day 7 - Advanced Constraints
 
-## 1. Clock Tree Modelling and IO Delays
+<details>
+    <summary>1. Clock Tree Modelling and IO Delays </summary>
 
 ## Clock Tree Modelling and Uncertainty
 
@@ -61,3 +62,5 @@ Clock period. As the clock period limits the time taken.
 
 ![img8](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/IO%20delays/img8.png)  
 ![img9](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/IO%20delays/img9.png)  
+
+</details>
