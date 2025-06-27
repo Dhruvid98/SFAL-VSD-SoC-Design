@@ -65,3 +65,8 @@ Clock period. As the clock period limits the time taken.
 ![img9](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/IO%20delays/img9.png)  
 
 </details>
+
+<details>
+    <summary>2. Labs (part 1) </summary>
+
+</details>
