@@ -67,6 +67,6 @@ Clock period. As the clock period limits the time taken.
 </details>
 
 <details>
-    <summary>2. Labs (part 1) </summary>
+    <summary>2. Labs 8–12: Design Loading, Clock Creation & Timing Characterization </summary>
 
 </details>
