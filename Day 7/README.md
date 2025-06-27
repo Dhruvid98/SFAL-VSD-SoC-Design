@@ -31,5 +31,31 @@ Clock period. As the clock period limits the time taken.
 
 #### Factors for Clock Modelling  
 ![img5](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Clock_tree_uncertainty/img5.png)  
-![img6](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Clock_tree_uncertainty/img6.png)
+![img6](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Clock_tree_uncertainty/img6.png)  
 
+### IO delays. 
+![img1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/IO%20delays/img1.png)
+
+#### Getting the Ports and Clock in DC
+![img2](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/IO%20delays/img2.png)
+![img3](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/IO%20delays/img3.png)
+
+#### Querying the cells in the design 
+- Hierarchical pins are nets
+
+![img4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/IO%20delays/img4.png)  
+
+#### Clock Distribution 
+
+![img5](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/IO%20delays/img5.png)  
+![img6](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/IO%20delays/img6.png)
+
+#### Creating Clock 
+- Here DC: Duty Cycle.
+  
+![img7](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/IO%20delays/img7.png)
+
+#### Constraining IO Paths
+
+![img8](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/IO%20delays/img8.png)  
+![img9](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/IO%20delays/img9.png)  
