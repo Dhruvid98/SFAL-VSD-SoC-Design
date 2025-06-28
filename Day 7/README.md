@@ -68,7 +68,7 @@ Clock period. As the clock period limits the time taken.
 
 <details>
     <summary>2. Labs 8–12: Design Loading, Clock Creation & Timing Characterization </summary>
-# Lab 1 - Loading design, get_cells, get_ports and get_nets
+	# Lab 1 - Loading design, get_cells, get_ports and get_nets
  lab8_circuit.v (verilog code)
     
  ```
