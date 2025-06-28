@@ -69,7 +69,7 @@ Clock period. As the clock period limits the time taken.
 <details>
     <summary>2. Labs 8–12: Design Loading, Clock Creation & Timing Characterization </summary>
 	
-# Lab 1 - Loading design, get_cells, get_ports and get_nets
+## Lab 1 - Loading design, get_cells, get_ports and get_nets
  lab8_circuit.v (verilog code)
     
  ```
@@ -121,7 +121,18 @@ compile_ultra
 * The compilation shouldn't throw any errors.
 ![img3](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab1/img3.png)
 
-## Commands with get ports
+### Commands with get ports
 ![img4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab1/img4.png)
+
+### Commands with get_cells
+![img5](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab1/img5.png)
+
+* Reference name of the cell in the library
+![img6](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab1/img6.png)
+
+The output obtained is sky130_fd_sc_hd__dfrtp_1, where `dfrtp` means `df`: DFF, `r`: asynchronous reset, `p`: positive triggered and `t`: true output (Q).  
+
+* Syntax to know the reference name of a cell or all the cells in the design.
+![img7](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab1/img7.png)
 
 </details>
