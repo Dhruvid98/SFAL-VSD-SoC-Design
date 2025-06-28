@@ -68,5 +68,59 @@ Clock period. As the clock period limits the time taken.
 
 <details>
     <summary>2. Labs 8–12: Design Loading, Clock Creation & Timing Characterization </summary>
+# Lab 1 - Loading design, get_cells, get_ports and get_nets
+ lab8_circuit.v (verilog code)
+    
+ ```
+module lab8_circuit (input rst, input clk , input IN_A , input IN_B , output OUT_Y , output out_clk);
+reg REGA , REGB , REGC ; 
+
+always @ (posedge clk , posedge rst)
+begin
+	if(rst)
+	begin
+		REGA <= 1'b0;
+		REGB <= 1'b0;
+		REGC <= 1'b0;
+	end
+	else
+	begin
+		REGA <= IN_A | IN_B;
+		REGB <= IN_A ^ IN_B;
+		REGC <= !(REGA & REGB); 
+	end
+end
+
+assign OUT_Y = ~REGC;
+
+assign out_clk = clk;
+
+endmodule
+ ```
+
+The corresponding circuit for lab8_circuit.v.  
+![img1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab1/img1.png)  
+
+Syntax to run the command in DC under /verilog_files folder. ($target_lib and $link_lib are set to .db)
+
+```
+csh
+dc_shell
+read_verilog lab8_circuit.v
+link
+compile_ultra
+```
+
+* Reading the Verilog file should not throw any errors.
+    - A useful message for that `Presto compilation completed successfully`: RTL does not have any errors or loading issues. It got loaded successfully.
+* The file has inferred 3 registers, 1-bit wide, asynchronous reset type as shown below.
+
+ ![img2](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab1/img2.png)
+
+* The compilation shouldn't throw any errors.
+![img3](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab1/img3.png)
+
+## Commands with get ports
+![img4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab1/img4.png)
 
 </details>
