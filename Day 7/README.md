@@ -135,4 +135,30 @@ The output obtained is sky130_fd_sc_hd__dfrtp_1, where `dfrtp` means `df`: DFF, 
 * Syntax to know the reference name of a cell or all the cells in the design.
 ![img7](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab1/img7.png)
 
+Command to write DDC of the design
+```
+write -f ddc -out lab8_circuit.ddc
+```
+
+Commands to open design_vision and read ddc file of design in Design Vision GUI.
+
+```
+csh
+design_vsion
+read_ddc lab8_circuit.ddc
+```
+![img8](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab1/img8.png)
+
+```
+get_nets * // get all nets of the design in Design Vision
+all_connected N1 // to know were is N1 net is connected
+```
+![img9](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab1/img9.png)
+
+* In design digital net can only be driven by **one** driver
+  - If there are multiple driver nets -> Logcial level corrupted (inconclusive).
+* Latch is a multidriven net because it is working within the standard cell called LATCH. As sizing of cells such as invertor will be taken care of.
+
+![img10](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab1/img10.png)
+
 </details>
