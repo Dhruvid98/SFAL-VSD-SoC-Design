@@ -69,7 +69,7 @@ Clock period. As the clock period limits the time taken.
 <details>
     <summary>2. Labs 8–12: Design Loading, Clock Creation & Timing Characterization </summary>
 	
-## Lab 1 - Loading design, get_cells, get_ports and get_nets
+## Lab 8 - Loading design, get_cells, get_ports and get_nets
  lab8_circuit.v (verilog code)
     
  ```
@@ -162,7 +162,7 @@ all_connected N1 // to know were is N1 net is connected
 ![img10](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab1/img10.png)  
 
 
-## Lab 2 - get_pins, get_clocks, querying_clocks.
+## Lab 9 - get_pins, get_clocks, querying_clocks.
 
 Syntax to get and read all the pins
 ```
@@ -173,7 +173,7 @@ echo $pin_name;
 }
 ```
 Below is the output. 
-![img1]()  
+![img1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab2/img1.png)  
 
 Command for different attributes of a pin 
 * To check direction of a pin
@@ -199,7 +199,29 @@ echo $my_pin_name $dir;
 ```
 
 Below is the output. 
-![img2]()  
+![img2](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab2/img2.png)  
 
+Synatx of query_clk.tcl
+* Here we are qureing all the clock pins who's direction is `in`.
+
+```
+foreach_in_collection my_pin [get_pins *] {
+	set my_pin_name [get_object_name $my_pin];
+        set dir [get_attribute [get_pins $my_pin_name] direction];                                                                                              
+	if { [regexp $dir in] } {
+		if { [get_attribute [get_pins $my_pin_name] clock ] } { 
+ 			echo $my_pin_name;
+
+		}
+	}
+}
+```
+
+Below is the output. 
+![img3](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab2/img3.png) 
+
+* Difference betwwen clock and clocks in get_attribute.
+
+![img4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab2/img4.png)
 
 </details>
