@@ -276,6 +276,62 @@ Syntax to create a clock with different rising/falling time and different duty c
 create_clock -name MYCLK -period 10 [get_ports clk] -wave {5 10} // first_rise:5, first_fall : 10
 create_clock -name MYCLK -period 10 -wave {0 2.5} [get_ports clk] // different duty cycle
 ```
-![img3](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab10/img3.png)
+![img3](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab10/img3.png)  
+
+## Lab 11 : Clock Network Modelling - Uncertainty, report_timing
+
+![img1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab11/img1.png)  
+![img2](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab11/img2.png)
+
+Syntax to model different latency
+```
+set_clock_latency -source 1 [get_clocks MYCLK] // source latency
+set_clock_latency 1 [get_clocks MYCLK] // network latency
+set_clock_uncertainty 0.5 [get_clocks MYCLK] // max delay or setup
+set_clock_uncertainty -hold 0.1 [get_clocks MYCLK] // min delay or hold. 
+```
+* *By default*, model uncertainty is applied to the maximum delay or setup
+  
+* If no clock is present, report_timing shows **path is unconstrained**.
+![img3](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab11/img3.png)
+
+Syntax to report clock to register
+```
+report_timing -to REGC_reg/D
+```
+As of now, a latency constraint has not been defined.  
+
+![img5](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab11/img5.png)
+![img4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab11/img4.png) 
+
+After modeling the clock, setting the clock latency using below commands. 
+```
+set_clock_latency -source 2 [get_clocks MYCLK]
+set_clock_latency 1 [get_clocks MYCLK]
+set_clock_uncertainty 0.5 [get_clocks MYCLK]
+set_clock_uncertainty -hold 0.1 [get_clocks MYCLK]
+```
+![img6](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab11/img6.png)  
+
+* **What are we checking?**
+  - data required time **>** data arrival time
+  - slack =  data required time - data arrival time
+  
+*  Why uncertainity and skew are subtracted from the clock period ?
+![img7](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab11/img7.png)
+
+Calculations for hold, uncertainty, and skew
+- For setup, check happens across one period. 
+- For hold, 0 cycle check happens.
+
+![img8](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab11/img8.png)  
+
+Syntax to check report_timing for hold/min 
+```
+report_timing -to REGC_reg/D -dealy -min
+```
+![img9](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab11/img9.png)
+
+#### All Reg2Reg paths are constraints by clock. 
 
 </details>
