@@ -198,7 +198,7 @@ echo $my_pin_name $dir;
 }
 ```
 
-Below is the output. 
+Below is the output.  
 ![img2](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab2/img2.png)  
 
 Synatx of query_clk.tcl
@@ -221,7 +221,52 @@ Below is the output.
 ![img3](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab2/img3.png) 
 
 * Difference betwwen clock and clocks in get_attribute.
+  - get_attribute [get_pins $my_pin_name]**clock** : Will tell us whether that pin is meant to receive the clock as per the standard cell library or not.
+  - get_attribute [get_pins $my_pin_name]**clocks** : Will tell us what is the name of the clock reaching there. 
 
-![img4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab2/img4.png)
+![img4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab2/img4.png)  
+
+## Lab 10 - Create_clock waveform.
+* The command `current_design` tells the name of top module we are working on.  
+
+Syntax to create a clock and get it's attributes. 
+* Here clock is generated with period (per) of 10ns\
+* If the `get_attribute [get_clocks MYCLK] is_generated` is false then it is a master clock.
+
+```
+create_clock -name MYCLK -per 10 [get_ports clk] // generate the clock
+get_clocks * // to know clocks
+get_attribute [get_clocks MYCLK] period // period of clock
+get_attribute [get_clocks MYCLK] is_generated // to check whether the clock is generated or not
+report_clocks * // to know the information about all clock
+```
+![img1]()  
+
+* Query the attributes of all clock pin
+
+```
+foreach_in_collection my_pin [get_pins *] {
+	set my_pin_name [get_object_name $my_pin];
+        set dir [get_attribute [get_pins $my_pin_name] direction];                                                                                              
+	if { [regexp $dir in] } {
+		if { [get_attribute [get_pins $my_pin_name] clock ] } { 
+			set clk [get_attribute [get_pins $my_pin_name] clocks];
+			set clk_name [get_object_name $clk];
+ 			echo $my_pin_name $clk_name;
+
+		}
+	}
+}
+```
+
+![img2]()
+
+* The clock should be created only on **clock port** (on the external port which is meant to receive the clock) or on **clock generator**.
+* Do not create a clock on the pin. The clock created on the pin will not reach to any clock pin of any flop
+
+Syntax to remove the clock. (BAD_CLK is clock name)
+```
+remove_clock BAD_CLK 
+```
 
 </details>
