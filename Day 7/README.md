@@ -334,4 +334,6 @@ report_timing -to REGC_reg/D -dealy -min
 
 #### All Reg2Reg paths are constraints by clock. 
 
+## Lab 12 : IO Delays
+
 </details>
