@@ -240,7 +240,7 @@ get_attribute [get_clocks MYCLK] period // period of clock
 get_attribute [get_clocks MYCLK] is_generated // to check whether the clock is generated or not
 report_clocks * // to know the information about all clock
 ```
-![img1]()  
+![img1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab10/img1.png)  
 
 * Query the attributes of all clock pin
 
@@ -259,7 +259,7 @@ foreach_in_collection my_pin [get_pins *] {
 }
 ```
 
-![img2]()
+![img2](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab10/img2.png)
 
 * The clock should be created only on **clock port** (on the external port which is meant to receive the clock) or on **clock generator**.
 * Do not create a clock on the pin. The clock created on the pin will not reach to any clock pin of any flop
@@ -268,5 +268,14 @@ Syntax to remove the clock. (BAD_CLK is clock name)
 ```
 remove_clock BAD_CLK 
 ```
+
+Syntax to create a clock with different rising/falling time and different duty cycle. 
+- The order of command doesn't matter when creating a clock.
+
+```
+create_clock -name MYCLK -period 10 [get_ports clk] -wave {5 10} // first_rise:5, first_fall : 10
+create_clock -name MYCLK -period 10 -wave {0 2.5} [get_ports clk] // different duty cycle
+```
+![img3](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab10/img3.png)
 
 </details>
