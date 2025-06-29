@@ -159,6 +159,47 @@ all_connected N1 // to know were is N1 net is connected
   - If there are multiple driver nets -> Logcial level corrupted (inconclusive).
 * Latch is a multidriven net because it is working within the standard cell called LATCH. As sizing of cells such as invertor will be taken care of.
 
-![img10](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab1/img10.png)
+![img10](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab1/img10.png)  
+
+
+## Lab 2 - get_pins, get_clocks, querying_clocks.
+
+Syntax to get and read all the pins
+```
+get_pins * // get all pins
+foreach_in_collection my_pin [get_pins *] {
+set pin_name [get_object_name $my_pin];
+echo $pin_name;
+}
+```
+Below is the output. 
+![img1]()  
+
+Command for different attributes of a pin 
+* To check direction of a pin
+
+```
+get_attribute [get_pins REGC_reg/RESET_B] direction 
+```
+* To check whether a pin is clock pin or not.
+ - This attibute should only be queried on **input pins**
+
+```
+get_attribute [get_pins REGC_reg/RESET_B] clock
+```
+
+* To know direction of all pin
+
+```
+foreach_in_collection my_pin [get_pins *] {
+set my_pin_name [get_object_name $my_pin];
+set dir [get_attribute [get_pins $my_pin_name] direction];
+echo $my_pin_name $dir;
+}
+```
+
+Below is the output. 
+![img2]()  
+
 
 </details>
