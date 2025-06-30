@@ -407,15 +407,15 @@ set_load -min 0.1 [get_ports OUT_Y]
 ![img4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/generated_clk/img4.png)  
 
 ## Lab 13: Generated_clocks
-![img1]()  
+![img1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab13/img1.png)  
 
 * Timing report before the generated clock
 
-![img2]()  
+![img2](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab13/img2.png)  
 
 ### Clock Divider
 
-![img3]()
+![img3](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab13/img3.png)
 
 ### Generating clock
 *  Modelling the outclk wrt MYCLK
@@ -426,10 +426,10 @@ create_generated_clock -name MYGEN_CLK -master MYCLK -source [get_ports clk] -di
 ```
 
 * Reporting all the present clocks.
-![img4]()
+![img4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab13/img4.png)
 
 * The timing of OUT_Y is still with respect to MYCLK
-![img5]()
+![img5](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab13/img5.png)
 
 * Syntax to model the timing with respect to `MYGEN_CLK`
 ```
@@ -441,7 +441,7 @@ Syntax to annotate the minimum and maximum delay.
 set_output_delay -max 5 [get_ports OUT_Y] -clock [get_clocks MYGEN_CLK]
 set_output_delay -min 1 [get_ports OUT_Y] -clock [get_clocks MYGEN_CLK]
 ```
-![img6]()  
+![img6](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab13/img6.png)  
 
 ### Updating the lab8 circuit design 
 
@@ -477,6 +477,42 @@ assign out_clk = clk;
 
 endmodule
 ```
-* ii. 
+ii. Read the design using the `read_verilog` command.
+iii. As the design got updated, all the earlier constraints got erased. So we create a lab8_cons.tcl where all the commands are mentioned performed until now. 
+
+Syntax lab8_cons.tcl 
+```
+create_clock -name MYCLK -per 10 [get_ports clk];
+set_clock_latency -source 2 [get_clocks MYCLK];
+set_clock_latency 1 [get_clocks MYCLK];
+set_clock_uncertainty -setup 0.5 [get_clocks MYCLK];
+set_clock_uncertainty -hold 0.1 [get_clocks MYCLK];
+set_input_delay -max 5 -clock [get_clocks MYCLK] [get_ports IN_A];
+set_input_delay -max 5 -clock [get_clocks MYCLK] [get_ports IN_B];
+set_input_delay -min 1 -clock [get_clocks MYCLK] [get_ports IN_A];
+set_input_delay -min 1 -clock [get_clocks MYCLK] [get_ports IN_B];
+set_input_transition -max 0.4 [get_ports IN_A];
+set_input_transition -max 0.4 [get_ports IN_B];
+set_input_transition -min 0.1 [get_ports IN_A];
+set_input_transition -min 0.1 [get_ports IN_B];
+create_generated_clock -name MYGEN_CLK -master MYCLK -source [get_ports clk] -div 1 [get_ports out_clk];
+create_generated_clock -name MYGEN_DIV_CLK -master MYCLK -source [get_ports clk] -div 2 [get_ports out_div_clk]; 
+set_output_delay -max 5 -clock [get_clocks MYGEN_CLK] [get_ports OUT_Y];
+set_output_delay -min 1 -clock [get_clocks MYGEN_CLK] [get_ports OUT_Y];
+set_load -max 0.4 [get_ports OUT_Y];
+set_load -min 0.1 [get_ports OUT_Y];
+```
+
+iv. Linking the design using `link`
+v. Sourcing the lab8_cons.tcl file using `source lab8_cons.tcl`
+vi. Reporting the clocks in the design `report_clocks`  
+vii. Reporting all the `get_generated clocks` 
+
+![img7]https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab13/img7.png() 
+
+viii. With the command `report_ports -verbose` all the information about ports is displayed
+![img8](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab13/img8.png)
+![img9](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab13/img9.png)
+![img10](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab13/img10.png)
 
 </details> 
