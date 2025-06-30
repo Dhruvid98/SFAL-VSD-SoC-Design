@@ -335,5 +335,36 @@ report_timing -to REGC_reg/D -dealy -min
 #### All Reg2Reg paths are constraints by clock. 
 
 ## Lab 12 : IO Delays
+The input and output paths in the design have not been constrained yet. 
+![img1]()  
+
+Syntax to know the modeling of ports and pins
+```
+report_port verbose
+```
+
+* Report_timing shows **path is unconstrained** for Input and Output paths.
+
+Syntax to see timing around port IN_A and OUT_Y. 
+```
+report_timing -from IN_A
+report_timing -to OUT_Y
+```
+![img2]() 
+![img3]() 
+
+Syntax to model the input port delay
+```
+set_input_delay -max 5 -clock [get_clocks MYCLK] [get_ports IN_A]
+report_timing -from IN_A
+```
+
+![img4]()
+
+Syntax to model the transition in port IN_A and store it in a file.
+```
+report_timing -from IN_A -trans -net -cap -nosplit > a
+```
+![img5]()  
 
 </details>
