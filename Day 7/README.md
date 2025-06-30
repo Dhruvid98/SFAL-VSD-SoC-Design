@@ -516,3 +516,11 @@ viii. With the command `report_ports -verbose` all the information about ports i
 ![img10](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab13/img10.png)
 
 </details> 
+
+<details>
+    <summary>4. vclk, max_latency, rise_fall IO Delays </summary>
+
+# 4 - vclk, max_latency, rise_fall IO Delays
+
+
+</details> 
