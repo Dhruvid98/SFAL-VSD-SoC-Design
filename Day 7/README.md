@@ -447,7 +447,7 @@ set_output_delay -min 1 [get_ports OUT_Y] -clock [get_clocks MYGEN_CLK]
 
 i. Update the design lab8_circuit.v where `out_div_clk` is added to the original syntax.
 
-lab8_circuit_modified.v 
+lab8_circuit_modified.v  
 
 ```
 module lab8_circuit (input rst, input clk , input IN_A , input IN_B , output OUT_Y , output out_clk , output reg out_div_clk);
