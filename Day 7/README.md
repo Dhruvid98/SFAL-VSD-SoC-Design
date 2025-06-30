@@ -336,7 +336,7 @@ report_timing -to REGC_reg/D -dealy -min
 
 ## Lab 12 : IO Delays
 The input and output paths in the design have not been constrained yet. 
-![img1]()  
+![img1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab12/img1.png)  
 
 Syntax to know the modeling of ports and pins
 ```
@@ -350,8 +350,8 @@ Syntax to see timing around port IN_A and OUT_Y.
 report_timing -from IN_A
 report_timing -to OUT_Y
 ```
-![img2]() 
-![img3]() 
+![img2](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab12/img2.png) 
+![img3](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab12/img3.png) 
 
 Syntax to model the input port delay
 ```
@@ -359,12 +359,37 @@ set_input_delay -max 5 -clock [get_clocks MYCLK] [get_ports IN_A]
 report_timing -from IN_A
 ```
 
-![img4]()
+![img4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab12/img4.png)
 
 Syntax to model the transition in port IN_A and store it in a file.
 ```
 report_timing -from IN_A -trans -net -cap -nosplit > a
 ```
-![img5]()  
+![img5](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab12/img5.png)  
+
+Syntax to set a max and min transition for port IN_A
+```
+set_input_transition -max 0.3 [get_ports IN_A]
+set_input_transition -min 0.1 [get_ports IN_A]
+```
+
+Syntax to model the max and min delay of output port
+```
+set_output_delay -max 5 -clock [get_clocks MYCLK] [get_ports OUT_Y]
+set_output_delay -min 1 -clock [get_clocks MYCLK] [get_ports OUT_Y]
+```
+![img6](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab12/img6.png)  
+
+Syntax to model a max load for output port
+```
+set_load -max 0.4 [get_ports OUT_Y]
+```
+![img7](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab12/img7.png)
+
+Syntax to model a min load for output port
+```
+set_load -min 0.1 [get_ports OUT_Y]
+```
+![img8](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab12/img8.png)
 
 </details>
