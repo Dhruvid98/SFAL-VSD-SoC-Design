@@ -332,7 +332,7 @@ report_timing -to REGC_reg/D -dealy -min
 ```
 ![img9](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab11/img9.png)
 
-#### All Reg2Reg paths are constraints by clock. 
+#### All Reg2Reg paths are constrained by the clock. 
 
 ## Lab 12 : IO Delays
 The input and output paths in the design have not been constrained yet. 
@@ -397,9 +397,51 @@ set_load -min 0.1 [get_ports OUT_Y]
 <details>
     <summary>3. Generated clocks </summary>
 	
-# Generated clk
+# Generated clk 
 ![img1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/generated_clk/img1.png)  
 ![img2](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/generated_clk/img2.png)
 ![img3](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/generated_clk/img3.png)
-![img4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/generated_clk/img4.png)
+
+- Assuming the clock won't toggle between A and B in each cycle. It will be constant. Either A or B.
+
+![img4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/generated_clk/img4.png)  
+
+## Lab 13: Generated_clocks
+![img1]()  
+
+* Timing report before the generated clock
+
+![img2]()  
+
+### Clock Divider
+
+![img3]()
+
+### Generating clock
+*  Modelling the outclk wrt MYCLK
+
+Syntax to create a generated clock, no divider
+```
+create_generated_clock -name MYGEN_CLK -master MYCLK -source [get_ports clk] -div 1 [get_ports out_clk]
+```
+
+* Reporting all the present clocks.
+![img4]()
+
+* The timing of OUT_Y is still with respect to MYCLK
+![img5]()
+
+* Syntax to model the timing with respect to `MYGEN_CLK`
+```
+set_clock_latency -max 1 [get_clocks MYGEN_CLK]
+```
+
+Syntax to annotate the minimum and maximum delay.
+```
+set_output_delay -max 5 [get_ports OUT_Y] -clock [get_clocks MYGEN_CLK]
+set_output_delay -min 1 [get_ports OUT_Y] -clock [get_clocks MYGEN_CLK]
+```
+![img6]()  
+
+
 </details> 
