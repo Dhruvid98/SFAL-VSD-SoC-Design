@@ -182,7 +182,7 @@ Command for different attributes of a pin
 get_attribute [get_pins REGC_reg/RESET_B] direction 
 ```
 * To check whether a pin is clock pin or not.
- - This attibute should only be queried on **input pins**
+   - This attibute should only be queried on **input pins**
 
 ```
 get_attribute [get_pins REGC_reg/RESET_B] clock
@@ -393,3 +393,13 @@ set_load -min 0.1 [get_ports OUT_Y]
 ![img8](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab12/img8.png)
 
 </details>
+
+<details>
+    <summary>3. Generated clocks </summary>
+	
+# Generated clk
+![img1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/generated_clk/img1.png)  
+![img2](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/generated_clk/img2.png)
+![img3](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/generated_clk/img3.png)
+![img4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/generated_clk/img4.png)
+</details> 
