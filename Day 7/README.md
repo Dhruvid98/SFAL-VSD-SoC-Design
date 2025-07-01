@@ -550,6 +550,98 @@ viii. With the command `report_ports -verbose` all the information about ports i
 
 ![img7](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/vclk%2C%20max_latency%2C%20rise_fall%20IODelays/img7.png)
 
+## Lab 15: Set_max_delay
+Verilog code for lab14_circuit.v 
+```
+module lab8_circuit (input rst, input clk , input IN_A , input IN_B , output OUT_Y , output out_clk , output reg out_div_clk , input IN_C , input IN_D , output OUT_Z );
+reg REGA , REGB , REGC ; 
 
+always @ (posedge clk , posedge rst)
+begin
+	if(rst)
+	begin
+		REGA <= 1'b0;
+		REGB <= 1'b0;
+		REGC <= 1'b0;
+		out_div_clk <= 1'b0;
+	end
+	else
+	begin
+		REGA <= IN_A | IN_B;
+		REGB <= IN_A ^ IN_B;
+		REGC <= !(REGA & REGB);
+		out_div_clk <= ~out_div_clk; 
+	end
+end
+
+assign OUT_Y = ~REGC;
+
+assign out_clk = clk;
+assign OUT_Z = IN_C ^ IN_D ;
+```
+
+The circuit is shown below
+![img1]()  
+
+![img2]()  
+
+* To know all the paths from IN_A
+
+**Fanout**
+
+```
+all_fanout -flat -endpoints_only -from IN_A // endpoints 
+all_fanout -flat -from IN_A // it will list all fanout.
+```
+All fan outs of IN_A
+
+![img3]()
+
+* To get teh point name along with it's standard cell reference.
+![img4]()
+
+* Mapping all the above points in the circuit
+![img5]()
+
+Below are the endpoints based on the timing path. 
+![img6]() 
+
+**Fanin**
+
+```
+all_fanin -to REGA_reg/D -starpoints_only // startpoints 
+all_fanin -to IN_A // it will list all fanin.
+```
+
+* Constraints OUT_Z using set_max_delay
+```
+set_max_delay 0.1 -from [all_inputs] -to [get_port OUT_Z]
+```
+
+Below is the `report_timing` after using set_max_delay. 
+* -sig : Significant digits.
+
+```
+report_timing -to OUT_Z -sig 4
+```
+![img7]()
+
+* The `set_max_delay` constraint is applied after the design is compiled. If the design is recompiled, the violation typically disappears, as the Design Compiler tool optimizes the logic to meet the specified delay constraint.
+
+```
+compile_ultra
+report_timing -to OUT_Z -sig 4
+```
+Below is the new timing report after compilation. 
+![img8]()
+
+Command to write DDC of the design
+```
+write -f ddc -out lab14.ddc
+```
+![img9]()
+
+Below is the boolean optimization for the design.
+![img10]()
 
 </details> 
