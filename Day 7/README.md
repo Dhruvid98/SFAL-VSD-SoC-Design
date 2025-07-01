@@ -521,6 +521,35 @@ viii. With the command `report_ports -verbose` all the information about ports i
     <summary>4. vclk, max_latency, rise_fall IO Delays </summary>
 
 # 4 - vclk, max_latency, rise_fall IO Delays
+* Input delay 
+  - Negative delay for max is **relaxing**
+  - Postive delay for max is **tightening the path**
+  - For min delay, positive is **relaxing**
+  - For min delay, negative is **tightening**
+
+![img1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/vclk%2C%20max_latency%2C%20rise_fall%20IODelays/img1.png)  
+
+* Output delay
+  - Negative delay for max is **relaxing**
+  - Postive delay for max is **tightening the path**
+  - For min delay, positive is **relaxing**
+  - For min delay, negative is **tightening**
+
+![img2](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/vclk%2C%20max_latency%2C%20rise_fall%20IODelays/img2.png)
+
+* Constrainting pure combinational
+  - If no clock definition point is specified in the command, it is considered a `Virtual clock` by default. 
+
+![img3](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/vclk%2C%20max_latency%2C%20rise_fall%20IODelays/img3.png)  
+
+![img4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/vclk%2C%20max_latency%2C%20rise_fall%20IODelays/img4.png)  
+
+![img5](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/vclk%2C%20max_latency%2C%20rise_fall%20IODelays/img5.png)  
+
+![img6](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/vclk%2C%20max_latency%2C%20rise_fall%20IODelays/img6.png)
+
+![img7](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/vclk%2C%20max_latency%2C%20rise_fall%20IODelays/img7.png)
+
 
 
 </details> 
