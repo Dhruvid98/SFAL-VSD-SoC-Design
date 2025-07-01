@@ -581,9 +581,9 @@ assign OUT_Z = IN_C ^ IN_D ;
 ```
 
 The circuit is shown below
-![img1]()  
+![img1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab14/img1.png)  
 
-![img2]()  
+![img2](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab14/img2.png)  
 
 * To know all the paths from IN_A
 
@@ -595,16 +595,16 @@ all_fanout -flat -from IN_A // it will list all fanout.
 ```
 All fan outs of IN_A
 
-![img3]()
+![img3](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab14/img3.png)
 
 * To get teh point name along with it's standard cell reference.
-![img4]()
+![img4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab14/img4.png)
 
 * Mapping all the above points in the circuit
-![img5]()
+![img5](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab14/img5.png)
 
 Below are the endpoints based on the timing path. 
-![img6]() 
+![img6](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab14/img6.png) 
 
 **Fanin**
 
@@ -624,7 +624,7 @@ Below is the `report_timing` after using set_max_delay.
 ```
 report_timing -to OUT_Z -sig 4
 ```
-![img7]()
+![img7](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab14/img7.png)
 
 * The `set_max_delay` constraint is applied after the design is compiled. If the design is recompiled, the violation typically disappears, as the Design Compiler tool optimizes the logic to meet the specified delay constraint.
 
@@ -633,15 +633,15 @@ compile_ultra
 report_timing -to OUT_Z -sig 4
 ```
 Below is the new timing report after compilation. 
-![img8]()
+![img8](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab14/img8.png)
 
 Command to write DDC of the design
 ```
 write -f ddc -out lab14.ddc
 ```
-![img9]()
+![img9](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab14/img9.png)
 
 Below is the boolean optimization for the design.
-![img10]()
+![img10](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/Images/Lab14/img10.png)
 
 </details> 
