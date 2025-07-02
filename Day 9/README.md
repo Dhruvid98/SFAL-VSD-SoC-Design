@@ -41,9 +41,9 @@ assign out_clk = clk;
 endmodule
 ```
 
-Step 2. Linking the file and sourcing the constraints file. `source lab8_cons_modified.tcl`
-Step 3. `compile_ultra` to optimize the design based on constraints 
-Step 4. `report_timing -sig 4 -nosplit -trans -cap -nets -inp`. 
+Step 2. Linking the file and sourcing the constraints file. `source lab8_cons_modified.tcl`  
+Step 3. `compile_ultra` to optimize the design based on constraints   
+Step 4. `report_timing -sig 4 -nosplit -trans -cap -nets -inp`.   
 * Below are the clues to see if it is set up or hold time. 
 ![img1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%209/Images/Lab/img1.png)
 ![img2](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%209/Images/Lab/img2.png)
