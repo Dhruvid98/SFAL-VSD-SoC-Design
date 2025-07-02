@@ -72,3 +72,4 @@ A clue that it is reporting hold time. (For slack time, look for just the differ
 ![img6](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%209/Images/Lab/img6.png)
 
 * The contribution from the cell can be min or max delay. It is not the contribution of the cell that matters; it is the **overall delay of the path that matters.**
+
