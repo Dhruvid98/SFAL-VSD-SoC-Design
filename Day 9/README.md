@@ -73,3 +73,25 @@ A clue that it is reporting hold time. (For slack time, look for just the differ
 
 * The contribution from the cell can be min or max delay. It is not the contribution of the cell that matters; it is the **overall delay of the path that matters.**
 
+## Design Load Check
+
+* `check_timing`: Ensures that the design is constrained properly. It will check whether the design is constrained or not.
+```
+check_timing
+```
+![img1]()
+
+After sourcing `lab8_cons_modified.tcl`. 
+
+![img3]
+
+* 'report_constraints' : Displays the constraints applied to the design. If no user-defined constraints are present, it shows the default constraints stored in the tool's memory. Below is an example of default constraints
+
+![img2]()
+
+After sourcing `lab8_cons_modified.tcl`.
+
+![img4]()
+* `check_design` : To check the current design
+
+Let's
