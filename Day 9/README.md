@@ -79,19 +79,71 @@ A clue that it is reporting hold time. (For slack time, look for just the differ
 ```
 check_timing
 ```
-![img1]()
+![img1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%209/Images/check_time_design/img1.png)
 
 After sourcing `lab8_cons_modified.tcl`. 
 
-![img3]
+![img3](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%209/Images/check_time_design/img3.png)
 
 * 'report_constraints' : Displays the constraints applied to the design. If no user-defined constraints are present, it shows the default constraints stored in the tool's memory. Below is an example of default constraints
 
-![img2]()
+![img2](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%209/Images/check_time_design/img2.png)
 
 After sourcing `lab8_cons_modified.tcl`.
 
-![img4]()
+![img4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%209/Images/check_time_design/img4.png)
 * `check_design` : To check the current design
 
-Let's
+Considering the mux_generate_128_1.v design. 
+```
+module mux_generate (input [127:0]i0 , input [6:0] sel  , output reg y);
+integer k;
+always @ (*)
+begin
+for(k = 0; k < 128; k=k+1) begin
+	if(k == sel)
+		y = i0[k];
+end
+end
+endmodule
+```
+
+
+* For the above design, the number of fanout and the capacitance value a alot. Due to that, we will see a violation in the timing report 
+
+![img5](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%209/Images/check_time_design/img5.png)
+
+* `set_max_capacitance 0.025 [current_design]` : To control the maximum capacitance of the entire design.
+![img6](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%209/Images/check_time_design/img6.png)
+
+* `report_constraint -all_violators` : Command to know what all constraints are violating. 
+![img7](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%209/Images/check_time_design/img7.png)
+
+* After compilation, the timing is met and there are no violation 
+  - report_constraints 
+![img8](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%209/Images/check_time_design/img8.png)
+
+  - report_timing 
+![img9](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%209/Images/check_time_design/img9.png)
+
+  - report_timing -net -cap -sig 4
+![img10](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%209/Images/check_time_design/img10.png)
+
+![img11](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%209/Images/check_time_design/img11.png)
+
+Steps performed to set_max_capacitance. 
+```
+read_verilog mux_generate_128_1.v
+check_design
+link
+compile_ultra
+write -f verilog -out mux_generate_128_1_net.v
+report_timing -net -cap -sig 4
+set_max_delay -from [all_inputs] -to [all__outputs] 3.5
+set_max_capacitance 0.025 [current_design]
+report_constraint -all_violators
+compile_ultra
+report_constraints
+report_timing
+report_timing -net -cap -sig 4
+```
