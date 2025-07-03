@@ -76,9 +76,7 @@ A clue that it is reporting hold time. (For slack time, look for just the differ
 ## Design Load Check
 
 * `check_timing`: Ensures that the design is constrained properly. It will check whether the design is constrained or not.
-```
-check_timing
-```
+
 ![img1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%209/Images/check_time_design/img1.png)
 
 After sourcing `lab8_cons_modified.tcl`. 
