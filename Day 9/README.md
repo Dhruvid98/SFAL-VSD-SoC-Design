@@ -147,3 +147,64 @@ report_constraints
 report_timing
 report_timing -net -cap -sig 4
 ```
+
+### High Fan out 
+![img1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%209/Images/HFN/img1.png)
+
+Creating en_128.v file
+```
+module en_128 (input [127:0] x , output [127:0] y , input en);
+	assign y[127:0] = en ?x[127:0]:128'b0;
+endmodule
+```
+
+`report_timing -from en -inp -nets -cap` 
+![img2](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%209/Images/HFN/img2.png)
+
+```
+set_max_capacitance 0.03 [current_design]
+report_constraints
+```
+![img3](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%209/Images/HFN/img3.png)
+
+After compilation, `compile_ultra`. Below is the report timing `report_timing -from en -inp -nets -cap -sig 4`
+![img4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%209/Images/HFN/img4.png)
+
+* Earlier single enable was driving all 128 pins. But now it has been a tree. It is driving only a few buffers. 
+![img5](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%209/Images/HFN/img5.png)
+
+
+![img6](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%209/Images/HFN/img6.png)
+![img7](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%209/Images/HFN/img7.png)
+
+```
+set_max_transition 0.15 [current_design]
+report_constraints
+```
+* When a violation is detected, Design Compiler assigns a higher cost to that specific area. As a result, only that portion of the design will be prioritized and optimized. 
+
+![img8](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%209/Images/HFN/img8.png)
+
+```
+report_constraints -all_violators
+```
+
+![img9](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%209/Images/HFN/img9.png)
+
+```
+compile_ultra
+report_constraints -all_violators
+```
+ 
+* After compilation, there is no transition violation. All transition violation is removed 
+![img10](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%209/Images/HFN/img10.png)
+
+```
+report_timing -from en -inp -nets -cap -sig 4 -nosplit -from en -to y[116]
+```
+![img11](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%209/Images/HFN/img11.png)  
+
+![img12](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%209/Images/HFN/img12.png)
+
+![img13](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%209/Images/HFN/img13.png)
+![img14](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%209/Images/HFN/img14.png)
