@@ -14,3 +14,14 @@ An SoC is a single die that integrates multiple IP cores. These IPs could vary f
 **5. Digital Signal Processor (DSP):** Used for processing audio and video signals.  
 **6. Power Management:** Manages power consumption within the SoC to ensure efficient and optimized chip operation.  
 
+### Types of SoC
+  1. Microcontroller-based SoC : These SoCs are centered on a microcontroller and designed for basic control functions in common devices. They are recognized for their low power consumption and efficiency.
+  2. Microprocessor-based SoC: This category includes a microprocessor that can manage more advanced tasks and operate full operating systems. These SoCs enable multitasking and run complex applications
+  3. Application-Specific SoC: These SoC is designed specifically for high-performance tasks. The SoCs excel in fields such as graphics processing, network management, and multimedia applications. They are optimized for speed and efficiency.
+
+* SoC Design flow
+![img1]()
+
+## Introduction to VSDBabySoC
+
+
