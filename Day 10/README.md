@@ -7,10 +7,10 @@ This project explores the design of a small, open-source System on Chip (SoC) bu
 An SoC is a single die that integrates multiple IP cores. These IPs could vary from microprocessors (digital) to 5G broadband modems (analog). 
 
 ### Key Components 
-**1. CPU (Central Processing Unit) :**  The Brain  of the SoC, handling all main instructions and decisions.
-**2. Memory:** RAM (Random Access Memory) and ROM/Flash Storage
-**3. I/O Ports (Input/Output):**  Connects the SoC to other parts or devices, eg USB
-**4. Graphics Processing Unit (GPU):** Creates visuals on your screen.
-**5. Digital Signal Processor (DSP):** Used for processing audio and video signals.
-**6. Power Management:** Manages power consumption within the SoC to ensure efficient and optimized chip operation.
+**1. CPU (Central Processing Unit) :**  The Brain  of the SoC, handling all main instructions and decisions.  
+**2. Memory:** RAM (Random Access Memory) and ROM/Flash Storage.  
+**3. I/O Ports (Input/Output):**  Connects the SoC to other parts or devices, eg USB.  
+**4. Graphics Processing Unit (GPU):** Creates visuals on your screen.  
+**5. Digital Signal Processor (DSP):** Used for processing audio and video signals.  
+**6. Power Management:** Manages power consumption within the SoC to ensure efficient and optimized chip operation.  
 
