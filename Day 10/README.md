@@ -20,12 +20,12 @@ An SoC is a single die that integrates multiple IP cores. These IPs could vary f
   3. Application-Specific SoC: These SoC is designed specifically for high-performance tasks. The SoCs excel in fields such as graphics processing, network management, and multimedia applications. They are optimized for speed and efficiency.
 
 * SoC Design flow
-![img1]()
+![img1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2010/Images/Intro/img1.png)
 
 ## Introduction to VSDBabySoC
 
 VSDBabySoC is a powerful RISCV-based SoC. The main purpose of designing such a small SoC is to test three open-source IP cores together for the first time and calibrate the analog part of it. It contains one `RVMYTH microprocessor`, an `8x-PLL` to generate a stable clock, and a `10-bit DAC` to communicate with other analog devices.  
-![img2]()  
+![img2](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2010/Images/Intro/img2.png)  
 
 ### What is RVMYTH
 * RVMYTH is an open-source RISC-V CPU design. Its a customizable CPU that performs processing tasks and interacts with other elements within the SoC.
@@ -36,4 +36,5 @@ VSDBabySoC is a powerful RISCV-based SoC. The main purpose of designing such a s
 * The PLL generates a stable clock signal to keep all components in BabySoC synchronized. It aligns the SoC’s internal clock with a reference frequency, ensuring accurate timing for both the RVMYTH processor and the DAC.
 
 ### What is DAC
-* 
+* A digital-to-analog converter(DAC) is a system that converts a digital signal into an analog signal.
+* The DAC takes digital signals from the RVMYTH processor and turns them into analog signals, like sound or pictures. This lets BabySoC work with devices like speakers or screens that use analog signals.
