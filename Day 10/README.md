@@ -24,4 +24,16 @@ An SoC is a single die that integrates multiple IP cores. These IPs could vary f
 
 ## Introduction to VSDBabySoC
 
+VSDBabySoC is a powerful RISCV-based SoC. The main purpose of designing such a small SoC is to test three open-source IP cores together for the first time and calibrate the analog part of it. It contains one `RVMYTH microprocessor`, an `8x-PLL` to generate a stable clock, and a `10-bit DAC` to communicate with other analog devices.  
+![img2]()  
 
+### What is RVMYTH
+* RVMYTH is an open-source RISC-V CPU design. Its a customizable CPU that performs processing tasks and interacts with other elements within the SoC.
+* RVMYTH works as the brain of BabySoC
+
+### What is PLL
+* A Phase-Locked Loop(PLL) is a system that creates an output signal that stays in sync with an input signal. It's often used to keep clocks running at the correct speed and to ensure that different parts of a chip stay in sync with each other.
+* The PLL generates a stable clock signal to keep all components in BabySoC synchronized. It aligns the SoC’s internal clock with a reference frequency, ensuring accurate timing for both the RVMYTH processor and the DAC.
+
+### What is DAC
+* 
