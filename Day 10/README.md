@@ -19,12 +19,13 @@ An SoC is a single die that integrates multiple IP cores. These IPs could vary f
   2. Microprocessor-based SoC: This category includes a microprocessor that can manage more advanced tasks and operate full operating systems. These SoCs enable multitasking and run complex applications
   3. Application-Specific SoC: These SoC is designed specifically for high-performance tasks. The SoCs excel in fields such as graphics processing, network management, and multimedia applications. They are optimized for speed and efficiency.
 
-* SoC Design flow
+* SoC Design flow  
 ![img1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2010/Images/Intro/img1.png)
 
 ## Introduction to VSDBabySoC
 
 VSDBabySoC is a powerful RISCV-based SoC. The main purpose of designing such a small SoC is to test three open-source IP cores together for the first time and calibrate the analog part of it. It contains one `RVMYTH microprocessor`, an `8x-PLL` to generate a stable clock, and a `10-bit DAC` to communicate with other analog devices.  
+
 ![img2](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2010/Images/Intro/img2.png)  
 
 ### What is RVMYTH
