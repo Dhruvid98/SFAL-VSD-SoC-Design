@@ -51,9 +51,13 @@ VSDBabySoC is a powerful RISCV-based SoC. The main purpose of designing such a s
 
 #### Modelling of RVMYTH
 * RVMYTH is written in TL-Verilog, but we need to convert it to Verilog so that its results can be used SoC
-* Here Sandpiper saas is used to translate into verilog. 
+* Here, Sandpiper saas is used to translate into verilog. 
 
 [Model the RVMYTH](https://github.com/shivanishah269/risc-v-core)
 
-
+#### PLL and DAC modeling
+* PLL and DAC are analog blocks and cannot be synthesized. To test their functionality in simulations, we model their behavior. Verilog’s `real` datatype can be used to simulate analog-like behavior in a digital environment.
+* [This](https://github.com/vsdip/rvmyth_avsdpll_interface) was the earlier implementation of the PLL model. However, with a few modifications, the [updated version(https://github.com/lakshmi-sathi/avsdpll_1v8) of the PLL model is now being used.
+* [Reference](https://github.com/vsdip/rvmyth_avsdpll_interface) to model the PLL
+* [Reference](https://github.com/vsdip/rvmyth_avsddac_interface) to model the DAC
 </details>
