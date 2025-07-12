@@ -23,7 +23,7 @@ An SoC is a single die that integrates multiple IP cores. These IPs could vary f
 ![img1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2010/Images/Intro/img1.png)
 
 <details>
-    <summary> Introduction to VSDBabySoC </summary>
+    <summary> Introduction to VSDBabySoC Modelling </summary>
   
 ## Introduction to VSDBabySoC
 VSDBabySoC is a powerful RISCV-based SoC. The main purpose of designing such a small SoC is to test three open-source IP cores together for the first time and calibrate the analog part of it. It contains one `RVMYTH microprocessor`, an `8x-PLL` to generate a stable clock, and a `10-bit DAC` to communicate with other analog devices.  
@@ -50,5 +50,10 @@ VSDBabySoC is a powerful RISCV-based SoC. The main purpose of designing such a s
 * As a result, the `r17` register is updated with new values on each clock cycle. These values are then used by the DAC core to generate the final output signal, `OUT`.
 
 #### Modelling of RVMYTH
+* RVMYTH is written in TL-Verilog, but we need to convert it to Verilog so that its results can be used SoC
+* Here Sandpiper saas is used to translate into verilog. 
+
+![Model the RVMYTH](https://github.com/shivanishah269/risc-v-core)
+
 
 </details>
