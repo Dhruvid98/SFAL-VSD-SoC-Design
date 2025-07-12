@@ -53,7 +53,7 @@ VSDBabySoC is a powerful RISCV-based SoC. The main purpose of designing such a s
 * RVMYTH is written in TL-Verilog, but we need to convert it to Verilog so that its results can be used SoC
 * Here Sandpiper saas is used to translate into verilog. 
 
-![Model the RVMYTH](https://github.com/shivanishah269/risc-v-core)
+[Model the RVMYTH](https://github.com/shivanishah269/risc-v-core)
 
 
 </details>
