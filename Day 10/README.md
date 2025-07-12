@@ -22,8 +22,10 @@ An SoC is a single die that integrates multiple IP cores. These IPs could vary f
 * SoC Design flow  
 ![img1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2010/Images/Intro/img1.png)
 
+<details>
+    <summary> Introduction to VSDBabySoC </summary>
+  
 ## Introduction to VSDBabySoC
-
 VSDBabySoC is a powerful RISCV-based SoC. The main purpose of designing such a small SoC is to test three open-source IP cores together for the first time and calibrate the analog part of it. It contains one `RVMYTH microprocessor`, an `8x-PLL` to generate a stable clock, and a `10-bit DAC` to communicate with other analog devices.  
 
 ![img2](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2010/Images/Intro/img2.png)  
@@ -39,3 +41,14 @@ VSDBabySoC is a powerful RISCV-based SoC. The main purpose of designing such a s
 ### What is DAC
 * A digital-to-analog converter(DAC) is a system that converts a digital signal into an analog signal.
 * The DAC takes digital signals from the RVMYTH processor and turns them into analog signals, like sound or pictures. This lets BabySoC work with devices like speakers or screens that use analog signals.
+
+### Modeling VSDBabySoC 
+
+* Model and simulate the VSDBabySoC using iverilog, then we will show the results using gtkwave tool.
+* Providing initial input signals to the vsdbabysoc module, which triggers the PLL to begin generating the appropriate clock (CLK) signal for the circuit.
+* The clock signal will make the `RVMYTH` to execute instructions in its memory.
+* As a result, the `r17` register is updated with new values on each clock cycle. These values are then used by the DAC core to generate the final output signal, `OUT`.
+
+#### Modelling of RVMYTH
+
+</details>
