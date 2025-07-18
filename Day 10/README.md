@@ -61,3 +61,4 @@ VSDBabySoC is a powerful RISCV-based SoC. The main purpose of designing such a s
 * [Reference](https://github.com/vsdip/rvmyth_avsdpll_interface) to model the PLL
 * [Reference](https://github.com/vsdip/rvmyth_avsddac_interface) to model the DAC
 </details>
+
