@@ -1,4 +1,4 @@
-# Day 10: Fundamentals of SoC Design
+# Day 10: Fundamentals of SoC Design 
 
 ## Problem Statement 
 This project explores the design of a small, open-source System on Chip (SoC) built around RVMYTH (RISC-V processor). This SoC will leverage a Phase-Locked Loop (PLL) as a clock generator and controller, and a 10-bit Digital-to-Analog Converter (DAC) to help the chip interact with the real world. Devices like televisions and mobile phones that accept analog input can process the DAC output to deliver music or display video frames. In the end, the open-source SoC built using Sky130 technology offers a well-documented platform ideal for educational use and hands-on learning.
@@ -61,4 +61,5 @@ VSDBabySoC is a powerful RISCV-based SoC. The main purpose of designing such a s
 * [Reference](https://github.com/vsdip/rvmyth_avsdpll_interface) to model the PLL
 * [Reference](https://github.com/vsdip/rvmyth_avsddac_interface) to model the DAC
 </details>
+
 
