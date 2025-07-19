@@ -5,7 +5,7 @@
 
 * We adjust the digital output value, either by increasing or decreasing it, and then feed it to the DAC model to observe the changes SoC output.
 
-Script to install the packages.
+1. Script to install the packages.
 
 * vsdbabysoc.v (Top-Level SoC Module)
 ```
@@ -23,4 +23,10 @@ Script to install the packages.
 
 ```
 
-</details>
+2. Cloning this repository VSDBabySoC repository
+```
+$ cd ~
+$ git clone https://github.com/manili/VSDBabySoC.git
+```
+
+   </details>
