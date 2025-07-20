@@ -34,7 +34,7 @@ $ git clone https://github.com/manili/VSDBabySoC.git
 $ cd VSDBabySoC
 $ sandpiper-saas -i ./src/module/*.tlv -o rvmyth.v --bestsv --noline -p verilog --outdir ./src/module/
 ```
-![img1]()  
+![img1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2011/Images/img1.png)  
 
 Run the following command to perform a **pre-synthesis simulation**:  
 ```
@@ -47,14 +47,14 @@ cd output/pre_synth_sim
 * The simulation result is stored in `output/pre_synth_sim` directory i.e. `pre_synth_sim.vcd`
 * -DPRE_SYNTH_SIM: Defines the PRE_SYNTH_SIM macro for conditional compilation in the testbench.
   
-![img2]()
+![img2](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2011/Images/img2.png)
 
 ### 4. Analyzing `pre_synth_sim.vcd` waveforms in gtkwave by following the command:
 ```
 $ gtkwave output/pre_synth_sim/pre_synth_sim.vcd
 ```
 
-![img3]()
+![img3](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2011/Images/img3.png)
 
 The following signals are displayed.
 * CLK: This is the input CLK signal of the RVMYTH core.
@@ -63,10 +63,12 @@ The following signals are displayed.
 * reset: This is the input reset signal of the RVMYTH core.
     * This signal comes from an external source, originally.
 * OUT: This is the output OUT signal of the VSDBabySoC module. 
-* RV_TO_DAC[9:0]: This is the 10-bit output [9:0] OUT port of the RVMYTH core. This port comes from the RVMYTH register #17, originally.
+* RV_TO_DAC[9:0]: This is the 10-bit output [9:0] OUT port of the RVMYTH core.
+    * This port comes from the RVMYTH register originally.
 * OUT: This is a real datatype wire that can simulate analog values.
     * It is the output wire real OUT signal of the **DAC module**. This signal originates from the DAC.
-IMPORTANT NOTE is that the synthesis process does not support real variables, so we must use the simple wire datatype for the \vsdbabysoc.OUT instead. The iverilog simulator always treats wire as a digital signal. As a result we can not see the analog output via \vsdbabysoc.OUT port and we need to use \dac.OUT (which is a real datatype) instead.
+* The synthesis process does not support real variables, so we must use the simple wire datatype for the vsdbabysoc.OUT instead. The iverilog simulator always treats wire as a digital signal. As a result, we can not see the analog output via vsdbabysoc.OUT port, and we need to **use dac.OUT** (which is a real datatype) instead.
+* To view the signal as analog, set its Data Format to Analog
 
 
    </details>
