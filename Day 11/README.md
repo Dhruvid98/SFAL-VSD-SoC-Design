@@ -23,10 +23,26 @@
 
 ```
 
-2. Cloning this repository VSDBabySoC repository
+2. Cloning the VSDBabySoC repository
 ```
 $ cd ~
 $ git clone https://github.com/manili/VSDBabySoC.git
 ```
+
+3. Make the `pre_synth_sim.vcd`:
+```
+$ cd VSDBabySoC
+$ make pre_synth_sim
+```
+* Here `make pre_synth_sim` internally calls `sandpiper-saas -i src/module/rvmyth.tlv -o rvmyth.v --bestsv --noline -p verilog --outdir output/compiled_tlv` which is ued to convert TLV RVMYTH processor into verilog.
+* The simulation result is stored in `output/pre_synth_sim` directory i.e. `pre_synth_sim.vcd`
+![img1]()
+
+4. Analyzing `pre_synth_sim.vcd` waveforms by following the command:
+```
+$ gtkwave output/pre_synth_sim/pre_synth_sim.vcd
+```
+
+![img2]()
 
    </details>
