@@ -38,9 +38,8 @@ $ sandpiper-saas -i ./src/module/*.tlv -o rvmyth.v --bestsv --noline -p verilog 
 
 Run the following command to perform a **pre-synthesis simulation**:  
 ```
-iverilog -o output/pre_synth_sim/pre_synth_sim.out -DPRE_SYNTH_SIM \
-    -I src/include -I src/module \
-    src/module/testbench.v src/module/vsdbabysoc.v
+iverilog -o output/pre_synth_sim.out -DPRE_SYNTH_SIM  src/module/testbench.v
+    -I src/include -I src/module 
 cd output/pre_synth_sim
 ./pre_synth_sim.out
 ```
