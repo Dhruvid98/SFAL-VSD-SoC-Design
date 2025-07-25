@@ -21,7 +21,7 @@ Gate-Level Simulation (GLS) verifies both functionality and timing of the design
 
 ## Converting `avsddac.lib` to `avsddac.db`
 
-Path `cd /home/dhruvi/VSDBabySoC/src/lib `
+Path `cd /home/dhruvi/VSDBabySoC/src/lib `  
 ![img1]()    
 
 Launching library compiler 
@@ -48,7 +48,7 @@ lc_shell
 read_lib avsdpll.lib
 write_lib avsdpll -format db -output avsdpll.db
 ```
-![img5]()
+![img5]()  
 ![img6]()  
 
 ## Converting sky130_fd_sc_hd__tt_025C_1v80.lib to sky130_fd_sc_hd__tt_025C_1v80.db  
@@ -63,5 +63,24 @@ lc_shell
 read_lib sky130_fd_sc_hd__tt_025C_1v80.lib
 write_lib sky130_fd_sc_hd__tt_025C_1v80 -format db -output sky130_fd_sc_hd__tt_025C_1v80.db
 ```
-![img7]()
+![img7]()  
 ![img8]()  
+
+## Running Synthesis and GLS
+* After generating the .db files, running the synthesis and GLS
+
+### Synthesis 
+
+```
+cd /home/dhruvi/VSDBabySoC/src/lib
+dc_shell
+set target_library /home/dhruvi/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.db
+set link_library {* /home/dhruvi/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.db /home/dhruvi/VSDBabySoC/src/lib/avsdpll.db /home/dhruvi/VSDBabySoC/src/lib/avsddac.db}
+```
+![img9]()  
+
+```
+set search_path {/home/dhruvi/VSDBabySoC/src/module}
+
+````
+![img10]()  
