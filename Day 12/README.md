@@ -107,9 +107,9 @@ report_qor > report_qor.txt
 ![img16]()  
 ![img17]()  
 ![img18]()  
-![img19]()
-![img20]()
-![img21]()
-![img22]()
+![img19]()  
+![img20]()  
+![img21]()  
+![img22]()  
 
 ## Post-Synthesis Simulation
