@@ -22,13 +22,13 @@ Gate-Level Simulation (GLS) verifies both functionality and timing of the design
 ## Converting `avsddac.lib` to `avsddac.db`
 
 Path `cd /home/dhruvi/VSDBabySoC/src/lib `  
-![img1]()    
+![img1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2012/Images/img1.png)    
 
 Launching library compiler 
 ```
 $lc_shell
 ```
-![img2]()  
+![img2](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2012/Images/img2.png)  
 
 Reading the `avsddac.lib` file and converting it into `avsddac.db`
 
@@ -36,8 +36,8 @@ Reading the `avsddac.lib` file and converting it into `avsddac.db`
 read_lib avsddac.lib
 write_lib avsddac -format db -output avsddac.db
 ```
-![img3]()  
-![img4]()  
+![img3](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2012/Images/img3.png)  
+![img4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2012/Images/img4.png)  
 
 ## Converting avsdpll.lib to avsdpll.db
 
@@ -48,8 +48,8 @@ lc_shell
 read_lib avsdpll.lib
 write_lib avsdpll -format db -output avsdpll.db
 ```
-![img5]()  
-![img6]()  
+![img5](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2012/Images/img5.png)  
+![img6](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2012/Images/img6.png)  
 
 ## Converting sky130_fd_sc_hd__tt_025C_1v80.lib to sky130_fd_sc_hd__tt_025C_1v80.db  
 
@@ -63,8 +63,8 @@ lc_shell
 read_lib sky130_fd_sc_hd__tt_025C_1v80.lib
 write_lib sky130_fd_sc_hd__tt_025C_1v80 -format db -output sky130_fd_sc_hd__tt_025C_1v80.db
 ```
-![img7]()  
-![img8]()  
+![img7](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2012/Images/img7.png)  
+![img8](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2012/Images/img8.png)  
 
 ## Running Synthesis and GLS
 * After generating the .db files, running the synthesis and GLS
@@ -77,10 +77,10 @@ dc_shell
 set target_library /home/dhruvi/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.db
 set link_library {* /home/dhruvi/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.db /home/dhruvi/VSDBabySoC/src/lib/avsdpll.db /home/dhruvi/VSDBabySoC/src/lib/avsddac.db}
 ```
-![img9]()  
+![img9](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2012/Images/img9.png)  
 
 ```
 set search_path {/home/dhruvi/VSDBabySoC/src/module}
 
 ````
-![img10]()  
+![img10](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2012/Images/img10.png)  
