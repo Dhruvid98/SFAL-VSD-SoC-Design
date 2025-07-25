@@ -18,4 +18,4 @@ Gate-Level Simulation (GLS) verifies both functionality and timing of the design
 *  **Synopsys Library Compiler** (lc_shell) is used to convert  .lib to .db
 * `.db` files are genrated for `avsddac`, `avsdpll`, and `sky130_fd_sc_hd__tt_025C_1v80` libraries.
   * `sky130_fd_sc_hd__tt_025C_1v80` is avaliable for download at [Skywater GitHub repository.](https://github.com/efabless/skywater-pdk-libs-sky130_fd_sc_hd/tree/master/timing)
-  
+  * 
