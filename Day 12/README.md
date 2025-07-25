@@ -113,3 +113,30 @@ report_qor > report_qor.txt
 ![img22]()  
 
 ## Post-Synthesis Simulation
+Command
+```
+iverilog -DFUNCTIONAL -DUNIT_DELAY=#1 -o ./output/post_synth_sim.out ./src/gls_model/primitives.v ./src/gls_model/sky130_fd_sc_hd.v ./output/vsdbabysoc_net.v ./src/module/avsdpll.v ./src/module/avsddac.v ./src/module/testbench.v
+./a.out
+```
+* `-DFUNCTIONAL`: Defines `FUNCTIONAL` to use behavioral models instead of detailed gate-level timing.
+* `-DUNIT_DELAY=#1 ` : Assigns a unit delay of #1 to all gates for post-synthesis simulation.
+![img23]()
+![img24]()
+
+```
+gtkwave dump.vcd
+```
+![img25]()
+
+### Verify Pre-Synthesis vs Post-Synthesis
+![img26]()
+
+
+**Errors** 
+* Errors during avsdpll.db conversion of avsdpll.lib lib file.
+
+![error2]()
+
+* Errors during GLS simulation 
+
+![error1]()
