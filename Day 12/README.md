@@ -1,17 +1,22 @@
 # Day 12: Post-Synthesis Simulation
 
 ## Introduction 
-Gate-Level Simulation (GLS) verifies both functionality and timing of the design after synthesis.  Pre-synthesis simulations (RTL simulations), which validate logic without any delays, GLS incorporates gate delays and timing information extracted from the synthesized netlist. This helps in catching issues like timing violations, race conditions, or improper use of blocking/non-blocking assignments that may not be visible during RTL simulation.
+Gate-Level Simulation (GLS) verifies both functionality and timing of the design after synthesis.  Pre-synthesis simulations (RTL simulations), which validate logic without any delays, GLS incorporates gate delays and timing information extracted from the synthesized netlist. This helps in catching issues like timing violations, race conditions, functionality verification, dynamic circuit behavior, or glitches. 
+
+The initial step in the design flow is to synthesize the generated RTL code, followed by simulating the synthesized output. This process helps identify potential issues in the code. In this section, we will synthesize the RTL and then perform a post-synthesis simulation to detect any discrepancies. Ideally, the results of the post-synthesis simulation should match those from the pre-synthesis (modeling) phase, confirming that synthesis has not altered the original design behavior.
 
 ##  Pre-Synthesis and Post-Synthesis
 
   1. Pre-Synthesis
       * Focuses only on verifying the functionality of the code.
-      * Events occur on the active clock edge; therefore there is a zero-delay environment. 
+      * It helps to detect and correct logical errors, such as incorrect operator usage or unintended latch inference.
+      * Events occur on the active clock edge; therefore, there is a zero-delay environment. 
 
   2. Post-Synthesis
       * Focuses only on verifying both the functionality and timing of the design using a synthesized netlist
       * Identifies timing violations and potential mismatches. It also helps verify dynamic circuit behavior.
+
+These simulations ensure a robust and reliable digital design.
 
 ## Steps for Conversion of .lib to .db Files
 
@@ -87,6 +92,24 @@ set link_library {* /home/dhruvi/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v8
 
 ```
 set search_path {/home/dhruvi/VSDBabySoC/src/module}
-
+read_file {sandpiper_gen.vh  sandpiper.vh  sp_default.vh  sp_verilog.vh clk_gate.v rvmyth.v rvmyth_gen.v vsdbabysoc.v} -autoread -top vsdbabysoc
+link
+compile_ultra
+write_file -format verilog -hierarchy -output /home/dhruvi/VSDBabySoC/output/vsdbabysoc_net.v
+report_qor > report_qor.txt
 ````
 ![img10](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2012/Images/img10.png)  
+![img11]()  
+![img12]()  
+![img13]()  
+![img14]()  
+![img15]()  
+![img16]()  
+![img17]()  
+![img18]()  
+![img19]()
+![img20]()
+![img21]()
+![img22]()
+
+## Post-Synthesis Simulation
