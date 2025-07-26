@@ -98,6 +98,7 @@ compile_ultra
 write_file -format verilog -hierarchy -output /home/dhruvi/VSDBabySoC/output/vsdbabysoc_net.v
 report_qor > report_qor.txt
 ````
+
 ![img10](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2012/Images/img10.png)  
 ![img11](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2012/Images/img11.png)  
 ![img12](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2012/Images/img12.png)  
@@ -113,26 +114,32 @@ report_qor > report_qor.txt
 ![img22](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2012/Images/img22.png)  
 
 ## Post-Synthesis Simulation
+
 Command
 ```
 iverilog -DFUNCTIONAL -DUNIT_DELAY=#1 -o ./output/post_synth_sim.out ./src/gls_model/primitives.v ./src/gls_model/sky130_fd_sc_hd.v ./output/vsdbabysoc_net.v ./src/module/avsdpll.v ./src/module/avsddac.v ./src/module/testbench.v
 ./a.out
 ```
+
 * `-DFUNCTIONAL`: Defines `FUNCTIONAL` to use behavioral models instead of detailed gate-level timing.
 * `-DUNIT_DELAY=#1 ` : Assigns a unit delay of #1 to all gates for post-synthesis simulation.
+
 ![img23](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2012/Images/img23.png)
 ![img24](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2012/Images/img24.png)
 
 ```
 gtkwave dump.vcd
 ```
+
 ![img25](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2012/Images/img25.png)
 
 ### Verify Pre-Synthesis vs Post-Synthesis
+
 ![img26](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2012/Images/img26.png)
 
 
 **Errors** 
+
 * Errors during avsdpll.db conversion of avsdpll.lib lib file.
 
 ![error2](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2012/Images/error2.png)
