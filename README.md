@@ -5,7 +5,16 @@ Welcome to the repository documenting my journey through the SoC Design. This re
   <summary><a href="https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%200/README.md" target="_blank">Day 0 - Tools Installation</a></summary>
   
   #### Key Takeaways
-  * Set up Ngspice and Magic; configured environment for simulation and layout tools
+  * Gained a high-level understanding of the complete chip development flow from specification to system integration.
+  * Learned functional verification checkpoints at each stage (O0 to O4)
+  * Installed open-source tools:
+      * Yosys (Synthesis)
+      * Icarus Verilog (Simulation)
+      * GTKWave (Waveform viewer)
+      * OpenSTA (Static Timing Analysis)
+      * Ngspice (Simulation)
+      * Magic (Layout editing)
+      * OpenLane (RTL-to-GDSII flow)
 </details>
 
 <details>
