@@ -1,8 +1,8 @@
 # SFAL-VSD SoC Design Program
 Welcome to the repository documenting my journey through the SoC Design. This repository documents my hands-on progress, key takeaways, and daily explorations in digital hardware design. It covers topics from tool installation to advanced SoC design and implementation.
 
-| Day       | Topic                                                                  |       Key Takeaway                         |
-|-----------|------------------------------------------------------------------------|-----------------------------------------------------|
+| Day       | Topic                                                                  |       Key Takeaway       |
+|-----------|------------------------------------------------------------------------|-------------------------------------------|
 | Day 0     | [Tools Installation & Environment Setup](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%200/README.md) | Set up Ngspice and Magic; configured environment for simulation and layout tools |
 | Day 1     | [Introduction to Verilog RTL Design and Synthesis](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%201/README.md) | Understood Verilog RTL structure and basic synthesis flow           |
 | Day 2     | [Timing Libraries, Hierarchical vs Flat Synthesis, Efficient Flop Coding Styles](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%202/README.md) | Explored flop coding styles and timing library integration          |
