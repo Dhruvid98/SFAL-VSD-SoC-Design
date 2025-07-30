@@ -2,7 +2,13 @@
 Welcome to the repository documenting my journey through the SoC Design. This repository documents my hands-on progress, key takeaways, and daily explorations in digital hardware design. It covers topics from tool installation to advanced SoC design and implementation.
 
 <details> 
+  <summary><a href="https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%200/README.md" target="_blank">Day 0 - Chip development flow and Tool installation </a></summary>
+</details>
 
-  <summary><a href="https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%200/README.md" target="_blank">Day 0 - Tools Installation</a></summary>
+<details> 
+  <summary><a href="https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%201/README.md" target="_blank">Day 1 - Introduction to Verilog RTL Design and Synthesis </a></summary>
+</details>
 
+<details> 
+  <summary><a href="https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%202/README.md" target="_blank">Day 2 - Timing libs, Hierarchical vs Flat Synthesis and Efficient Flop Coding Styles </a></summary>
 </details>
