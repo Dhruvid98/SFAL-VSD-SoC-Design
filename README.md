@@ -21,4 +21,4 @@ Welcome to the repository documenting my journey through the SoC Design. This re
   <summary><a href="https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%204/README.md" target="_blank">Day 4 - GLS, Blocking vs Non-blocking and Synthesis-Simulation Mismatch </a></summary>
 </details>
 
-*  (Day 4 - GLS, Blocking vs Non-blocking and Synthesis-Simulation Mismatch)[https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%204/README.md]
+* [Day 4 - GLS, Blocking vs Non-blocking and Synthesis-Simulation Mismatch](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%204/README.md)
