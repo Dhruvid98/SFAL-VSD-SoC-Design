@@ -13,6 +13,6 @@ Welcome to the repository documenting my journey through the SoC Design. This re
 | Day 7     | [Advanced Constraints](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%207/README.md) | Refined RTL to meet timing using retiming and redundancy elimination|
 | Day 8    | [Logic Optimizations](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%208/README.md)  | Interpreted timing reports and debugged critical paths              |
 | Day 9     | [Report timing](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%209/README.md) | Understood SoC architecture and system-level integration             |
-| Day 10   | [Fundamentals SoC Design](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2010/README.md) | Understood SoC architecture       |
+| Day 10   | [Fundamentals SoC Design](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2010/README.md) | Understood  |
 | Day 11    | [ VSD BabySoC Modelling Process](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2011/README.md)  | Modeled SoC structure and interfaced IP blocks  |
 | Day 12  | [Post-Synthesis Simulation](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2012/README.md)  | Verified synthesized netlists and validated functional correctness  | 
