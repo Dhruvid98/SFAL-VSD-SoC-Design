@@ -1,4 +1,4 @@
-# Day 1: Functional Verification and Synthesis of 2x1 MUX. 
+# Day 1: Introduction to Verilog RTL Design and Synthesis
 
 ## Introduction to simulator Iverilog and GTKWave. 
 * **Iverilog** is an open-source simulator tool used to verify whether an RTL design adheres to the specified requirements by simulating the design's functionality.
