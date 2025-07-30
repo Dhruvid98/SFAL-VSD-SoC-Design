@@ -12,3 +12,11 @@ Welcome to the repository documenting my journey through the SoC Design. This re
 <details> 
   <summary><a href="https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%202/README.md" target="_blank">Day 2 - Timing libs, Hierarchical vs Flat Synthesis and Efficient Flop Coding Styles </a></summary>
 </details>
+
+<details> 
+  <summary><a href="https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%203/README.md" target="_blank">Day 3 - Combinational and Sequential Optimization </a></summary>
+</details>
+
+<details> 
+  <summary><a href="https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%204/README.md" target="_blank">Day 4 - GLS, Blocking vs Non-blocking and Synthesis-Simulation Mismatch </a></summary>
+</details>
