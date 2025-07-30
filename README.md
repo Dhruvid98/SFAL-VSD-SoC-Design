@@ -3,8 +3,8 @@ Welcome to the repository documenting my journey through the SoC Design. This re
 
 | Day       | Topic                          |       Key Takeaway                                                        |
 |-----------|------------------------------------------------------------------------|---------------------------------------|
-| Day 0 | [Tools Installation & Environment Setup](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%200/README.md) | Set up Ngspice and Magic; configured environment for simulation and layout tools |
-| Day 1 | [Introduction to Verilog RTL Design and Synthesis](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%201/README.md) | Understood Verilog RTL structure and basic synthesis flow           |
+| Day 0     | [Tools Installation & Environment Setup](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%200/README.md) | Set up Ngspice and Magic; configured environment for simulation and layout tools |
+| Day 1     | [Introduction to Verilog RTL Design and Synthesis](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%201/README.md) | Understood Verilog RTL structure and basic synthesis flow           |
 | Day 2 | [Timing Libraries, Hierarchical vs Flat Synthesis, Efficient Flop Coding Styles](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%202/README.md) | Explored flop coding styles and timing library integration          |
 | Day 3 | [Combinational and Sequential Optimizations](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%203/README.md) | Optimized logic for area/timing and deepened synthesis understanding|
 | Day 4 | [GLS, Blocking vs Non-Blocking, Synthesis-Simulation Mismatch](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%204/README.md) | Gained clarity on synthesis concepts and RTL transformation          |
