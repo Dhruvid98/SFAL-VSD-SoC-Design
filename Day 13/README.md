@@ -12,3 +12,12 @@ This task involves performing synthesis, timing analysis, and reporting of post-
 
   ## SDC constraints and synthesizing the design
   
+* `vsdbabysoc_synthesis.sdc` constraint file defines the design requirement of synthesis.
+     * Timing and Area: It constrains to manage maximum area usage and ensures signal timings within a 10ns clock period.
+     * Clock Specifications: Configurations for clock latency, uncertainty, and input delays.
+     * Input/Output Loads: Defines input/output transition and load value.
+
+* Synthesizing the design
+```
+
+```
