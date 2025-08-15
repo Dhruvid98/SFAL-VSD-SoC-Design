@@ -147,3 +147,163 @@ gtkwave dump.vcd
 * Errors during GLS simulation 
 
 ![error1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2012/Images/error1.png)
+
+
+## Synthesizing the design with yosys
+
+### Reading the main vsdbabysoc.v RTL file in yosys
+```
+$yosys
+$read_verilog src/module/vsdbabysoc.v 
+```
+![img1]()
+
+### Reading the rvmyth.v file
+```
+read_verilog -I ~/VSDBabySoC/src/include/ ~/VSDBabySoC/src/module/rvmyth.v
+```
+![img2]()  
+
+### Reading the clk_gate.v file
+```
+read_verilog -I ~/VSDBabySoC/src/include/ ~/VSDBabySoC/src/module/clk_gate.v
+```
+![img3]()
+
+### Loading the Liberty Files for Synthesis
+```
+read_liberty -lib ~/VLSI/VSDBabySoC/src/lib/avsdpll.lib 
+read_liberty -lib ~/VLSI/VSDBabySoC/src/lib/avsddac.lib 
+read_liberty -lib ~/VLSI/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
+![img4]()
+
+### Running Synthesis
+```
+synth -top vsdbabysoc
+```
+![img5]()
+
+### Mapping DFF with standard cells
+```
+dfflibmap -liberty src/lib/sky130_fd_sc_hd__tt_025_1v80.lib //standard-cell lib used for logic mapping
+opt
+abc -liberty src/lib/sky130_fd_sc_hd__tt_025_1v80.lib //standard-cell lib used for logic mapping
+```
+![img6]()
+![img7]()
+![img8]()
+
+### Clean up and renaming
+```
+$flatten 
+$setundef -zero
+$clean -purge
+$rename -enumerate
+```
+* `Flatten`: Flattens the entire design hierarchy into a single-level netlist.
+* `setundef -zero`: Replaces all undefined (x) logic values with logical 0 to avoid simulation issues
+* `clean -purge`: Removes all unused wires, cells, and modules; -purge makes it more aggressive.
+* `rename -enumerate`: Renames internal wires and cells to unique, numbered names for consistency.
+
+### Stats
+```
+$ stat
+```
+```
+=== vsdbabysoc ===
+
+   Number of wires:               4736
+   Number of wire bits:           6210
+   Number of public wires:        4736
+   Number of public wire bits:    6210
+   Number of ports:                  7
+   Number of port bits:              7
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               5920
+     $scopeinfo                      8
+     avsddac                         1
+     avsdpll                         1
+     sky130_fd_sc_hd__a2111oi_0     10
+     sky130_fd_sc_hd__a211o_2        1
+     sky130_fd_sc_hd__a211oi_1      26
+     sky130_fd_sc_hd__a21boi_0       4
+     sky130_fd_sc_hd__a21o_2         1
+     sky130_fd_sc_hd__a21oi_1      672
+     sky130_fd_sc_hd__a221o_2        1
+     sky130_fd_sc_hd__a221oi_1     163
+     sky130_fd_sc_hd__a22o_2         4
+     sky130_fd_sc_hd__a22oi_1      123
+     sky130_fd_sc_hd__a311oi_1       4
+     sky130_fd_sc_hd__a31o_2         1
+     sky130_fd_sc_hd__a31oi_1      344
+     sky130_fd_sc_hd__a32oi_1        2
+     sky130_fd_sc_hd__a41oi_1       26
+     sky130_fd_sc_hd__and2_2        12
+     sky130_fd_sc_hd__and3_2         1
+     sky130_fd_sc_hd__clkinv_1     597
+     sky130_fd_sc_hd__dfxtp_1     1144
+     sky130_fd_sc_hd__lpflow_inputiso0p_1      1
+     sky130_fd_sc_hd__mux2i_1       12
+     sky130_fd_sc_hd__nand2_1      839
+     sky130_fd_sc_hd__nand3_1      249
+     sky130_fd_sc_hd__nand3b_1       1
+     sky130_fd_sc_hd__nand4_1       41
+     sky130_fd_sc_hd__nor2_1       403
+     sky130_fd_sc_hd__nor3_1        35
+     sky130_fd_sc_hd__nor4_1         2
+     sky130_fd_sc_hd__o2111ai_1     20
+     sky130_fd_sc_hd__o211a_1        1
+     sky130_fd_sc_hd__o211ai_1      49
+     sky130_fd_sc_hd__o21a_1         6
+     sky130_fd_sc_hd__o21ai_0      866
+     sky130_fd_sc_hd__o21ba_2        1
+     sky130_fd_sc_hd__o21bai_1      18
+     sky130_fd_sc_hd__o221a_2        1
+     sky130_fd_sc_hd__o221ai_1       7
+     sky130_fd_sc_hd__o22ai_1      155
+     sky130_fd_sc_hd__o2bb2ai_1      1
+     sky130_fd_sc_hd__o311ai_0       2
+     sky130_fd_sc_hd__o31ai_1        3
+     sky130_fd_sc_hd__o32ai_1        1
+     sky130_fd_sc_hd__o41ai_1        1
+     sky130_fd_sc_hd__or2_2         12
+     sky130_fd_sc_hd__or3_2          1
+     sky130_fd_sc_hd__or4_2          1
+     sky130_fd_sc_hd__xnor2_1       13
+     sky130_fd_sc_hd__xor2_1        32
+```
+
+### Writing Synthesized Netlist
+```
+$write_verilog -noattr ~/VSDBabySoC/output/post_synth_sim/vsdbabysoc.netlist.v
+```
+![img9]()
+
+### Compiling the testbench and running the simulation:
+```
+$ iverilog -o output/post_synth_sim/post_synth_sim.out -DPOST_SYNTH_SIM -DFUNCTIONAL -DUNIT_DELAY=#1 -I src/include -I /src/module /src/module/testbench.v
+```
+![img10]()
+
+* TO resolve the issue, update the syntax in the file sky130_fd_sc_hd.v at or around line 74452.
+
+From 
+```
+`endif SKY130_FD_SC_HD__LPFLOW_BLEEDER_FUNCTIONAL_V
+```
+
+To 
+```
+`endif // SKY130_FD_SC_HD__LPFLOW_BLEEDER_FUNCTIONAL_V
+```
+
+### Running the Simulation in gtkwave
+```
+cd output/post_synth_sim/
+./post_synth_sim.out
+gtkwave post_synth_sim.vcd
+```
+![img[11]()
