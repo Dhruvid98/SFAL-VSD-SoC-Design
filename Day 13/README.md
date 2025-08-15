@@ -45,6 +45,5 @@ abc -liberty src/lib/sky130_fd_sc_hd__tt_025_1v80.lib //standard-cell lib used f
 ![img6]()
 
 ### Statistics in yosys
-```
-
-```
+![img7]()
+![img8]()
