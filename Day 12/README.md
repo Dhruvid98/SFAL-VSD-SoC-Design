@@ -156,19 +156,19 @@ gtkwave dump.vcd
 $yosys
 $read_verilog src/module/vsdbabysoc.v 
 ```
-![img1]()
+![img1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2012/Images/yosys/img1.png)
 
 ### Reading the rvmyth.v file
 ```
 read_verilog -I ~/VSDBabySoC/src/include/ ~/VSDBabySoC/src/module/rvmyth.v
 ```
-![img2]()  
+![img2](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2012/Images/yosys/img2.png)  
 
 ### Reading the clk_gate.v file
 ```
 read_verilog -I ~/VSDBabySoC/src/include/ ~/VSDBabySoC/src/module/clk_gate.v
 ```
-![img3]()
+![img3](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2012/Images/yosys/img3.png)
 
 ### Loading the Liberty Files for Synthesis
 ```
@@ -176,13 +176,13 @@ read_liberty -lib ~/VLSI/VSDBabySoC/src/lib/avsdpll.lib
 read_liberty -lib ~/VLSI/VSDBabySoC/src/lib/avsddac.lib 
 read_liberty -lib ~/VLSI/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 ```
-![img4]()
+![img4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2012/Images/yosys/img4.png)
 
 ### Running Synthesis
 ```
 synth -top vsdbabysoc
 ```
-![img5]()
+![img5](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2012/Images/yosys/img5.png)
 
 ### Mapping DFF with standard cells
 ```
@@ -190,9 +190,9 @@ dfflibmap -liberty src/lib/sky130_fd_sc_hd__tt_025_1v80.lib //standard-cell lib 
 opt
 abc -liberty src/lib/sky130_fd_sc_hd__tt_025_1v80.lib //standard-cell lib used for logic mapping
 ```
-![img6]()
-![img7]()
-![img8]()
+![img6](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2012/Images/yosys/img6.png)
+![img7](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2012/Images/yosys/img7.png)
+![img8](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2012/Images/yosys/img8.png)
 
 ### Clean up and renaming
 ```
@@ -280,13 +280,13 @@ $ stat
 ```
 $write_verilog -noattr ~/VSDBabySoC/output/post_synth_sim/vsdbabysoc.netlist.v
 ```
-![img9]()
+![img9](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2012/Images/yosys/img9.png)
 
 ### Compiling the testbench and running the simulation:
 ```
 $ iverilog -o output/post_synth_sim/post_synth_sim.out -DPOST_SYNTH_SIM -DFUNCTIONAL -DUNIT_DELAY=#1 -I src/include -I /src/module /src/module/testbench.v
 ```
-![img10]()
+![img10](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2012/Images/yosys/imh10.png)
 
 * TO resolve the issue, update the syntax in the file sky130_fd_sc_hd.v at or around line 74452.
 
@@ -306,4 +306,4 @@ cd output/post_synth_sim/
 ./post_synth_sim.out
 gtkwave post_synth_sim.vcd
 ```
-![img[11]()
+![img11](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2012/Images/img26.png)
