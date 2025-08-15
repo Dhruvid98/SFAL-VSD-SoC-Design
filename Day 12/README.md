@@ -306,4 +306,4 @@ cd output/post_synth_sim/
 ./post_synth_sim.out
 gtkwave post_synth_sim.vcd
 ```
-![img11](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2012/Images/img26.png)
+![img11](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2012/Images/yosys/img11.png)
