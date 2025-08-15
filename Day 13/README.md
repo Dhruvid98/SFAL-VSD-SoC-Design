@@ -17,7 +17,34 @@ This task involves performing synthesis, timing analysis, and reporting of post-
      * Clock Specifications: Configurations for clock latency, uncertainty, and input delays.
      * Input/Output Loads: Defines input/output transition and load value.
 
-* Synthesizing the design
+* Synthesizing the design with yosys
+
+### Reading the main vsdbabysoc.v RTL file in yosys
+![img1]()
+
+### Reading the rvmyth.v file
+![img2]()  
+
+### Reading the clk_gate.v file
+![img3]()
+
+### Loading the Liberty Files for Synthesis
+![img4]()
+
+### Running Synthesis
+```
+synth -top vsdbabysoc
+```
+![img5]()
+
+### Mapping DFF with standard cells
+```
+dfflibmap -liberty src/lib/sky130_fd_sc_hd__tt_025_1v80.lib //standard-cell lib used for logic mapping
+abc -liberty src/lib/sky130_fd_sc_hd__tt_025_1v80.lib //standard-cell lib used for logic mapping
+```
+![img6]()
+
+### Statistics in yosys
 ```
 
 ```
