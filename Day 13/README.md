@@ -1,6 +1,6 @@
 # Day 13: PVT Corners Timing Analyses
 
-This task involves performing synthesis, timing analysis, and reporting of post-synthesis simulations on the VSDBabySoC design with Synopsys DC using SDC constraints across multiple Process, Voltage, Temperature corners. The goal is to validate the design across diverse operating conditions, ensuring it meets timing requirements for robust functionality. In industry, this is typically achieved by analyzing various PVT corners to guarantee optimal performance, power, and area (PPA) characteristics.
+This task involves performing synthesis, timing analysis, and reporting of post-synthesis simulations on the VSDBabySoC design with OpenSTA using SDC constraints across multiple Process, Voltage, Temperature corners. The goal is to validate the design across diverse operating conditions, ensuring it meets timing requirements for robust functionality. In industry, this is typically achieved by analyzing various PVT corners to guarantee optimal performance, power, and area (PPA) characteristics.
 
 * PVT Corners: Represent the varying conditions under which a semiconductor device is tested to ensure reliable and consistent performance.
     * `Process`: Variations in manufacturing can lead to different transistor speeds.
@@ -16,4 +16,6 @@ This task involves performing synthesis, timing analysis, and reporting of post-
      * Timing and Area: It constrains to manage maximum area usage and ensures signal timings within a 10ns clock period.
      * Clock Specifications: Configurations for clock latency, uncertainty, and input delays.
      * Input/Output Loads: Defines input/output transition and load value.
+
+* **Download Libraries**: Obtain .lib files for different corners from [Skywater PDK timing libraries](https://github.com/efabless/skywater-pdk-libs-sky130_fd_sc_hd/tree/master/timing).
 
