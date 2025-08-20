@@ -19,3 +19,8 @@ This task involves performing synthesis, timing analysis, and reporting of post-
 
 * **Download Libraries**: Obtain .lib files for different corners from [Skywater PDK timing libraries](https://github.com/efabless/skywater-pdk-libs-sky130_fd_sc_hd/tree/master/timing).
 
+
+Debug
+1. Make sure the sdc clock is for 10ns
+2. 
+
