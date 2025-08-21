@@ -82,8 +82,42 @@ report_wns -digits {4} >> ./sta_output/sta_wns.txt
 **TNS vs PVT corners**   
 ![img4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2013/Images/img4.png)
 
-
-Debug
-1. Make sure the sdc clock is for 10ns
-2. 
-
+## SDC Constraints
+```
+set_units -time ns
+create_clock -name MYCLK_I -period 10 [get_ports REF]
+create_generated_clock -name MYCLK -source [get_ports REF ] -divide_by 1 [get_pins {pll/CLK}]
+# setting clock latency
+set_clock_latency -source -min 1 MYCLK
+set_clock_latency -source -max 4 MYCLK
+# setting clock network for jitter (skew + jitter)
+set_clock_uncertainty -setup 0.5 [get_clocks MYCLK]
+set_clock_uncertainty -hold 0.2 [get_clocks MYCLK]
+# IO path constraints. input_delay and transition
+set min_input_delay_factor 0.1
+set max_input_delay_factor 0.3
+set_input_delay -max 3 -clock [get_clocks MYCLK] [get_ports reset ]
+set_input_delay -max 3 -clock [get_clocks MYCLK] [get_ports VCO_IN]
+set_input_delay -max 3 -clock [get_clocks MYCLK] [get_ports ENb_CP ]
+set_input_delay -max 3 -clock [get_clocks MYCLK] [get_ports ENb_VCO]
+set_input_delay -max 3 -clock [get_clocks MYCLK] [get_ports VREFH ]
+set_input_delay -min 1 -clock [get_clocks MYCLK] [get_ports reset]
+set_input_delay -min 1 -clock [get_clocks MYCLK] [get_ports VCO_IN]
+set_input_delay -min 1 -clock [get_clocks MYCLK] [get_ports ENb_CP]
+set_input_delay -min 1 -clock [get_clocks MYCLK] [get_ports ENb_VCO]
+set_input_delay -min 1 -clock [get_clocks MYCLK] [get_ports VREFH]
+set_input_transition -max 0.5 [get_ports reset]
+set_input_transition -max 0.5 [get_ports VCO_IN]
+set_input_transition -max 0.5 [get_ports ENb_CP]
+set_input_transition -max 0.5 [get_ports ENb_VCO]
+set_input_transition -max 0.5 [get_ports VREFH]
+set_input_transition -min 0.1 [get_ports reset]
+set_input_transition -min 0.1 [get_ports VCO_IN]
+set_input_transition -min 0.1 [get_ports ENb_CP]
+set_input_transition -min 0.1 [get_ports ENb_VCO]
+set_input_transition -min 0.1 [get_ports VREFH]
+set_false_path -to [get_ports OUT]
+# output load
+set_load -max 0.4 [get_ports OUT]
+set_load -min 0.1 [get_ports OUT]
+```
