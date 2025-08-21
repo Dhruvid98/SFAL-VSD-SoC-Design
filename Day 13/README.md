@@ -62,25 +62,25 @@ report_wns -digits {4} >> ./sta_output/sta_wns.txt
 ```
 ## PVT Timing Report table
 
-![img1]()
+![img1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2013/Images/img1.png)
 
 * Negative WHS: Indicates a need for hold-time buffers in cases like the fast-fast (ff) corners.
 * Negative WNS: Indicates that the points to set up timing issues may benefit from optimizing the logic path or pipeline stages.
 
 ## Analysis 
 * Slowest corners: The worst max path (Setup-critical) corners are the process nodes are usually: ss_LowTemp_LowVolt, ss_HighTemp_LowVolt
-* Fastest corners: The worst min path (Hold-critical) corners being: ff_LowTemp_HighVolt,ff_HighTemp_HighVolt.
+* Fastest corners: The worst min path (Hold-critical) corners are: ff_LowTemp_HighVolt,ff_HighTemp_HighVolt.
 
 ## Graph 
 
 **Worst setup Slack vs PVT corners**   
-![img2]()  
+![img2](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2013/Images/img2.png)  
 
 **Worst hold Slack vs PVT corners**   
-![img3]()  
+![img3](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2013/Images/img3.png)  
 
-**TNS vs PVT corners** 
-![img4]()
+**TNS vs PVT corners**   
+![img4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2013/Images/img4.png)
 
 
 Debug
