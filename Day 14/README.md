@@ -28,3 +28,10 @@ The cell delays depend on input slew and output load. Delay information is store
 * The NMOS is currently turned off. So there is no conducting path between the source and drain  
 ![img6](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Intro/img6.png)
 ![img7](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Intro/img7.png)
+* In a P–N junction diode, when a reverse bias is applied, a depletion region forms, which is depleted of majority carriers.  
+![img8]()
+![img9]()
+![img10]()
+
+* Cut off region of operation: A Continuous channel is available, now by just application of potential, it will allow the flow from source to drain.
+![img11]()
