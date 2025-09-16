@@ -33,5 +33,5 @@ The cell delays depend on input slew and output load. Delay information is store
 ![img9]()
 ![img10]()
 
-* Cut off region of operation: A Continuous channel is available, now by just application of potential, it will allow the flow from source to drain.
+* Cut off region of operation: A Continuous channel is available, now by just application of potential, it will allow the flow from source to drain.  
 ![img11]()
