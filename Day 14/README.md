@@ -10,21 +10,21 @@ SPICE serves as the foundation in digital VLSI design, providing accurate modeli
 
 ### Inverter 
 An inverter uses PMOS and NMOS transistors. The PMOS connects to VDD and the NMOS to GND. The gates are tied to the input, and the drain is tied to the output. 
-![img1]()
+![img1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Intro/img1.png)
 
 ### Analysis of Inverter using SPICE
 Simulating a CMOS inverter in SPICE verifies its functionality, measures propagation delay, and calculates dynamic and static power. Designers obtain voltage transfer characteristics as well as Id–Vout plots for NMOS and PMOS devices under different input conditions.
-![img2]()
+![img2](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Intro/img2.png)
 
 ### Delay 
 The cell delays depend on input slew and output load. Delay information is stored in a 2D lookup table, where the delay is mapped as a function of input slew and output load.
-![img3]()
+![img3](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Intro/img3.png)
 
 ### NMOS Transistor
-![img5]()
-![img4]()
+![img5](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Intro/img5.png)
+![img4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Intro/img4.png)
 
 ### Threshold Voltage
 * The NMOS is currently turned off. So there is no conducting path between the source and drain 
-![img6]()
-![img7]()
+![img6](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Intro/img6.png)
+![img7](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Intro/img7.png)
