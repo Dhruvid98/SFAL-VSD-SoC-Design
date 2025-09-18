@@ -39,3 +39,6 @@ The cell delays depend on input slew and output load. Delay information is store
 ### Body Effect
 When the source-to-body voltage is zero, surface inversion occurs under the gate. However, when the source-to-body voltage is greater than zero, the threshold voltage increases due to the reverse bias across the body–source junction. This widens the depletion layer, requiring a higher Vgs to achieve strong inversion. This phenomenon is known as the body effect.  
 ![img12](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Intro/img12.png)  
+![img13](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Intro/img13.png)
+![img14](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Intro/img14.png)
+![img15](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Intro/img15.png) 
