@@ -25,6 +25,7 @@ The cell delays depend on input slew and output load. Delay information is store
 ![img4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Intro/img4.png)
 
 ### Threshold Voltage
+* Cut off region of operation 
 * The NMOS is currently turned off. So there is no conducting path between the source and drain  
 ![img6](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Intro/img6.png)
 ![img7](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Intro/img7.png)
@@ -42,3 +43,21 @@ When the source-to-body voltage is zero, surface inversion occurs under the gate
 ![img13](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Intro/img13.png)
 ![img14](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Intro/img14.png)
 ![img15](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Intro/img15.png) 
+
+## Resistive/ Linear Region of Operation 
+* Considering the Vgs >= Vth and small Vds(drain to source) applied across the channel.
+![img1]()
+
+### Drain Current
+* Drain Current, Id is the result 
+I
+D
+ that results due to the 
+V
+G
+S
+ and 
+V
+D
+S
+ values applied.
