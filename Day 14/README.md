@@ -29,13 +29,13 @@ The cell delays depend on input slew and output load. Delay information is store
 ![img6](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Intro/img6.png)
 ![img7](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Intro/img7.png)
 * In a P–N junction diode, when a reverse bias is applied, a depletion region forms, which is depleted of majority carriers.
-![img8]()
-![img9]()
-![img10]()
+![img8](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Intro/img8.png)
+![img9](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Intro/img9.png)
+![img10](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Intro/img10.png)
 
 * As VGS increases further, a point is reached where enough electrons are attracted to invert the surface from p-type to n-type. This condition defines the threshold voltage (Vth).  
-![img11]()
+![img11](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Intro/img11.png)
 
 ### Body Effect
 When the source-to-body voltage is zero, surface inversion occurs under the gate. However, when the source-to-body voltage is greater than zero, the threshold voltage increases due to the reverse bias across the body–source junction. This widens the depletion layer, requiring a higher Vgs to achieve strong inversion. This phenomenon is known as the body effect.  
-![img12]()
+![img12](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Intro/img12.png)  
