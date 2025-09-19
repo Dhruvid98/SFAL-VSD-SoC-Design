@@ -48,10 +48,13 @@ When the source-to-body voltage is zero, surface inversion occurs under the gate
 * Considering the Vgs >= Vth and small Vds(drain to source) applied across the channel.
 ![img1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Linear%20operation/img1.png)
 
-### Drift Current  
+### Drain Current Equation  
 ![img2](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Linear%20operation/img2.png)
 ![img3](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Linear%20operation/img3.png)
 ![img4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Linear%20operation/img4.png)
 ![img5](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Linear%20operation/img5.png)
+![img6]()  
+* For all the values of Vds if `Vds < = Vgs -Vt` the MOSFET (device) will operate in a linear/ resistive region of operation.  
+![img7]()
 
-### 
+## Saturation Region
