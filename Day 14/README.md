@@ -68,3 +68,11 @@ reduces. When it falls to equal or less than Vt, the channel is said to be pinch
 ![img10](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Linear%20operation/img10.png)
 * When  Vgs - Vds < Vth, at this point, the conducting channel disappears or is pinched off starting from the Drain end.  
 ![img11](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Linear%20operation/img11.png)
+
+### Drain current model for Saturation Region
+* By increasing the Vds beyond Vds sat i.e. value of (Vgs- Vth) has no effect on the channel shape and charge. Thus, the current through the channel remains constant at the value reached for Vds = Vgs -Vth. The MOSFET is said to have entered saturation/ pinch-off regsion at: Vds sat = Vgs - Vth
+* Any increase in Vds above Vds sat apperes as a voltage drop across the depletion region. 
+
+![img12]()
+![img13]()
+![img14]()
