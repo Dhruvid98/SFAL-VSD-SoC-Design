@@ -53,8 +53,18 @@ When the source-to-body voltage is zero, surface inversion occurs under the gate
 ![img3](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Linear%20operation/img3.png)
 ![img4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Linear%20operation/img4.png)
 ![img5](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Linear%20operation/img5.png)
-![img6]()  
+![img6](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Linear%20operation/img6.png)  
 * For all the values of Vds if `Vds < = Vgs -Vt` the MOSFET (device) will operate in a linear/ resistive region of operation.  
-![img7]()
+![img7](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Linear%20operation/img7.png)
 
 ## Saturation Region
+* When Vgs - Vds > Vth, then a conducting channel will be formed and current will be induced.
+* **Pinch-off Region Condition**
+As Vds increases, the inversion charge is strong at the source end since Vgs - Vds > Vth. But toward the drain end, the effective gate voltage Vgs - V(x)
+reduces. When it falls to equal or less than Vt, the channel is said to be pinched off at the drain side. In this region, the inversion charge density is minimal, and the channel narrows, but current continues to flow due to carrier drift in the high-field depletion region.  
+  
+![img8](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Linear%20operation/img8.png)
+![img9](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Linear%20operation/img9.png)
+![img10](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Linear%20operation/img10.png)
+* When  Vgs - Vds < Vth, at this point, the conducting channel disappears or is pinched off starting from the Drain end.  
+![img11](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Linear%20operation/img11.png)
