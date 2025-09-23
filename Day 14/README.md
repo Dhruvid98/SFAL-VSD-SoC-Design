@@ -104,5 +104,5 @@ setplot dc1
 
 .end
 ```
-* Plotting vdd#branch shows ID–VDS characteristics of an NMOS device.
+* Plotting vdd#branch shows (ID) vs VDS characteristics of an NMOS device.
 ![img15](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Linear%20operation/img15.png)
