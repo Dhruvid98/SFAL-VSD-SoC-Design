@@ -161,4 +161,10 @@ Differentiated between optimizable and non-optimizable sequential patterns
   #### PVT Corners Timing Analysis
   * Understood
 </details>
+<details>
+  <summary><a href="http://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/README.md" target="_blank">Day 14 - CMOS Fundamentals </a></summary>
+  
+  #### PVT Corners Timing Analysis
+  * Understood
+</details>
 
