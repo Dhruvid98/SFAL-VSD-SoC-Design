@@ -70,9 +70,39 @@ reduces. When it falls to equal or less than Vt, the channel is said to be pinch
 ![img11](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Linear%20operation/img11.png)
 
 ### Drain current model for Saturation Region
-* By increasing the Vds beyond Vds sat i.e. value of (Vgs- Vth) has no effect on the channel shape and charge. Thus, the current through the channel remains constant at the value reached for Vds = Vgs -Vth. The MOSFET is said to have entered saturation/ pinch-off regsion at: Vds sat = Vgs - Vth
-* Any increase in Vds above Vds sat apperes as a voltage drop across the depletion region. 
+* By increasing the Vds beyond Vds sat, i.e. the value of (Vgs- Vth) has no effect on the channel shape and charge. Thus, the current through the channel remains constant at the value reached for Vds = Vgs -Vth. The MOSFET is said to have entered saturation/ pinch-off region at: Vds sat = Vgs - Vth
+* Any increase in Vds above Vds sat appears as a voltage drop across the depletion region. 
 
-![img12]()
-![img13]()
-![img14]()
+![img12](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Linear%20operation/img12.png)
+![img13](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Linear%20operation/img13.png)
+![img14](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Linear%20operation/img14.png)
+
+## Lab: ID vs. VDS for different VGS  
+#### Running day1_nfet_idvds_L2_W5.spice file
+```
+*** Model Description ***
+.param temp=27
+
+*** Including sky130 library files ***
+.lib "sky130_fd_pr/models/sky130.lib.spice" tt
+
+*** Netlist Description ***
+XM1 vdd n1 0 0 sky130_fd_pr__nfet_01v8 w=5 l=2
+R1 n1 in 55
+Vdd vdd 0 1.8
+Vin in 0 1.8
+
+*** Simulation Commands ***
+.op
+.dc Vdd 0 1.8 0.1 Vin 0 1.8 0.2
+
+.control
+run
+display
+setplot dc1
+.endc
+
+.end
+```
+* Plotting vdd#branch shows ID–VDS characteristics of an NMOS device.
+![img15](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2014/Images/Linear%20operation/img15.png)
