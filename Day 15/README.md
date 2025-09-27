@@ -11,7 +11,8 @@
 ### Operation Regions
 
 * Cut of region
-  * When the device is off.
+  * Vgs =< Vt
+  * Area where the device is being cut off.
 
 * Resistive region/ Linear region
     * Id ∝ Vds
