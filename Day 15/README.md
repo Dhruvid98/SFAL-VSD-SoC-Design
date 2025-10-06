@@ -49,3 +49,40 @@
 ![img10](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2015/Images/Observations/img10.png)  
 
 ## Labs Simulation Sky130 Id-Vgs 
+**Id–Vds Characteristics**
+SPICE File: day2_nfet_idvgs_L015_W039.spice
+```
+Model Description
+.param temp=27
+
+
+*Including sky130 library files
+.lib "sky130_fd_pr/models/sky130.lib.spice" tt
+
+
+*Netlist Description
+
+XM1 Vdd n1 0 0 sky130_fd_pr__nfet_01v8 w=0.39 l=0.15
+
+R1 n1 in 55
+
+Vdd vdd 0 1.8V
+Vin in 0 1.8V
+
+*simulation commands
+
+.op
+.dc Vin 0 1.8 0.1
+
+.control
+
+run
+display
+setplot dc1
+.endc
+
+.end
+
+```
+Below is the Id-Vgs curve for Vds = 1.8V
+![img11](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2015/Images/Observations/img11.png)
