@@ -86,3 +86,5 @@ setplot dc1
 ```
 Below is the Id-Vgs curve for Vds = 1.8V
 ![img11](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2015/Images/Observations/img11.png)
+
+## CMOS Voltage Transfer Characteristics
