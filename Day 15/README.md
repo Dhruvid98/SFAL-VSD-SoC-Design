@@ -140,7 +140,7 @@ Below is the Id-Vgs curve for Vds = 1.8V
 - Converting the PMOS gate-source voltage (VgsP) into an equivalent Vin. Replacing the internal node voltages with Vin and Vdd.
 - Vgsp = Vin - Vdd
 
-![img6]()  
+![img6]()    
 
 **Step 2 and 3** : Convert PMOS and NMOS drain-source-voltage to Vout  
 - Express PMOS and NMOS drain-source (Vdsp) voltages in terms of Vout.
@@ -151,5 +151,12 @@ Below is the Id-Vgs curve for Vds = 1.8V
 
  - Step 3: Load curve for NMOS transistor 
  
-![img8]()
+![img8]()  
   
+**Step 4**:  Merge PMOS and NMOS load curves and plot VTC  
+
+![img9]()  
+
+* Sweeping Vin and plotting Vout to obtain the inverter VTC curve, which shows the switching behavior of the inverter from logic HIGH to logic LOW.  
+
+![img10]()
