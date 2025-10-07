@@ -170,7 +170,7 @@ Differentiated between optimizable and non-optimizable sequential patterns
 </details>
 
 <details>
-  <summary><a href="http://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2015/README.md" target="_blank">Day 15 - Velocity Saturation and basics of CMOS inverter VTC </a></summary>
+  <summary><a href="http://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2015/README.md" target="_blank">Day 15 - Velocity Saturation and Basics of CMOS Inverter VTC </a></summary>
   
   #### SPICE Simulations of NMOS and CMOS Circuits
   * Understood
