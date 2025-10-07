@@ -104,7 +104,7 @@ Below is the Id-Vgs curve for Vds = 1.8V
 
 **Switch level extraction**  
 * Circuit diagram of CMOS Inverter when Vin is high
-   * Vin = Vdd → NMOS ON, PMOS OFF → Vout = 0
+   * Vin = Vdd → NMOS ON, PMOS OFF → Vout = 0  
 ![img2]()
 
 * Circuit diagram of CMOS Inverter when Vin is low
@@ -119,10 +119,10 @@ Below is the Id-Vgs curve for Vds = 1.8V
     * Vout taken at the common drain
     * Vin applied to both gates
 
-- PMOS
-  * PMOS source connected to VDD
-  * Vout taken at the common drain
-  * Vin applied to both gates
+ - PMOS
+    * PMOS source connected to VDD
+    * Vout taken at the common drain
+    * Vin applied to both gates
 
 ![img4]()
 
