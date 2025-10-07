@@ -88,3 +88,45 @@ Below is the Id-Vgs curve for Vds = 1.8V
 ![img11](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2015/Images/Observations/img11.png)
 
 ## CMOS Voltage Transfer Characteristics
+
+### MOSFET as a switch 
+
+* ON State
+  * Condition : |Vgs| > |Vth|
+  *  MOSFET acts as a closed switch with a finite resistance.
+
+* OFF State
+  * Condition : |Vgs| < |Vth|
+  * MOSFET acts as an open switch with infinite resistance.
+![img1]()
+
+### CMOS Representation 
+
+**Switch level extraction**  
+* Circuit diagram of CMOS Inverter when Vin is high
+ *  Vin = Vdd → NMOS ON, PMOS OFF → Vout = 0
+
+![img2]()
+
+* Circuit diagram of CMOS Inverter when Vin is low
+   * Vin = 0 → PMOS ON, NMOS OFF → Vout = Vdd
+ 
+![img3]()
+
+**Transistor-level Extraction** 
+* The CMOS inverter at the transistor level 
+ - NMOS
+    * NMOS source connected to VSS
+    * Vout taken at the common drain
+    * Vin applied to both gates
+
+- PMOS
+  * PMOS source connected to VDD
+  * Vout taken at the common drain
+  * Vin applied to both gates
+
+![img4]()
+
+
+ 
+  
