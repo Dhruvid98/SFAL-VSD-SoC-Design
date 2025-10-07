@@ -1,4 +1,4 @@
-# SPICE Simulations CMOS Circuits
+# Velocity Saturation and basics of CMOS inverter VTC
 * To explore SPICE simulations of NMOS transistors and CMOS inverters across different technology nodes. And comparing the behaviors of long-channel and short-channel devices, as well as analyzing their current–voltage characteristics.
 
 ## NMOS Characteristics
