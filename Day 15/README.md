@@ -97,15 +97,14 @@ Below is the Id-Vgs curve for Vds = 1.8V
 
 * OFF State
   * Condition : |Vgs| < |Vth|
-  * MOSFET acts as an open switch with infinite resistance.
+  * MOSFET acts as an open switch with infinite resistance.  
 ![img1]()
 
 ### CMOS Representation 
 
 **Switch level extraction**  
 * Circuit diagram of CMOS Inverter when Vin is high
- *  Vin = Vdd → NMOS ON, PMOS OFF → Vout = 0
-
+   * Vin = Vdd → NMOS ON, PMOS OFF → Vout = 0
 ![img2]()
 
 * Circuit diagram of CMOS Inverter when Vin is low
@@ -115,7 +114,7 @@ Below is the Id-Vgs curve for Vds = 1.8V
 
 **Transistor-level Extraction** 
 * The CMOS inverter at the transistor level 
- - NMOS
+  - NMOS
     * NMOS source connected to VSS
     * Vout taken at the common drain
     * Vin applied to both gates
