@@ -99,7 +99,7 @@ Below is the Id-Vgs curve for Vds = 1.8V
   * Condition : |Vgs| < |Vth|
   * MOSFET acts as an open switch with infinite resistance.  
   
-![img1]()
+![img1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2015/Images/CMOS_VTC/img1.png)
 
 ### CMOS Representation 
 
@@ -107,12 +107,12 @@ Below is the Id-Vgs curve for Vds = 1.8V
 * Circuit diagram of CMOS Inverter when Vin is high
    * Vin = Vdd → NMOS ON, PMOS OFF → Vout = 0
   
-![img2]()
+![img2](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2015/Images/CMOS_VTC/img2.png)
 
 * Circuit diagram of CMOS Inverter when Vin is low
    * Vin = 0 → PMOS ON, NMOS OFF → Vout = Vdd
  
-![img3]()
+![img3](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2015/Images/CMOS_VTC/img3.png)
 
 **Transistor-level Extraction** 
 * The CMOS inverter at the transistor level 
@@ -126,12 +126,12 @@ Below is the Id-Vgs curve for Vds = 1.8V
     * Vout taken at the common drain
     * Vin applied to both gates
 
-![img4]()
+![img4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2015/Images/CMOS_VTC/img4.png)
 
 ### PMOS/NMOS drain current v/s drain voltage
 * We are comparing the drain current (Id) versus drain voltage (Vds) characteristics of NMOS and PMOS transistors to gain a basic understanding of their behavior and how these characteristics affect the operation of an inverter.
 
-![img5]()  
+![img5](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2015/Images/CMOS_VTC/img5.png)  
 
 ### Analysis of CMOS inverter
 * Steps to derive Voltage-Transfer Characteristics (VTC) of a cell, which are only a function of Vin and Vout. 
@@ -140,23 +140,23 @@ Below is the Id-Vgs curve for Vds = 1.8V
 - Converting the PMOS gate-source voltage (VgsP) into an equivalent Vin. Replacing the internal node voltages with Vin and Vdd.
 - Vgsp = Vin - Vdd
 
-![img6]()    
+![img6](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2015/Images/CMOS_VTC/img6.png)    
 
 **Step 2 and 3** : Convert PMOS and NMOS drain-source-voltage to Vout  
 - Express PMOS and NMOS drain-source (Vdsp) voltages in terms of Vout.
     * For the CMOS inverter, when we see Vout =0, it means the load capacitance is discharged and we need to charge it. i.e. the load capacitance has been discharged by the NMOS. If you want the output to go high again, you must charge that capacitance through the PMOS.
 - Step 2: converting PMOS to Vout
 
-![img7]()
+![img7](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2015/Images/CMOS_VTC/img7%20.png)
 
  - Step 3: Load curve for NMOS transistor 
  
-![img8]()  
+![img8](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2015/Images/CMOS_VTC/img8.png)  
   
 **Step 4**:  Merge PMOS and NMOS load curves and plot VTC  
 
-![img9]()  
+![img9](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2015/Images/CMOS_VTC/img9.png)  
 
 * Sweeping Vin and plotting Vout to obtain the inverter VTC curve, which shows the switching behavior of the inverter from logic HIGH to logic LOW.  
 
-![img10]()
+![img10](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2015/Images/CMOS_VTC/img10.png)
