@@ -155,6 +155,7 @@ Differentiated between optimizable and non-optimizable sequential patterns
   * Ran post-synthesis simulation with unit delays using Icarus Verilog and validated functionality with GTKWave.
   * Compared pre-synthesis vs. post-synthesis behavior to confirm functional equivalence and detect synthesis-induced discrepancies
 </details>
+
 <details>
   <summary><a href="http://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2013/README.md" target="_blank">Day 13 - PVT Corners Timing Analyses </a></summary>
   
@@ -174,5 +175,5 @@ Differentiated between optimizable and non-optimizable sequential patterns
   #### SPICE Simulations of NMOS and CMOS Circuits
   * Understood
 </details>
-<details>
+
 
