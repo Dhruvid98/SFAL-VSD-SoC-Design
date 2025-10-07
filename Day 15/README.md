@@ -128,6 +128,28 @@ Below is the Id-Vgs curve for Vds = 1.8V
 
 ![img4]()
 
+### PMOS/NMOS drain current v/s drain voltage
+* We are comparing the drain current (Id) versus drain voltage (Vds) characteristics of NMOS and PMOS transistors to gain a basic understanding of their behavior and how these characteristics affect the operation of an inverter.
 
+![img5]()  
+
+### Analysis of CMOS inverter
+* Steps to derive Voltage-Transfer Characteristics (VTC) of a cell, which are only a function of Vin and Vout. 
+
+**Step 1** : Convert PMOS gate-source-voltage to Vin
+- Converting the PMOS gate-source voltage (VgsP) into an equivalent Vin. Replacing the internal node voltages with Vin and Vdd.
+- Vgsp = Vin - Vdd
+
+![img6]()  
+
+**Step 2 and 3** : Convert PMOS and NMOS drain-source-voltage to Vout  
+- Express PMOS and NMOS drain-source (Vdsp) voltages in terms of Vout.
+    * For the CMOS inverter, when we see Vout =0, it means the load capacitance is discharged and we need to charge it. i.e. the load capacitance has been discharged by the NMOS. If you want the output to go high again, you must charge that capacitance through the PMOS.
+- Step 2: converting PMOS to Vout
+
+![img7]()
+
+ - Step 3: Load curve for NMOS transistor 
  
+![img8]()
   
