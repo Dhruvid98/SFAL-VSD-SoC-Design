@@ -94,4 +94,6 @@ run
 .end
 ```
 
-![img4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2016/Images/SPICE%20Deck/img4.png)
+![img4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2016/Images/SPICE%20Deck/img4.png)  
+
+## Static Behavior Evaluation - CMOS Inverter Robustness and Switching Threshold
