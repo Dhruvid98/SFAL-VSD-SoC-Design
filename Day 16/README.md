@@ -13,8 +13,8 @@
 - Simulation Commands:
     * .dc, .op, and including the technology model file   
       
-![img1]()
-![img2]()  
+![img1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2016/Images/SPICE%20Deck/img1.png)
+![img2](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2016/Images/SPICE%20Deck/img2.png)  
 
 ## Labs Sky130 SPICE simulation for CMOS
 * VTC characteristics of the CMOS inverter
@@ -56,7 +56,7 @@ display
 .end
 ```
 
-![img3]()  
+![img3](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2016/Images/SPICE%20Deck/img3.png)  
 
 * Rise delay and Fall delay in transient analysis. 
    - Below output waveform of the transient analysis of a CMOS inverter, illustrating the rise time delay and the fall time delay of the inverter. 
@@ -94,4 +94,4 @@ run
 .end
 ```
 
-![img4]()
+![img4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2016/Images/SPICE%20Deck/img4.png)
