@@ -107,17 +107,17 @@ The Key characteristics to define the robustness of CMOS inverters:
 
 * The Switching Threshold Voltage (Vm) is the point at which the input voltage and the output voltage are equal i.e. Vin = Vout
 *  At Vm point, PMOS and NMOS are in the saturation region. That means both are turned on. Because of that, there is a chance of a short.
-*  This point corresponds to maximum voltage gain in the inverter transfer curve.
+*  This point corresponds to the maximum voltage gain in the inverter transfer curve.
 
-![img1]()  
+![img1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2016/Images/Static%20behv/img1.png)  
 
 *  The different regions of operations for the curve correspond to the transistor operating regions: PMOS Linear / NMOS OFF, PMOS Linear / NMOS Saturation,  PMOS Saturation / NMOS Saturation (where Vm is located), PMOS Saturation / NMOS Linear,  PMOS OFF / NMOS Linear.  
 
-![img2]()  
+![img2](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2016/Images/Static%20behv/img2.png)  
 
 ### Analytical expression of Vm as a function of (W/L)p and (W/L)n
 
-![img3]()  
+![img3](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2016/Images/Static%20behv/img3.png)  
 
 ### Static and dynamic simulation of CMOS inverter
 
@@ -127,7 +127,12 @@ The Key characteristics to define the robustness of CMOS inverters:
      * Fall Delay
      * Switching Threshold Voltage
      
-* Rise Delay means the time it takes for an output capacitance to charge completely.
-* 
+* Rise Delay means the time it takes for an output capacitance to charge completely using PMOS.
+* Fall delay is how long it takes to discharge that capacitance using NMOS.
 
- 
+![img4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2016/Images/Static%20behv/img4.png)  
+
+### Key Observation 
+* When Wp/Lp ≈ 2 × Wn/Ln, the inverter achieves balanced rise and fall delays, which is also known as Clock buffers.
+     * For the inverter, switching threshold Vm ≈ 1.2 V provides symmetric switching behavior.
+* When the Wp/Wn ratio is 1:1, the inverter exhibits a longer rise delay and a shorter fall delay. In contrast, with a Wp/Wn ratio of 2:1, the rise and fall delays are balanced, both approximately 80 ps.
