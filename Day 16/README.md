@@ -97,3 +97,37 @@ run
 ![img4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2016/Images/SPICE%20Deck/img4.png)  
 
 ## Static Behavior Evaluation - CMOS Inverter Robustness and Switching Threshold
+
+The Key characteristics to define the robustness of CMOS inverters:   
+* Switching Threshold Voltage (Vm)
+* Noise Margins
+* Power Supply Variation Tolerance
+
+### Switching Threshold Voltage 
+
+* The Switching Threshold Voltage (Vm) is the point at which the input voltage and the output voltage are equal i.e. Vin = Vout
+*  At Vm point, PMOS and NMOS are in the saturation region. That means both are turned on. Because of that, there is a chance of a short.
+*  This point corresponds to maximum voltage gain in the inverter transfer curve.
+
+![img1]()  
+
+*  The different regions of operations for the curve correspond to the transistor operating regions: PMOS Linear / NMOS OFF, PMOS Linear / NMOS Saturation,  PMOS Saturation / NMOS Saturation (where Vm is located), PMOS Saturation / NMOS Linear,  PMOS OFF / NMOS Linear.  
+
+![img2]()  
+
+### Analytical expression of Vm as a function of (W/L)p and (W/L)n
+
+![img3]()  
+
+### Static and dynamic simulation of CMOS inverter
+
+**Effect of varying Wp/Wn Ratio on Inverter with increased PMOS width**    
+* Key Parameters that get affected
+     * Rise Delay
+     * Fall Delay
+     * Switching Threshold Voltage
+     
+* Rise Delay means the time it takes for an output capacitance to charge completely.
+* 
+
+ 
