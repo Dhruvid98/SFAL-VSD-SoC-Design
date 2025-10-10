@@ -1,4 +1,4 @@
-# CMOS Switching Threshold and Dynamic Simulations
+#Day 16: CMOS Switching Threshold and Dynamic Simulations
 - This section demonstrates CMOS inverter static and dynamic analysis using SPICE simulations. Focusing on Voltage Transfer Characteristics (VTC), transient response, and switching threshold voltage (Vm).
 
 ## CMOS Inverter SPICE Deck 
