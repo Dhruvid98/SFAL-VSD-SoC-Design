@@ -1,4 +1,4 @@
-# SPICE overview and CMOS fundamentals
+# Day 14: SPICE overview and CMOS fundamentals
 
 ## What is SPICE
 SPICE (Simulation Program with Integrated Circuit Emphasis) is an industry-standard Circuit Simulator. It takes a circuit description in the form of a netlist: transistors, resistors, capacitors, sources, etc., and mathematically solves how voltage and current behave over time in that circuit.
