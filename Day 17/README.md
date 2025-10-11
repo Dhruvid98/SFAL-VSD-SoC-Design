@@ -23,4 +23,16 @@ Based on the above graph, the following points can be inferred
 * V(OH) (valid output high level) : when input voltage is between 0 and V(IL), output is expected to be V(OH) and above. And V(OH) value will be greater than V(IH).
     * Detected as logic = 1
 * VIL: Input Low Threshold Voltage (slope = −1)
-* VIH: Input High Threshold Voltage (slope = −1)
+* VIH: Input High Threshold Voltage (slope = −1)  
+
+![img2]()  
+
+**Noise Margin**
+* `Noise margin high (NMH)`: Any voltage level that lies between the range of V(OH) and V(IH), either input or output side, will be detected as logic 1.
+* `Noise margin low (NML)`: Any voltage level that lies between the range of V(IL) and V(OL), either input or output side, will be detected as logic 0.
+* `NMH = VOH − VIH`: tolerance for noise on logic 1
+* `NML = VIL − VOL`: tolerance for noise on logic 0
+
+**Undefined Region**
+* Between VIL and VIH, the input is undefined. i.e. the value of voltage can either be 1 or 0.
+* Noise in this zone may cause unstable or invalid outputs.
