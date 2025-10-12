@@ -25,7 +25,7 @@ Based on the above graph, the following points can be inferred
 * VIL: Input Low Threshold Voltage (slope = −1)
 * VIH: Input High Threshold Voltage (slope = −1)  
 
-![img2]()  
+![img3]()  
 
 **Noise Margin**
 * `Noise margin high (NMH)`: Any voltage level that lies between the range of V(OH) and V(IH), either input or output side, will be detected as logic 1.
@@ -35,4 +35,53 @@ Based on the above graph, the following points can be inferred
 
 **Undefined Region**
 * Between VIL and VIH, the input is undefined. i.e. the value of voltage can either be 1 or 0.
-* Noise in this zone may cause unstable or invalid outputs.
+* Noise in this zone may cause unstable or invalid outputs.  
+
+![img4]()
+
+**Noise Margin Robustness against variations in Device Ratio**
+![img5]()  
+![img6]()  
+
+### Lab: Noise Margin - sky130 Inverter
+* File: day4_inv_noisemargin_wp1_wn036.spice
+
+```
+*Model Description
+.param temp=27
+
+
+*Including sky130 library files
+.lib "sky130_fd_pr/models/sky130.lib.spice" tt
+
+
+*Netlist Description
+
+
+XM1 out in vdd vdd sky130_fd_pr__pfet_01v8 w=1 l=0.15
+XM2 out in 0 0 sky130_fd_pr__nfet_01v8 w=0.36 l=0.15
+
+
+Cload out 0 50fF
+
+Vdd vdd 0 1.8V
+Vin in 0 1.8V
+
+*simulation commands
+
+.op
+
+.dc Vin 0 1.8 0.01
+
+.control
+run
+setplot dc1
+display
+.endc
+
+.end
+```
+
+![img7]()  
+
+* VTC curve waveform for Noise margin. 
