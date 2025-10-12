@@ -174,6 +174,20 @@ Differentiated between optimizable and non-optimizable sequential patterns
   
   #### SPICE Simulations of NMOS and CMOS Circuits
   * Understood
+</details>  
+
+<details>
+  <summary><a href="http://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2016/README.md" target="_blank">Day 16 - CMOS Switching Threshold and Dynamic Simulations </a></summary>
+  
+  #### Switching Threshold and Dynamic Simulations
+  * Understood
+</details>
+
+<details>
+  <summary><a href="http://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2017/README.md" target="_blank">Day 17 - Static Behavior Evaluation: CMOS Inverter Robustness and Noise Margin </a></summary>
+  
+  #### CMOS Inverter Robustness and Noise Margin
+  * Understood
 </details>
 
 
