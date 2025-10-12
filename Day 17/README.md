@@ -3,7 +3,7 @@
 Introduction to Noise Margin:
 * Noise margin is the amount of noise that a CMOS circuit could withstand without any logical errors.
 
-![img1]()
+![img1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2017/Images/img1.png)
 
 Based on the above graph, the following points can be inferred
 * Any input voltage level between 0 and VIL, the output voltage will be high
@@ -13,7 +13,7 @@ Based on the above graph, the following points can be inferred
 
 **Realistic VTC inverter** 
 
-![img2]()
+![img2](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2017/Images/img2.png)
 
 Based on the above graph, the following points can be inferred
 * Any input voltage between 0 to V(IL), output is expected high
@@ -25,7 +25,7 @@ Based on the above graph, the following points can be inferred
 * VIL: Input Low Threshold Voltage (slope = −1)
 * VIH: Input High Threshold Voltage (slope = −1)  
 
-![img3]()  
+![img3](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2017/Images/img3.png)  
 
 **Noise Margin**
 * `Noise margin high (NMH)`: Any voltage level that lies between the range of V(OH) and V(IH), either input or output side, will be detected as logic 1.
@@ -37,11 +37,11 @@ Based on the above graph, the following points can be inferred
 * Between VIL and VIH, the input is undefined. i.e. the value of voltage can either be 1 or 0.
 * Noise in this zone may cause unstable or invalid outputs.  
 
-![img4]()
+![img4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2017/Images/img4.png)
 
 **Noise Margin Robustness against variations in Device Ratio**
-![img5]()  
-![img6]()  
+![img5](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2017/Images/img5.png)  
+![img6](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2017/Images/img6.png)  
 
 ### Lab: Noise Margin - sky130 Inverter
 * File: day4_inv_noisemargin_wp1_wn036.spice
@@ -82,6 +82,6 @@ display
 .end
 ```
 
-![img7]()  
+![img7](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2017/Images/img7.png)  
 
 * VTC curve waveform for Noise margin. 
