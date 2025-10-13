@@ -6,9 +6,9 @@
 
 * Scaling the supply voltage (Vdd) directly impacts the inverter’s static behavior by shifting the switching threshold Vm, reducing noise margin, and increasing overall robustness. 
 
-![img1]()
+![img1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2018/Images/img1.png)
 
-![img2]()
+![img2](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2018/Images/img2.png)
 
 **Power Performance**
 * Lower supply saves static & dynamic power but reduces robustness.
@@ -18,7 +18,7 @@
 
 * File: day5_inv_supplyvariation_Wp1_Wn036.spice
 
-![img3]()
+![img3](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2018/Images/img3.png)
 
 **Key Observation**
 * With a decrease in supply voltage, the gain values keep increasing. But once the supply voltage reaches voltage 1, the gain value starts to decrease. As it is not able to recharge fully. As a result, the gain of the inverter in the transition region increases with a reduction of the supply voltage.
