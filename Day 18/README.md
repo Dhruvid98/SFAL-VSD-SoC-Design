@@ -49,13 +49,15 @@
 
 **Inverter Chain Example**
 
-* The chain of inviter is usually used to understand the Propagation delay and Cumulative variation effects.  
+* The chain of inviter is usually used to understand the Propagation delay and Cumulative variation effects.
+  
 ![img6](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2018/Images/img6.png)
 ![img5](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2018/Images/img5.png)
 
 ### 2. Oxide Thickness Variation
 
-* The second key source of variation comes from oxide thickness (tox) of the MOS gate.  
+* The second key source of variation comes from oxide thickness (tox) of the MOS gate.
+  
 ![img7](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2018/Images/img7.png)
 ![img8](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2018/Images/img8.png)
 
