@@ -14,7 +14,7 @@
 * Lower supply saves static & dynamic power but reduces robustness.
 * Higher supply: improves noise margins but increases power dissipation
 
-## Lab: Supply Scaling - sky130 Inverter 
+### Lab: Supply Scaling - sky130 Inverter 
 
 * File: day5_inv_supplyvariation_Wp1_Wn036.spice
 
@@ -22,3 +22,42 @@
 
 **Key Observation**
 * With a decrease in supply voltage, the gain values keep increasing. But once the supply voltage reaches voltage 1, the gain value starts to decrease. As it is not able to recharge fully. As a result, the gain of the inverter in the transition region increases with a reduction of the supply voltage.
+
+## Static Behavior Evaluation — CMOS Inverter Robustness and Device Variation
+
+* The device variation is a critical factor that influences the robustness of a CMOS inverter.
+* While gates are designed based on nominal operating conditions and typical device parameters, real-world conditions often differ significantly. Operating temperatures can vary across a wide range, and post-fabrication device parameters often deviate from the nominal values used during design. These variations are primarily due to fabrication non-idealities such as etching inconsistencies and oxide thickness variations which can affect the effective dimensions and performance of transistors.
+
+## Source of Etching variation 
+
+### 1. Etching Process Variations
+* `Poly-silicon layer`: defines channel length `L`. That helps to link with technology node. Eg 28nm, 65nm etc.
+* `P-diffusion region`: sets PMOS gate width
+* `N-diffusion region`: sets NMOS gate width
+* Layout layers in an inverter:
+    * Poly (Gate)
+    * P-Diffusion
+    * N-Diffusion
+    * VDD and VSS rails
+
+![img4]()  
+
+**Impact**
+* The area of W and L will differ.i.e. Actual W and L differ from intended values
+* Drain current value `(Id  ∝  W/L)` changes.
+* Drain current value changes as it is directly dependent on oxide thickness variation. 
+
+**Inverter Chain Example**
+
+* The chain of inviter is usually used to understand the Propagation delay and Cumulative variation effects.  
+![img6]()
+![img5]()
+
+### 2. Oxide Thickness Variation
+
+* The second key source of variation comes from oxide thickness (tox) of the MOS gate.  
+![img7]()
+![img8]()
+
+## Lab: Spice Simulation 
+* File : 
