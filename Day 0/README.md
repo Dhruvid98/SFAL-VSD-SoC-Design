@@ -47,3 +47,6 @@
 ![magic](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%200/Images/Screenshot%202025-05-06%20232524.png)
 ### 8. OpenLane
 ![openLane](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%200/Images/Screenshot%202025-05-07%20130008.png)
+
+### ASIC flow diagram using open-source tools. 
+![flow](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%200/Images/flow_open.png)
