@@ -198,9 +198,9 @@ Differentiated between optimizable and non-optimizable sequential patterns
 </details>
 
 <details>
-  <summary><a href="http://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2019/README.md" target="_blank">Day 19 - Floorplan and Placement of VSDBabySoC in OpenROAD </a></summary>
+  <summary><a href="http://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2019/README.md" target="_blank">Day 19 - OpenROAD Installation </a></summary>
   
-  #### Floorplan and Placement
+  #### OpenROAD Installation
   * Understood
 </details>
 
