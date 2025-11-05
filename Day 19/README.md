@@ -50,14 +50,15 @@ cd ~/OpenROAD-flow-scripts
 ```
 cd flow
 util/docker_shell make
-```
-![img2_1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2019/Images/img2_1.png)  
-![img2_2](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2019/Images/img2_2.png)  
+``` 
+![img2_2](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2019/Images/img2_2.png)    
+![img2_1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2019/Images/img2_1.png)   
 
 **Visualize final layout in GUI**
 ```
 util/docker_shell make gui_final
 ```
+![img3_2](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2019/Images/img3_2.png)
 ![img1_1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2019/Images/img1_1.png)
 
 **Issue**
