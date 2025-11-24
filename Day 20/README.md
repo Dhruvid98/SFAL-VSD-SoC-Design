@@ -58,11 +58,47 @@ export SKIP_GATE_CLONING = 1
 
 # export CORE_UTILIZATION=0.1  # Reduce this value to allow more whitespace for routing.
 ```
-* Command for synthesis:
+
+### Command for synthesis:
 ```
 util/docker_shell make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk PLATFORM=sky130hd synth
 ```
 ![img1]()  
 ![img2]()
 
-* Synthesis netlist:
+* **Synthesis netlist:**
+![img3]()
+
+* **Synthesis Log file:**
+![img4]()
+
+* **Synthesis Stats:**
+![img5]()
+
+* **Synthesis check:**
+![img6]()
+
+### Commands for floorplan:
+```
+util/docker_shell make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk floorplan
+```
+![img7]()  
+![img8]()  
+
+```
+util/docker_shell make gui_floorplan DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk
+```
+![img9]()  
+
+### Run Placement:
+```
+util/docker_shell make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk place
+```
+![img10]()  
+
+### Placement Result in GUI
+
+```
+util/docker_shell make gui_place DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk
+```
+![img11]()
