@@ -1,3 +1,4 @@
+
 # Floorplan and Placement of VSDBabySoC in OpenROAD
 * Below steps where perfomed to for Floorplan and placement of VSDBabaySoC.
     * Creating a directory vsdbabysoc inside OpenROAD-flow-scripts/flow/designs/sky130hd
@@ -57,3 +58,11 @@ export SKIP_GATE_CLONING = 1
 
 # export CORE_UTILIZATION=0.1  # Reduce this value to allow more whitespace for routing.
 ```
+* Commands for synthesis:
+```
+
+```
+![img1]()  
+![img2]()
+
+* Synthesis netlist:
