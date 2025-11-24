@@ -102,3 +102,9 @@ util/docker_shell make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk pla
 util/docker_shell make gui_place DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk
 ```
 ![img11]()
+
+* Placement Density Heatmap:
+![img12]()
+
+*  Pin Density Heatmap:
+![img13]()  
