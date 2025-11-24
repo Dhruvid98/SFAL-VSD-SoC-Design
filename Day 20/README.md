@@ -58,9 +58,9 @@ export SKIP_GATE_CLONING = 1
 
 # export CORE_UTILIZATION=0.1  # Reduce this value to allow more whitespace for routing.
 ```
-* Commands for synthesis:
+* Command for synthesis:
 ```
-
+util/docker_shell make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk PLATFORM=sky130hd synth
 ```
 ![img1]()  
 ![img2]()
