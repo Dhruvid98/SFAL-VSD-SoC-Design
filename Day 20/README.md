@@ -63,48 +63,48 @@ export SKIP_GATE_CLONING = 1
 ```
 util/docker_shell make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk PLATFORM=sky130hd synth
 ```
-![img1]()  
-![img2]()
+![img1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2020/Images/img1.png)  
+![img2](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2020/Images/img2.png)
 
-* **Synthesis netlist:**
-![img3]()
+* **Synthesis netlist:**  
+![img3](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2020/Images/img3.png)
 
-* **Synthesis Log file:**
-![img4]()
+* **Synthesis Log file:**  
+![img4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2020/Images/img4.png)
 
-* **Synthesis Stats:**
-![img5]()
+* **Synthesis Stats:**  
+![img5](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2020/Images/img5.png)
 
-* **Synthesis check:**
-![img6]()
+* **Synthesis check:**  
+![img6](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2020/Images/img6.png)
 
 ### Commands for floorplan:
 ```
 util/docker_shell make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk floorplan
 ```
-![img7]()  
-![img8]()  
+![img7](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2020/Images/img7.png)  
+![img8](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2020/Images/img8.png)  
 
 ```
 util/docker_shell make gui_floorplan DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk
 ```
-![img9]()  
+![img9](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2020/Images/img9.png)  
 
 ### Run Placement:
 ```
 util/docker_shell make DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk place
 ```
-![img10]()  
+![img10](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2020/Images/img10.png)  
 
 ### Placement Result in GUI
 
 ```
 util/docker_shell make gui_place DESIGN_CONFIG=./designs/sky130hd/vsdbabysoc/config.mk
 ```
-![img11]()
+![img11](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2020/Images/img11.png)
 
-* Placement Density Heatmap:
-![img12]()
+* **Placement Density Heatmap:**  
+![img12](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2020/Images/img12.png)
 
-*  Pin Density Heatmap:
-![img13]()  
+*  **Pin Density Heatmap:**  
+![img13](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2020/Images/img13.png)  
