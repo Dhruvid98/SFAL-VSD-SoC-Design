@@ -4,7 +4,7 @@
 For open-source ASIC design implementation, the following enablers are required. They are:- RTL Designs, EDA Tools and PDK Data. 
 
 The interface between the designers and the fab has become a set of data files and documents, which are referred to as the "Process Design Kits (PDKs)".
-The PDK includes Device Models, Technology Information, Design Rules, Digital Standard Cell Libraries, I/O Libraries and many more.
+The PDK includes Device Models, Technology Information, Design Rules, Digital Standard Cell Libraries, I/O Libraries and many more.  
 ![img2]()  
 
 #### ASIC flow
@@ -29,7 +29,7 @@ Additional DFT steps, such as scan chain insertion and test pattern generation, 
 
 OpenLane is an open-source framework that transforms RTL designs into manufacturable layouts by integrating all major stages of the digital IC design process.
 
-* Front-End: RTL synthesis is performed using Yosys and ABC, followed by static timing analysis (STA) with OpenSTA. Design for Testability (DFT) is implemented to ensure fault coverage, and Yosys also supports Logic Equivalence Checking (LEC) for correctness verification.
+* Front-End: RTL synthesis is performed using Yosys and ABC, followed by static timing analysis (STA) with OpenSTA. Design for Testability (DFT) is implemented to ensure fault coverage, and Yosys also supports Logic Equivalence Checking (LEC) for correctness verification.  
 ![img3]()  
 
 * Physical Design: The OpenROAD App handles floorplanning, powerplanning, placement, clock tree synthesis (CTS), optimization, and global routing. TritonRoute performs detailed routing, while custom scripts manage the insertion of antenna diodes.
@@ -43,7 +43,7 @@ OpenLane is an open-source framework that transforms RTL designs into manufactur
 ![img9]()  
 ![img10]()  
 
-* Signoff: STA includes RC extraction, with STA re-run to confirm timing. Magic and Netgen provide physical verification through Design Rule Checking (DRC) and Layout vs. Schematic (LVS) comparisons.
+* Signoff: STA includes RC extraction, with STA re-run to confirm timing. Magic and Netgen provide physical verification through Design Rule Checking (DRC) and Layout vs. Schematic (LVS) comparisons.  
 ![img11]()  
 
 * Output: The design flow ultimately generates GDSII and LEF files, leveraging the SkyWater PDK for process-specific libraries and technology data.
@@ -55,4 +55,13 @@ Additional design exploration and synthesis exploration steps are essential to c
 * Clone the project setup:
 ```
 git clone https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd
+```
+
+* Build and install the OpenPDKs for the Sky130:
+```
+git clone https://github.com/RTimothyEdwards/open_pdks.git
+cd open_pdks
+./configure --enable-sky130-pdk
+make
+sudo make install
 ```
