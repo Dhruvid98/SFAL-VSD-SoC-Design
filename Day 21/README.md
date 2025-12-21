@@ -5,7 +5,7 @@ For open-source ASIC design implementation, the following enablers are required.
 
 The interface between the designers and the fab has become a set of data files and documents, which are referred to as the "Process Design Kits (PDKs)".
 The PDK includes Device Models, Technology Information, Design Rules, Digital Standard Cell Libraries, I/O Libraries and many more.  
-![img2]()  
+![img2](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2021/Images/img2.png)  
 
 #### ASIC flow
 ASICs (Application-Specific Integrated Circuits) are chips designed for a specific purpose, unlike general-purpose processors. An example in cars, the airbag controller is often an ASIC that continuously monitors sensors and triggers airbag deployment within microseconds, designed for reliability and safety rather than flexibility. Designing an ASIC is a complex process supported by Electronic Design Automation tools and typically takes several months to complete. 
@@ -25,26 +25,26 @@ ASICs (Application-Specific Integrated Circuits) are chips designed for a specif
 Additional DFT steps, such as scan chain insertion and test pattern generation, are essential for testing the fabricated chip against defects.
 
 #### OpenLANE ASIC design flow:  
-![img1]()  
+![img1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2021/Images/img1.png)  
 
 OpenLane is an open-source framework that transforms RTL designs into manufacturable layouts by integrating all major stages of the digital IC design process.
 
 * Front-End: RTL synthesis is performed using Yosys and ABC, followed by static timing analysis (STA) with OpenSTA. Design for Testability (DFT) is implemented to ensure fault coverage, and Yosys also supports Logic Equivalence Checking (LEC) for correctness verification.  
-![img3]()  
+![img3](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2021/Images/img3.png)  
 
 * Physical Design: The OpenROAD App handles floorplanning, powerplanning, placement, clock tree synthesis (CTS), optimization, and global routing. TritonRoute performs detailed routing, while custom scripts manage the insertion of antenna diodes.
   * In global placement provide approximate locations for all cells based on connectivity but in this stage the cells may be overlapped on each other and in detailed placement the positions obtained from global placements are minimally altered to make it legal (non-overlapping and in site-rows)
 
-![img4]()  
-![img5]()  
-![img6]()  
-![img7]()  
-![img8]()  
-![img9]()  
-![img10]()  
+![img4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2021/Images/img4.png)  
+![img5](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2021/Images/img5.png)   
+![img6](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2021/Images/img6.png)  
+![img7](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2021/Images/img7.png)  
+![img8](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2021/Images/img8.png)  
+![img9](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2021/Images/img9.png)  
+![img10](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2021/Images/img10.png)  
 
 * Signoff: STA includes RC extraction, with STA re-run to confirm timing. Magic and Netgen provide physical verification through Design Rule Checking (DRC) and Layout vs. Schematic (LVS) comparisons.  
-![img11]()  
+![img11](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2021/Images/img11.png)  
 
 * Output: The design flow ultimately generates GDSII and LEF files, leveraging the SkyWater PDK for process-specific libraries and technology data.
 
