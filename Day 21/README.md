@@ -119,3 +119,8 @@ $$
 ```
 run_floorplan
 ```
+![img19]()  
+![img20]()  
+
+#### View Floorplan DEF in Magic
+
