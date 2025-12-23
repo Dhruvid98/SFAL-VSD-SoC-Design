@@ -73,7 +73,14 @@ export PDK_ROOT=/home/saad/soc-design-and-planning-nasscom-vsd/Desktop/work/tool
 
 * Change directory to the OpenLANE flow working directory and running openlan interractive shell.
 ```
+cd OpenLane ( this is where Docker is installed)
+make mount
 cd ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/openlane
-docker
 ./flow.tcl -interactive
+```
+![img13]()  
+
+* Preparing the design 
+```
+prep -design picorv32a
 ```
