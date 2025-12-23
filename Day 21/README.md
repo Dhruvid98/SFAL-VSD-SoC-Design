@@ -65,3 +65,15 @@ cd open_pdks
 make
 sudo make install
 ```
+* Exporting the PDK_ROOT variable to point to sky130A PDK
+```
+export PDK_ROOT=/home/saad/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/pdks
+```
+![img12]()  
+
+* Change directory to the OpenLANE flow working directory and running openlan interractive shell.
+```
+cd ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/openlane
+docker
+./flow.tcl -interactive
+```
