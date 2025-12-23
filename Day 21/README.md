@@ -95,8 +95,9 @@ run_synthesis
 
 
 #### Calculate the flop ratio.
-![img17]()  
-![img18]()
+![img17]()   
+![img18]()  
+
 * Flop Ratio and DFF % Calculation from Synthesis Statistics Report File  
 Total Cells = 16885   
 DFF Cells = 1613  
