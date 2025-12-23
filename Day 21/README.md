@@ -75,12 +75,32 @@ export PDK_ROOT=/home/saad/soc-design-and-planning-nasscom-vsd/Desktop/work/tool
 ```
 cd OpenLane ( this is where Docker is installed)
 make mount
-cd ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/openlane
-./flow.tcl -interactive
-```
-![img13]()  
+./flow.tcl -interactive -design designs/picorv32a
 
-* Preparing the design 
+```
+![img13]()   
+
+* Prep the design
 ```
 prep -design picorv32a
 ```
+![img14]()  
+
+* Run Synthesis
+```
+run_synthesis
+```
+![img15]()  
+![img16]()  
+
+
+#### Calculate the flop ratio.
+![img17]()  
+![img18]()
+* Flop Ratio and DFF % Calculation from Synthesis Statistics Report File
+Total Cells = 16885 DFF Cells = 1613
+$$
+\text{Flop Ratio} = \frac{\text{DFFs}}{\text{Total Cells}} = \frac{1613}{14876} = 0.10842
+$$
+
+
