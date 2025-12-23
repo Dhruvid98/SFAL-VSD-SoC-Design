@@ -109,7 +109,7 @@ $$
  
 $$
 \text{Percentage of DFFs}
-= \frac{0.095528} \times 100
+= \frac{0.095528} * 100
 = 9.55\%
 $$
 
