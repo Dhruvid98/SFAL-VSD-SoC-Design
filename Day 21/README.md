@@ -97,15 +97,21 @@ run_synthesis
 #### Calculate the flop ratio.
 ![img17]()  
 ![img18]()
-* Flop Ratio and DFF % Calculation from Synthesis Statistics Report File
-Total Cells = 16885  
-DFF Cells = 1613
+* Flop Ratio and DFF % Calculation from Synthesis Statistics Report File  
+Total Cells = 16885   
+DFF Cells = 1613  
 
  $$
 \text{Flop Ratio} = \frac{\text{DFF Cells}}{\text{Total Cells}}
 = \frac{1613}{16885}
 = 0.095528
 $$
-$$ \text{Flop Ratio} = \frac{\text{DFFs}}{\text{Total Cells}} = \frac{1613}{16885} = 0.095528 $$
+ 
+$$
+\text{Percentage of DFFs}
+= \frac{0.095528} \times 100
+= 9.55\%
+$$
+
 
 
