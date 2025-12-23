@@ -123,6 +123,7 @@ run_floorplan
 ![img20]()  
 
 #### View Floorplan DEF in Magic
+- Exiting the container. 
 ```
 cd /home/dhruvi/OpenLane/designs/picorv32a/runs/RUN_2025.12.23_22.44.16/results/floorplan
 ```
