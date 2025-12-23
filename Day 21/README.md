@@ -124,5 +124,5 @@ run_floorplan
 
 #### View Floorplan DEF in Magic
 ```
-
+cd /home/dhruvi/OpenLane/designs/picorv32a/runs/RUN_2025.12.23_22.44.16/results/floorplan
 ```
