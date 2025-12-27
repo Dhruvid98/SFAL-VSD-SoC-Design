@@ -69,7 +69,7 @@ sudo make install
 ```
 export PDK_ROOT=/home/saad/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/pdks
 ```
-![img12]()  
+![img12](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2021/Images/img12.png)  
 
 * Change directory to the OpenLANE flow working directory and running openlan interractive shell.
 ```
@@ -78,25 +78,25 @@ make mount
 ./flow.tcl -interactive -design designs/picorv32a
 
 ```
-![img13]()   
+![img13](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2021/Images/img13.png)   
 
 * Prep the design
 ```
 prep -design picorv32a
 ```
-![img14]()  
+![img14](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2021/Images/img14.png)  
 
 * Run Synthesis
 ```
 run_synthesis
 ```
-![img15]()  
-![img16]()  
+![img15](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2021/Images/img15.png)  
+![img16](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2021/Images/img16.png)  
 
 
 #### Calculate the flop ratio.
-![img17]()   
-![img18]()  
+![img17](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2021/Images/img17.png)   
+![img18](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2021/Images/img18.png)  
 
 * Flop Ratio and DFF % Calculation from Synthesis Statistics Report File  
 Total Cells = 16885   
@@ -119,15 +119,15 @@ $$
 ```
 run_floorplan
 ```
-![img19]()  
-![img20]()  
+![img19](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2021/Images/img19.png)  
+![img20](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2021/Images/img20.png)  
 
 #### View Floorplan DEF in Magic
 - Exiting the container. 
 ```
 cd /home/dhruvi/OpenLane/designs/picorv32a/runs/RUN_2025.12.23_22.44.16/results/floorplan
 ```
-![img21]()
-![img22]()
-![img23]() 
-![img24]()
+![img21](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2021/Images/img21.png)
+![img22](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2021/Images/img22.png)
+![img23](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2021/Images/img23.png) 
+![img24](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2021/Images/img24.png)
