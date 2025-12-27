@@ -133,4 +133,17 @@ magic -T ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_worki
 ![img23](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2021/Images/img23.png) 
 ![img24](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2021/Images/img24.png)   
 
+* SoC dir
 
+```
+usr/bin/docker pull efabless/openlane:latest
+
+export PDK_ROOT=/home/dhruvi/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/pdks
+
+docker run -it   -v "$PWD:/openlane"   -v "$PDK_ROOT:$PDK_ROOT"   -e PDK_ROOT="$PDK_ROOT"   -e PDK=sky130A   efabless/openlane:latest
+```
+```
+tclsh flow.tcl -interactive
+package require openlane 0.9
+prep -design picorv32a
+```
