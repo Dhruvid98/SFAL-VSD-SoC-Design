@@ -127,3 +127,7 @@ run_floorplan
 ```
 cd /home/dhruvi/OpenLane/designs/picorv32a/runs/RUN_2025.12.23_22.44.16/results/floorplan
 ```
+![img21]()
+![img22]()
+![img23]() 
+![img24]()
