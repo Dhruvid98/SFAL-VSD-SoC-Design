@@ -131,4 +131,23 @@ magic -T ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_worki
 ![img21](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2021/Images/img21.png)
 ![img22](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2021/Images/img22.png)
 ![img23](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2021/Images/img23.png) 
-![img24](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2021/Images/img24.png)
+![img24](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2021/Images/img24.png)   
+
+
+* Running the floor plan inside the soc_ dir
+```
+cd /soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a
+/usr/bin/docker pull efabless/openlane:latest
+````
+```
+docker run -it \
+  -v $PWD:/openlane \
+  efabless/openlane:latest
+tclsh flow.tcl -interactive
+
+```
+* In the interactive session
+```
+package require openlane 0.9
+
+```
