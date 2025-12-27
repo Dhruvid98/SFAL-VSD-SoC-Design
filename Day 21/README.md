@@ -126,6 +126,7 @@ run_floorplan
 - Exiting the container. 
 ```
 cd /home/dhruvi/OpenLane/designs/picorv32a/runs/RUN_2025.12.23_22.44.16/results/floorplan
+magic -T ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.def &
 ```
 ![img21](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2021/Images/img21.png)
 ![img22](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2021/Images/img22.png)
