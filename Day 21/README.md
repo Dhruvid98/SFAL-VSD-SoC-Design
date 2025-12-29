@@ -140,10 +140,27 @@ usr/bin/docker pull efabless/openlane:latest
 
 export PDK_ROOT=/home/dhruvi/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/pdks
 
-docker run -it   -v "$PWD:/openlane"   -v "$PDK_ROOT:$PDK_ROOT"   -e PDK_ROOT="$PDK_ROOT"   -e PDK=sky130A   efabless/openlane:latest
+docker run -it \
+  -v $PWD:/openlane \
+  -v /home/dhruvi:/home/dhruvi \
+  efabless/openlane:1.1.1
 ```
 ```
 tclsh flow.tcl -interactive
 package require openlane 0.9
-prep -design picorv32a
+set ::env(PDK_ROOT) "/home/dhruvi/open_pdks/sky130"
+set ::env(PDK) "sky130A"
+set ::env(STD_CELL_LIBRARY) "sky130_fd_sc_hd"
+set ::env(PDKPATH) "$::env(PDK_ROOT)/$::env(PDK)"
+puts "PDKPATH=$::env(PDKPATH)"
+exec ls -ld $::env(PDKPATH)
+exec ls -ld $::env(PDKPATH)/libs.ref
+exec ls -ld $::env(PDKPATH)/libs.tech
+exec ls -ld $::env(PDKPATH)/libs.tech/openlane
+exec ls -l $::env(PDKPATH)/libs.tech/openlane/config.tcl
+set ::env(TECH_LEF) "$::env(PDKPATH)/libs.ref/$::env(STD_CELL_LIBRARY)/techlef/sky130_fd_sc_hd__nom.tlef"
+exec ls -l $::env(TECH_LEF)
+prep -design picorv32a -overwrite
+
+
 ```
