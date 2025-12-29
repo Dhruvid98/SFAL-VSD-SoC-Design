@@ -160,6 +160,8 @@ exec ls -ld $::env(PDKPATH)/libs.tech/openlane
 exec ls -l $::env(PDKPATH)/libs.tech/openlane/config.tcl
 set ::env(TECH_LEF) "$::env(PDKPATH)/libs.ref/$::env(STD_CELL_LIBRARY)/techlef/sky130_fd_sc_hd__nom.tlef"
 exec ls -l $::env(TECH_LEF)
+set ::env(CELLS_LEF) [glob $::env(PDKPATH)/libs.ref/$::env(STD_CELL_LIBRARY)/lef/*.lef]
+puts $::env(CELLS_LEF)
 prep -design picorv32a -overwrite
 
 
