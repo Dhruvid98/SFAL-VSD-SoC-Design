@@ -172,6 +172,8 @@ docker run -it --rm --platform linux/amd64   -v "$PWD":/openLANE_flow   -v "/hom
 tclsh flow.tcl -interactive
 set ::env(CELLS_LEF) [glob $::env(PDKPATH)/libs.ref/$::env(STD_CELL_LIBRARY)/lef/*.lef]
 puts $::env(CELLS_LEF)
-prep -design picorv32a 
+prep -design picorv32a
+set ::env(TRACKS_INFO_FILE) "$::env(PDKPATH)/libs.tech/openlane/sky130_fd_sc_hd/tracks.info"
+prep -design picorv32a -overwrite
 
 ```
