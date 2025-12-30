@@ -167,18 +167,11 @@ prep -design picorv32a -overwrite
 
 ```
 ```
-package require openlane 0.9
+docker run -it --rm --platform linux/amd64   -v "$PWD":/openLANE_flow   -v "/home/dhruvi/open_pdks":/open_pdks   -e PDK_ROOT=/open_pdks/sky130   -e PDKPATH=/open_pdks/sky130/sky130A   efabless/openlane:v0.21 /bin/bash
 
-set ::env(PDK_ROOT) "/home/dhruvi/open_pdks/sky130"
-set ::env(PDK) "sky130A"
-set ::env(PDKPATH) "$::env(PDK_ROOT)/$::env(PDK)"
-set ::env(STD_CELL_LIBRARY) "sky130_fd_sc_hd"
-
-set ::env(TECH_LEF) "$::env(PDKPATH)/libs.ref/$::env(STD_CELL_LIBRARY)/techlef/sky130_fd_sc_hd__nom.tlef"
+tclsh flow.tcl -interactive
 set ::env(CELLS_LEF) [glob $::env(PDKPATH)/libs.ref/$::env(STD_CELL_LIBRARY)/lef/*.lef]
-
-set ::env(GENERATE_FINAL_SUMMARY_REPORT) 0
-
-prep -design picorv32a -overwrite
+puts $::env(CELLS_LEF)
+prep -design picorv32a 
 
 ```
