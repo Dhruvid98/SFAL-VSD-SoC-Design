@@ -138,12 +138,12 @@ magic -T ~/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_worki
 ```
 usr/bin/docker pull efabless/openlane:latest
 
-export PDK_ROOT=/home/dhruvi/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/pdks
+export PDK_ROOT=/home/dhruvi/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir/pdk
 
 docker run -it \
-  -v $PWD:/openlane \
-  -v /home/dhruvi:/home/dhruvi \
-  efabless/openlane:1.1.1
+  -v /home/dhruvi/soc-design-and-planning-nasscom-vsd/Desktop/work/tools/openlane_working_dir:/openlane \
+  efabless/openlane:latest
+
 ```
 ```
 tclsh flow.tcl -interactive
@@ -164,5 +164,21 @@ set ::env(CELLS_LEF) [glob $::env(PDKPATH)/libs.ref/$::env(STD_CELL_LIBRARY)/lef
 puts $::env(CELLS_LEF)
 prep -design picorv32a -overwrite
 
+
+```
+```
+package require openlane 0.9
+
+set ::env(PDK_ROOT) "/home/dhruvi/open_pdks/sky130"
+set ::env(PDK) "sky130A"
+set ::env(PDKPATH) "$::env(PDK_ROOT)/$::env(PDK)"
+set ::env(STD_CELL_LIBRARY) "sky130_fd_sc_hd"
+
+set ::env(TECH_LEF) "$::env(PDKPATH)/libs.ref/$::env(STD_CELL_LIBRARY)/techlef/sky130_fd_sc_hd__nom.tlef"
+set ::env(CELLS_LEF) [glob $::env(PDKPATH)/libs.ref/$::env(STD_CELL_LIBRARY)/lef/*.lef]
+
+set ::env(GENERATE_FINAL_SUMMARY_REPORT) 0
+
+prep -design picorv32a -overwrite
 
 ```
