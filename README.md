@@ -204,4 +204,17 @@ Differentiated between optimizable and non-optimizable sequential patterns
   * Understood
 </details>
 
+<details>
+  <summary><a href="http://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2020/README.md" target="_blank">Day 20 - Floorplan and Placement of VSDBabySoC in OpenROAD </a></summary>
+  
+  #### Floorplan of VSDBabySoC in OpenROAD
+  * Understood
+</details>
+
+<details>
+  <summary><a href="http://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2021/README.md" target="_blank">Day 21 - Advanced Physical Design using OpenLane </a></summary>
+  
+  #### Advanced Physical Design using OpenLane
+  * Understood
+</details>
 
