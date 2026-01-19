@@ -143,7 +143,7 @@ Differentiated between optimizable and non-optimizable sequential patterns
   * Modeled and simulated the VSDBabySoC, integrating RVMYTH, PLL, and DAC modules.
   * Used Sandpiper-SaaS to convert TL-Verilog RVMYTH into synthesizable Verilog
   * Conducted pre-synthesis simulation using Icarus Verilog; visualized output waveforms via GTKWave
-  * Simulated DAC behavior using Verilog’s `real` datatype to represent analog like output
+  * Simulated DAC behavior using Verilog’s `real` datatype to represent analog-like output
 </details>
 
 <details>
