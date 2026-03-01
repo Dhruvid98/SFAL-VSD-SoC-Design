@@ -2,10 +2,10 @@
 
 ## Cell Design and Characterization
 * In an integrated circuit(IC), a **library** is a collection of standard cells defined by parameters such as size, functionality, threshold voltage, and other physical properties. These libraries are essential to the ASIC flow, supporting synthesis, placement, and timing analysis.
-* A library consists of different drive strengths of the standard cell.
+* A library consists of different drive strengths of the standard cell.  
 
-![img1]()
-![img2]()
+![img1](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2022/Images/img1.png)  
+![img2](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2022/Images/img2.png)  
 
 ### Inputs for cell design 
 * Process Design kits (PDKs)
@@ -24,7 +24,7 @@
 * Circuit Design:  Develop the transistor-level schematic.
   * Implement the function itself ( Euler's path)
   * Model pmos and nmos transistor such that they meet the library requirement.
-  * Output of circuit design is circuit description language (CDL)
-![img3]()
+  * Output of circuit design is circuit description language (CDL)  
+![img3](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2022/Images/img3.png)  
 * Layout Design: Create the physical layout, adhering to DRC rules.
 * Characterization 
