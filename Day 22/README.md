@@ -39,5 +39,39 @@
 
 * **Parasitic Extraction:** Extract parasitics from the layout for accurate modeling.
 * **Characterization:** Analyze performance (timing, power, noise).
-    * r
-      
+    * Output: .lib – Characterized library files with timing, power, and noise data
+
+## Standard Cell Characterization Flow
+A typical characterization process involves:
+
+    * Step 1: Reading SPICE models and technology files
+    * Step 2: Loading the extracted SPICE netlist
+    * Step 3: Recognizing functional behavior of the cell
+    * Step 4: Identifying subcircuits
+    * Step 5: Applying power sources
+    * Step 6: Stimulating the cell with test vectors
+    * Step 7: Setting output load capacitances
+    * Step 8: Running simulations with proper commands (.tran for transient, .dc for dc simulation) 
+    
+![img6]()
+![img5]()
+![img7]()
+
+---
+
+## Standard Cell Design Flow
+
+1. Circuit Design – Develop the transistor-level schematic.
+2. Layout Design – Create the physical layout adhering to DRC rules.
+3. Parasitic Extraction – Extract parasitics from the layout for accurate modeling.
+4. Characterization – Analyze performance (timing, power, noise).
+
+**Outputs:**
+
+* CDL – Circuit Description Language (netlist from schematic)
+* LEF – Library Exchange Format (abstract layout info for PnR)
+* GDSII – Final layout database for fabrication
+* .cir – Extracted SPICE netlist
+* .lib – Characterized library files with timing, power, and noise data
+
+---
