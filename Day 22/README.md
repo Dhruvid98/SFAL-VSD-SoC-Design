@@ -35,7 +35,7 @@
     * Step 4: Create a stick diagram.
     * Output: GDSII, LEF, Extracted spice netlist (.cir)
 
-![img4]()
+![img4](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2022/Images/img4.png)
 
 * **Parasitic Extraction:** Extract parasitics from the layout for accurate modeling.
 * **Characterization:** Analyze performance (timing, power, noise).
@@ -71,9 +71,9 @@ A typical characterization process involves:
  * Step 7: Setting output load capacitances
  * Step 8: Running simulations with proper commands (.tran for transient, .dc for dc simulation) 
     
-![img6]()
-![img5]()
-![img7]()
+![img6](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2022/Images/img6.png)  
+![img5](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2022/Images/img5.png)  
+![img7](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2022/Images/img7.png)  
 
 Any input will have 2 kinds of delay. Rise delay and false delay. 
 
@@ -82,10 +82,10 @@ Any input will have 2 kinds of delay. Rise delay and false delay.
 The time difference between the input signal reaching 50% of its final value and the output reaching 50% of its final value.
 * If slew is negative, there is a possibility of choosing bad threshold or huge wire delays.   
 
-![img8]()
+![img8](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2022/Images/img8.png)  
 
 ## Transition Delay
 
 The time it takes for a signal to transition between logic states. Typically measured between 10–90% or 20–80% of the voltage levels (VDD as the reference).  
 
-![img9]()
+![img9](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2022/Images/img9.png)  
