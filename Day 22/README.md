@@ -62,14 +62,14 @@
 ## Standard Cell Characterization Flow
 A typical characterization process involves:
 
-    * Step 1: Reading SPICE models and technology files
-    * Step 2: Loading the extracted SPICE netlist
-    * Step 3: Recognizing functional behavior of the cell
-    * Step 4: Identifying subcircuits
-    * Step 5: Applying power sources
-    * Step 6: Stimulating the cell with test vectors
-    * Step 7: Setting output load capacitances
-    * Step 8: Running simulations with proper commands (.tran for transient, .dc for dc simulation) 
+ * Step 1: Reading SPICE models and technology files
+ * Step 2: Loading the extracted SPICE netlist
+ * Step 3: Recognizing functional behavior of the cell
+ * Step 4: Identifying subcircuits
+ * Step 5: Applying power sources
+ * Step 6: Stimulating the cell with test vectors
+ * Step 7: Setting output load capacitances
+ * Step 8: Running simulations with proper commands (.tran for transient, .dc for dc simulation) 
     
 ![img6]()
 ![img5]()
