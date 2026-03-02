@@ -23,8 +23,8 @@
 ### Design Steps
 * Circuit Design:  Develop the transistor-level schematic.
   * Implement the function itself ( Euler's path)
-  * Model pmos and nmos transistor such that they meet the library requirement.
-  * Output of circuit design is circuit description language (CDL)  
+  * Model pmos and NMOS transistors such that they meet the library requirement.
+  * **Output** of circuit design is **Circuit description language (CDL)**.  
 ![img3](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2022/Images/img3.png)  
 * Layout Design: Create the physical layout, adhering to DRC rules.
 * Characterization 
