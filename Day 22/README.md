@@ -75,4 +75,17 @@ A typical characterization process involves:
 ![img5]()
 ![img7]()
 
+Any input will have 2 kinds of delay. Rise delay and false delay. 
 
+## Propagation Delay
+
+The time difference between the input signal reaching 50% of its final value and the output reaching 50% of its final value.
+* If slew is negative, there is a possibility of choosing bad threshold or huge wire delays.   
+
+![img8]()
+
+## Transition Delay
+
+The time it takes for a signal to transition between logic states. Typically measured between 10–90% or 20–80% of the voltage levels (VDD as the reference).  
+
+![img9]()
