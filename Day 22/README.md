@@ -21,10 +21,23 @@
   6. Drawn gate-length
  
 ### Design Steps
-* Circuit Design:  Develop the transistor-level schematic.
+* **Circuit Design:** Develop the transistor-level schematic.
   * Implement the function itself ( Euler's path)
   * Model pmos and NMOS transistors such that they meet the library requirement.
-  * **Output** of circuit design is **Circuit description language (CDL)**.  
+  * **Output** of circuit design is **Circuit description language (CDL)**.
+
 ![img3](https://github.com/Dhruvid98/SFAL-VSD-SoC-Design/blob/main/Day%2022/Images/img3.png)  
-* Layout Design: Create the physical layout, adhering to DRC rules.
-* Characterization 
+
+* **Layout Design:** Create the physical layout, adhering to DRC rules.
+    * Step 1: Implement the function itself based on pmos and nmos transistors.
+    * Step 2: Derive the pmos and NMOS network graph.
+    * Step 3: Obtain Euler's path
+    * Step 4: Create a stick diagram.
+    * Output: GDSII, LEF, Extracted spice netlist (.cir)
+
+![img4]()
+
+* **Parasitic Extraction:** Extract parasitics from the layout for accurate modeling.
+* **Characterization:** Analyze performance (timing, power, noise).
+    * r
+      
